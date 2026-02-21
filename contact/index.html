@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Contact Coach Princeton Basketball. Reach out for coaching inquiries, support, or questions about the Princeton Offense system.">
+    <meta name="keywords" content="contact, coaching inquiry, support, Coach Lee DeForest">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Coach Lee DeForest">
+    <link rel="canonical" href="https://coachprincetonbasketball.com/contact">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contact Coach Princeton Basketball">
+    <meta property="og:description" content="Get in touch with Coach Lee DeForest for inquiries and support.">
+    <meta property="article:author" content="Coach Lee DeForest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coachprincetonbasketball.com/contact">
+    <meta property="og:image" content="https://coachprincetonbasketball.com/og-image.jpg">
+
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Coach Princeton Basketball">
+    <meta name="twitter:description" content="Get in touch with Coach Lee DeForest.">
+    <meta name="twitter:image" content="https://coachprincetonbasketball.com/og-image.jpg">
+
+    <title>Contact Coach Princeton Basketball</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11158472206');
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 1.2rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c9a84c;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #e8c96d;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-links a:hover {
+            color: #c9a84c;
+            border-bottom: 2px solid #c9a84c;
+        }
+
+        .nav-cta {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-cta:hover {
+            background-color: #e8c96d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, #111111 0%, #0a0a0a 50%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-subtext {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Content Section */
+        .content-section {
+            padding: 100px 2rem;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            max-width: 500px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #c9a84c;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 8px;
+        }
+
+        .contact-detail h3 {
+            font-size: 0.95rem;
+            color: #c9a84c;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-detail p {
+            margin: 0;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .contact-detail a {
+            color: #c9a84c;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: #e8c96d;
+        }
+
+        .contact-message {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+
+        .contact-message h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #c9a84c;
+            margin-bottom: 1rem;
+        }
+
+        .contact-message p {
+            font-size: 0.95rem;
+            color: #bbbbbb;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .contact-message ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .contact-message li {
+            padding: 0.6rem 0;
+            color: #bbbbbb;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .contact-message li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #c9a84c;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
+            margin-top: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #e8c96d;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(201, 168, 76, 0.35);
+        }
+
+        .cta-section {
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.05) 100%);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 4rem 2rem 2rem;
+            color: #888888;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #888888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: #c9a84c;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero {
+                padding: 60px 1rem;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Coach Princeton Basketball</a>
+            <ul class="nav-links">
+                <li><a href="/about">About</a></li>
+                <li><a href="/book">Playbook</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/#pricing" class="nav-cta">Get the Playbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <h1>Get in Touch</h1>
+                <p class="hero-subtext">Have questions about the Princeton Offense? Want to discuss coaching opportunities? Reach out to Coach Lee DeForest and his team.</p>
+            </div>
+        </section>
+
+        <!-- Contact Content Section -->
+        <section class="content-section scroll-animate">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info scroll-animate">
+                        <h2>Let's Talk Basketball</h2>
+                        <p>Coach Lee DeForest is committed to helping coaches at every level implement the Princeton Offense system and develop better basketball players. Whether you have questions about the system, need support, or want to discuss coaching opportunities, we're here to help.</p>
+
+                        <div class="contact-detail">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@coachprincetonbasketball.com">info@coachprincetonbasketball.com</a></p>
+                        </div>
+
+                        <div class="contact-detail">
+                            <h3>Response Time</h3>
+                            <p>We typically respond to inquiries within 24-48 hours during business days.</p>
+                        </div>
+
+                        <div class="contact-detail">
+                            <h3>Support</h3>
+                            <p>Need help with your purchase or have questions about the Blueprint? Our support team is ready to assist.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-message scroll-animate">
+                        <h3>Common Reasons to Reach Out</h3>
+                        <p>We love hearing from coaches. Here are some common reasons coaches contact us:</p>
+                        <ul>
+                            <li>Questions about implementing the Princeton Offense</li>
+                            <li>Technical support or account issues</li>
+                            <li>Coaching inquiries and partnership opportunities</li>
+                            <li>Speaking engagements and clinic inquiries</li>
+                            <li>Video demonstration or content requests</li>
+                            <li>General feedback or suggestions</li>
+                            <li>Refund requests (we honor our 60-day guarantee)</li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem; color: #c9a84c;">Ready to Get Started?</h3>
+                        <p>If you haven't already, grab the Princeton Offense Mastery Blueprint. It's the complete system with everything you need to transform your offense.</p>
+                        <a href="/book" class="btn-primary">Get the Playbook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section scroll-animate">
+            <div class="cta-container">
+                <h2 class="cta-title">Have a Question?</h2>
+                <p class="cta-text">Email us at info@coachprincetonbasketball.com and we'll get back to you within 24-48 hours. We're here to support you and your team.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about">About Coach</a></li>
+                        <li><a href="/book">The Playbook</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog">Coaching Blog</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/contact">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use">Terms of Use</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Coach Princeton Basketball. All rights reserved. | Coach Lee DeForest</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Coach Princeton Basketball",
+        "url": "https://coachprincetonbasketball.com/contact",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Coach Princeton Basketball",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "email": "info@coachprincetonbasketball.com"
+            }
+        }
+    }
+    </script>
+
+    <script>
+        // Sticky Navigation
+        const navbar = document.getElementById('navbar');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>

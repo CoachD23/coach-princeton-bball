@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="The Princeton Offense Mastery Blueprint — Complete read-based basketball system. Six sets, fourteen counters, 42 drills. Used by 200+ coaches worldwide.">
+    <meta name="keywords" content="Princeton Offense, basketball playbook, coaching system, basketball drills, offensive system">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Coach Lee DeForest">
+    <link rel="canonical" href="https://coachprincetonbasketball.com/book">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="The Princeton Offense Mastery Blueprint — Coach Princeton Basketball">
+    <meta property="og:description" content="Complete read-based basketball system with six interchangeable sets, fourteen counters, and 42 detailed drills.">
+    <meta property="article:author" content="Coach Lee DeForest">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://coachprincetonbasketball.com/book">
+    <meta property="og:image" content="https://coachprincetonbasketball.com/og-image.jpg">
+
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Princeton Offense Mastery Blueprint">
+    <meta name="twitter:description" content="Complete read-based basketball system for coaches at every level.">
+    <meta name="twitter:image" content="https://coachprincetonbasketball.com/og-image.jpg">
+
+    <title>The Princeton Offense Mastery Blueprint — Coach Princeton Basketball</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11158472206');
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 1.2rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c9a84c;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #e8c96d;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-links a:hover {
+            color: #c9a84c;
+            border-bottom: 2px solid #c9a84c;
+        }
+
+        .nav-cta {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-cta:hover {
+            background-color: #e8c96d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
+        }
+
+
+        /* Hamburger Menu */
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; z-index: 1001; }
+        .hamburger span { display: block; width: 25px; height: 3px; background: #c9a84c; border-radius: 3px; transition: all 0.3s ease; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10, 10, 10, 0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; z-index: 999; }
+            .nav-links.active { display: flex; }
+            .nav-links a { font-size: 1.2rem; }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, #111111 0%, #0a0a0a 50%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-subtext {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #e8c96d;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(201, 168, 76, 0.35);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 100px 2rem;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #ffffff;
+        }
+
+        .content-text {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #cccccc;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            padding: 2.5rem;
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(17, 17, 17, 0.9);
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #c9a84c;
+            font-weight: 700;
+        }
+
+        .feature-card ul {
+            list-style: none;
+        }
+
+        .feature-card li {
+            padding: 0.6rem 0;
+            color: #bbbbbb;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .feature-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #c9a84c;
+            font-weight: bold;
+        }
+
+        .pricing-section {
+            padding: 100px 2rem;
+            background: rgba(17, 17, 17, 0.5);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            background: rgba(201, 168, 76, 0.08);
+            border: 2px solid #c9a84c;
+            transform: scaleY(1.05);
+            box-shadow: 0 20px 40px rgba(201, 168, 76, 0.15);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        .pricing-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #c9a84c;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price small {
+            font-size: 1.2rem;
+            color: #888888;
+        }
+
+        .pricing-description {
+            color: #aaaaaa;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 0.6rem 0;
+            color: #888888;
+            font-size: 0.9rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #c9a84c;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .pricing-button {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:not(.featured) .pricing-button {
+            background-color: transparent;
+            color: #c9a84c;
+            border: 2px solid #c9a84c;
+        }
+
+        .pricing-card:not(.featured) .pricing-button:hover {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+        }
+
+        .pricing-card.featured .pricing-button {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
+        }
+
+        .pricing-card.featured .pricing-button:hover {
+            background-color: #e8c96d;
+            box-shadow: 0 12px 35px rgba(201, 168, 76, 0.35);
+        }
+
+        .testimonials-section {
+            padding: 100px 2rem;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-left: 4px solid #c9a84c;
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(26, 26, 26, 1);
+            border-color: rgba(201, 168, 76, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(201, 168, 76, 0.1);
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #dddddd;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #c9a84c;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-title {
+            font-size: 0.85rem;
+            color: #888888;
+            margin-top: 0.3rem;
+        }
+
+        .guarantee-section {
+            padding: 100px 2rem;
+            background: rgba(17, 17, 17, 0.5);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .guarantee-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.05) 100%);
+            border: 2px solid rgba(201, 168, 76, 0.3);
+            padding: 4rem 3rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .guarantee-container h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #c9a84c;
+        }
+
+        .guarantee-text {
+            font-size: 1.05rem;
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .faq-section {
+            padding: 100px 2rem;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(201, 168, 76, 0.4);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .faq-question:hover {
+            color: #c9a84c;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c9a84c;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-content {
+            padding: 1.5rem;
+            padding-top: 0;
+            color: #aaaaaa;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.05) 100%);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 4rem 2rem 2rem;
+            color: #888888;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #888888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: #c9a84c;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 60px 1rem;
+            }
+
+            .pricing-card.featured {
+                transform: scaleY(1);
+            }
+
+            .nav-cta { display: inline-block !important; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Coach Princeton Basketball</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/about">About</a></li>
+                <li><a href="/book">Playbook</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="#pricing" class="nav-cta">Get the Playbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <h1>The Princeton Offense Mastery Blueprint</h1>
+                <p class="hero-subtext">The complete read-based basketball offensive system used by 200+ coaches worldwide. Six interchangeable sets, fourteen counters, 42 detailed drills, and everything you need to transform your team.</p>
+                <a href="#pricing" class="btn-primary">Get the System — $39</a>
+            </div>
+        </section>
+
+        <!-- What's Inside Section -->
+        <section class="content-section scroll-animate">
+            <div class="container">
+                <h2 class="section-title">Inside the Blueprint</h2>
+                <p class="content-text scroll-animate">The Princeton Offense Mastery Blueprint is a complete, detailed coaching system designed for immediate implementation. Whether you're starting from scratch or looking to complement your current offensive system, this Blueprint gives you everything you need.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card scroll-animate">
+                        <h3>Six Foundation Sets</h3>
+                        <ul>
+                            <li>Chin Set</li>
+                            <li>Low Set</li>
+                            <li>Point Set</li>
+                            <li>Twirl Set</li>
+                            <li>Five Out Set</li>
+                            <li>X Set</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card scroll-animate">
+                        <h3>Fourteen Counter Packages</h3>
+                        <ul>
+                            <li>Switch Counters</li>
+                            <li>Help-Side Counters</li>
+                            <li>Pressure Counters</li>
+                            <li>Denial Counters</li>
+                            <li>Zone Offense</li>
+                            <li>Press Break Plays</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card scroll-animate">
+                        <h3>Complete Training Package</h3>
+                        <ul>
+                            <li>42 Breakdown Drills</li>
+                            <li>Positioning Guides</li>
+                            <li>Practice Plans</li>
+                            <li>Installation Schedule</li>
+                            <li>Out-of-Bounds Plays</li>
+                            <li>Game Adjustments</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card scroll-animate">
+                        <h3>Bonus Materials</h3>
+                        <ul>
+                            <li>Read Progression Charts</li>
+                            <li>Coaching Notes</li>
+                            <li>Film Study Guide</li>
+                            <li>Troubleshooting Guide</li>
+                            <li>FAQ Reference</li>
+                            <li>Quick Start Guide</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section scroll-animate" id="pricing">
+            <div class="pricing-container">
+                <h2 class="section-title">Simple Pricing</h2>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card scroll-animate">
+                        <div class="pricing-name">Princeton Offense System</div>
+                        <div class="pricing-price">$39<small></small></div>
+                        <p class="pricing-description">The complete Princeton system</p>
+                        <ul class="pricing-features">
+                            <li>87-Page Princeton Offense Playbook (PDF)</li>
+                            <li>Learn the Princeton Video Walkthrough</li>
+                            <li>Practice Plans &amp; Drills Guide (PDF)</li>
+                            <li>All six sets and counters</li>
+                            <li>Zone offense and press break</li>
+                            <li>60-day guarantee</li>
+                        </ul>
+                        <button class="pricing-button" onclick="location.href='/checkout/?product=system';">Get Started — $39</button>
+                    </div>
+
+                    <div class="pricing-card featured scroll-animate">
+                        <div class="pricing-name">Complete Coaching Bundle</div>
+                        <div class="pricing-price">$49<small></small></div>
+                        <div class="pricing-old-price" style="color:#999;font-size:0.9rem;text-decoration:line-through;">was $59</div>
+                        <p class="pricing-description">Everything above + a second offensive system</p>
+                        <ul class="pricing-features">
+                            <li>87-Page Princeton Offense Playbook (PDF)</li>
+                            <li>Learn the Princeton Video Walkthrough</li>
+                            <li>Practice Plans &amp; Drills Guide (PDF)</li>
+                            <li><strong>BONUS: West Virginia 2-Guard Offense (PDF)</strong></li>
+                            <li>All six sets and counters</li>
+                            <li>60-day guarantee</li>
+                        </ul>
+                        <button class="pricing-button" onclick="location.href='/checkout/?product=bundle';">Get the Bundle — $49</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section scroll-animate">
+            <div class="container">
+                <h2 class="section-title">Real Results from Real Coaches</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-text">"We installed the Chin and Low sets from the Blueprint on Monday. By Thursday, my JV squad was making backdoor reads I had been trying to teach for three years. We went 8-2 down the stretch."</div>
+                        <div class="testimonial-author">Mike R.</div>
+                        <div class="testimonial-title">JV Head Coach, Illinois</div>
+                    </div>
+
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-text">"The counter packages alone are worth ten times the price. Last season we faced a switching man defense in the state quarterfinals — we scored 14 straight using the switch counters from the playbook."</div>
+                        <div class="testimonial-author">Coach D. Williams</div>
+                        <div class="testimonial-title">Varsity Head Coach, Texas</div>
+                    </div>
+
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-text">"Our offensive efficiency jumped from 0.89 to 1.04 points per possession within the first month. The system is that clear and effective."</div>
+                        <div class="testimonial-author">Jason T.</div>
+                        <div class="testimonial-title">NAIA Head Coach, Georgia</div>
+                    </div>
+
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-text">"Parents can't believe what they're watching. The offense is so beautiful, so clean, and our kids play with such confidence. This changed everything."</div>
+                        <div class="testimonial-author">Sarah M.</div>
+                        <div class="testimonial-title">Middle School Coach, Ohio</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantee Section -->
+        <section class="guarantee-section scroll-animate">
+            <div class="guarantee-container">
+                <h2>60-Day Money-Back Guarantee</h2>
+                <p class="guarantee-text">If you purchase the Blueprint and don't find it valuable within 60 days, we'll refund every penny. No questions asked. We stand behind this system because we know it works.</p>
+                <p class="guarantee-text">The only risk is missing out on what could transform your team's offense.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section scroll-animate">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container scroll-animate">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What exactly do I get when I purchase the Blueprint?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                You receive the complete Princeton Offense System: an 87-page playbook covering all six interchangeable sets (Chin, Low, Point, Twirl, Five Out, X), fourteen complete counter packages, a zone offense system, press break plays, out-of-bounds plays, and detailed breakdown drills — plus the Learn the Princeton video walkthrough and practice plans. If you purchase the Complete Coaching Bundle, you also get the West Virginia 2-Guard Offense playbook as a bonus second system.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I use this at my level?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                Yes. The Princeton Offense has been used successfully at every level from middle school through professional basketball. The system scales to your players' skill level and basketball IQ. You simplify it for younger players and add complexity as your team develops.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does it take to implement?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                Most coaches see noticeable improvements within 2-3 weeks. Full implementation typically takes 4-6 weeks depending on your team's current offensive knowledge. The system is designed to be installed progressively — you start with one or two sets, then add more as your players master the reads.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do my players need to be great athletes?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                No. The Princeton Offense is designed to level the playing field. Smart reads and basketball IQ beat raw athleticism. That's the entire point — you can compete with more talented teams by running a smarter, more efficient offense.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What if I already run a different offensive system?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                The Princeton Offense can complement or replace your current system. Many coaches start by incorporating one or two sets as counters to their existing offense, then transition fully once they see the results. The Blueprint shows you how to make the transition smoothly.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is this just a PDF?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                The Playbook is a comprehensive PDF you can print or view on any device. The Bundle includes the PDF plus access to video demonstrations of all 42 breakdown drills, including setup instructions, positioning details, and progression variations.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's your refund policy?</span>
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                We offer a 60-day money-back guarantee. If you're not satisfied with the Blueprint for any reason, email us within 60 days and we'll refund your purchase immediately. No questions asked. We're confident you'll find this system valuable.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="cta-section scroll-animate">
+            <div class="cta-container">
+                <h2 class="cta-title">Start Transforming Your Offense Today</h2>
+                <p class="cta-text">Join 200+ coaches who've implemented the Princeton Offense and transformed their teams. Reduce turnovers, increase efficiency, develop smarter players. All with one complete, proven system.</p>
+                <a href="/checkout/" class="btn-primary">Get the System — $39</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about">About Coach</a></li>
+                        <li><a href="/book">The Playbook</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog">Coaching Blog</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/contact">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use">Terms of Use</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Coach Princeton Basketball. All rights reserved. | Coach Lee DeForest</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Coach Princeton Basketball - Mastery Blueprint",
+        "description": "Complete read-based basketball offensive system with six interchangeable sets, fourteen counter packages, and 42 breakdown drills",
+        "brand": {
+            "@type": "Brand",
+            "name": "Coach Princeton Basketball"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "price": "39",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "name": "Playbook"
+            },
+            {
+                "@type": "Offer",
+                "price": "49",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "name": "Bundle"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "url": "https://coachprincetonbasketball.com/book"
+    }
+    </script>
+
+    <script>
+        // Sticky Navigation
+        const navbar = document.getElementById('navbar');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

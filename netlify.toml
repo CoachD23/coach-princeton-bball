@@ -1,0 +1,67 @@
+# ============================================================
+# Coach Princeton Basketball — Netlify Config
+# ============================================================
+
+[build]
+  publish = "."
+  # No build command needed — pure static HTML
+
+# -----------------------------------------------
+# Security & performance headers
+# -----------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML pages — short cache so edits show up fast
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# -----------------------------------------------
+# Redirects (supplement to _redirects file)
+# -----------------------------------------------
+# Force HTTPS
+[[redirects]]
+  from = "http://coachprincetonbasketball.com/*"
+  to = "https://coachprincetonbasketball.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.coachprincetonbasketball.com/*"
+  to = "https://coachprincetonbasketball.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.coachprincetonbasketball.com/*"
+  to = "https://coachprincetonbasketball.com/:splat"
+  status = 301
+  force = true

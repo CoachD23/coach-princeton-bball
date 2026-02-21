@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Secure checkout for the Princeton Offense System. Complete your purchase and get instant access.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Checkout — Coach Princeton Basketball</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11158472206');
+    </script>
+
+    <!-- Authorize.net Accept.js (Production) -->
+    <script type="text/javascript" src="https://js.authorize.net/v1/Accept.js" charset="utf-8"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Nav */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 1.2rem 0;
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem; font-weight: 700; color: #c9a84c;
+            text-decoration: none; letter-spacing: 0.5px;
+        }
+        .nav-back {
+            color: #999; text-decoration: none; font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-back:hover { color: #c9a84c; }
+
+        /* Layout */
+        .checkout-wrapper {
+            max-width: 1000px; margin: 0 auto; padding: 3rem 2rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+        }
+        @media (max-width: 768px) {
+            .checkout-wrapper { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1rem; }
+        }
+
+        /* Order Summary */
+        .order-summary {
+            background: #111; border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 12px; padding: 2rem;
+        }
+        .order-title {
+            font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem;
+            color: #c9a84c;
+        }
+
+        .product-option {
+            background: #1a1a1a; border: 2px solid #333; border-radius: 10px;
+            padding: 1.2rem; margin-bottom: 1rem; cursor: pointer;
+            transition: all 0.3s ease; position: relative;
+        }
+        .product-option:hover { border-color: rgba(201, 168, 76, 0.4); }
+        .product-option.selected {
+            border-color: #c9a84c;
+            background: rgba(201, 168, 76, 0.05);
+        }
+        .product-option.featured-product {
+            border-color: #c9a84c;
+        }
+        .product-option.featured-product .best-value {
+            position: absolute; top: -10px; right: 12px;
+            background: #c9a84c; color: #0a0a0a; font-size: 0.7rem;
+            font-weight: 700; padding: 2px 10px; border-radius: 4px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .product-radio {
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .product-radio input[type="radio"] {
+            accent-color: #c9a84c; width: 18px; height: 18px; cursor: pointer;
+        }
+        .product-name {
+            font-weight: 600; font-size: 1rem; color: #fff;
+        }
+        .product-desc {
+            font-size: 0.85rem; color: #999; margin-top: 0.25rem;
+        }
+        .product-includes {
+            font-size: 0.8rem; color: #bbb; margin-top: 0.5rem;
+            padding-left: 0.5rem; border-left: 2px solid rgba(201, 168, 76, 0.3);
+        }
+        .product-includes span { display: block; margin-bottom: 0.15rem; }
+        .product-price-row {
+            display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;
+        }
+        .product-price {
+            font-size: 1.3rem; font-weight: 700; color: #c9a84c;
+        }
+        .product-old-price {
+            font-size: 0.9rem; color: #666; text-decoration: line-through;
+        }
+        .product-savings {
+            font-size: 0.75rem; color: #4ade80; font-weight: 600;
+            background: rgba(74, 222, 128, 0.1); padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .order-details {
+            margin-top: 1.5rem; padding-top: 1.5rem;
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+        }
+        .order-line {
+            display: flex; justify-content: space-between;
+            margin-bottom: 0.5rem; font-size: 0.95rem;
+        }
+        .order-line.total {
+            font-weight: 700; font-size: 1.1rem;
+            padding-top: 0.75rem; margin-top: 0.75rem;
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+            color: #c9a84c;
+        }
+
+        .guarantee-badge {
+            margin-top: 1.5rem; padding: 1rem;
+            background: rgba(201, 168, 76, 0.05);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 8px; text-align: center;
+        }
+        .guarantee-badge .shield { font-size: 1.5rem; margin-bottom: 0.25rem; }
+        .guarantee-badge p {
+            font-size: 0.85rem; color: #999;
+        }
+        .guarantee-badge strong { color: #c9a84c; }
+
+        /* Payment Form */
+        .payment-section {
+            background: #111; border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 12px; padding: 2rem;
+        }
+        .payment-title {
+            font-size: 1.3rem; font-weight: 700; margin-bottom: 0.25rem;
+        }
+        .payment-subtitle {
+            font-size: 0.85rem; color: #999; margin-bottom: 1.5rem;
+        }
+        .secure-badge {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            font-size: 0.8rem; color: #4ade80; margin-bottom: 1.5rem;
+        }
+
+        .form-group { margin-bottom: 1.25rem; }
+        .form-label {
+            display: block; font-size: 0.85rem; font-weight: 500;
+            color: #ccc; margin-bottom: 0.5rem;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+        .form-input {
+            width: 100%; padding: 0.85rem 1rem;
+            background: #1a1a1a; border: 1px solid #333;
+            border-radius: 8px; color: #fff; font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            outline: none; border-color: #c9a84c;
+        }
+        .form-input::placeholder { color: #555; }
+
+        .pay-button {
+            width: 100%; padding: 1.1rem; margin-top: 1.5rem;
+            background: #c9a84c; color: #0a0a0a;
+            border: none; border-radius: 8px;
+            font-size: 1.05rem; font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer; transition: all 0.3s ease;
+        }
+        .pay-button:hover {
+            background: #e8c96d; transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.3);
+        }
+        .pay-button:disabled {
+            opacity: 0.6; cursor: not-allowed; transform: none;
+            box-shadow: none;
+        }
+        .pay-button .spinner {
+            display: inline-block; width: 18px; height: 18px;
+            border: 2px solid #0a0a0a; border-top-color: transparent;
+            border-radius: 50%; animation: spin 0.8s linear infinite;
+            vertical-align: middle; margin-right: 0.5rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444; padding: 0.75rem 1rem;
+            border-radius: 8px; font-size: 0.9rem;
+            margin-top: 1rem; display: none;
+        }
+
+        .trust-icons {
+            display: flex; justify-content: center; gap: 1.5rem;
+            margin-top: 1.5rem; font-size: 0.8rem; color: #666;
+        }
+        .trust-icons span { display: flex; align-items: center; gap: 0.3rem; }
+
+        /* Footer */
+        .checkout-footer {
+            text-align: center; padding: 2rem;
+            font-size: 0.8rem; color: #555;
+        }
+        .checkout-footer a { color: #c9a84c; text-decoration: none; }
+    </style>
+    <link rel="canonical" href="https://coachprincetonbasketball.com/checkout/">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Coach Princeton</a>
+            <a href="/" class="nav-back">&larr; Back to Site</a>
+        </div>
+    </nav>
+
+    <div class="checkout-wrapper">
+        <!-- Left: Order Summary -->
+        <div class="order-summary">
+            <div class="order-title">Your Order</div>
+
+            <div class="product-option" data-product="system" data-price="39.00" onclick="selectProduct('system')">
+                <div class="product-radio">
+                    <input type="radio" name="product" id="prod-system" value="system">
+                    <div>
+                        <div class="product-name">Princeton Offense System</div>
+                        <div class="product-desc">The complete Princeton system — playbook, video, and practice plans</div>
+                        <div class="product-includes">
+                            <span>&#10003; 87-Page Princeton Offense Playbook (PDF)</span>
+                            <span>&#10003; Learn the Princeton Video Walkthrough</span>
+                            <span>&#10003; Practice Plans &amp; Drills Guide (PDF)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="product-price">$39</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-option featured-product" data-product="bundle" data-price="49.00" onclick="selectProduct('bundle')">
+                <span class="best-value">Most Popular</span>
+                <div class="product-radio">
+                    <input type="radio" name="product" id="prod-bundle" value="bundle" checked>
+                    <div>
+                        <div class="product-name">Complete Coaching Bundle</div>
+                        <div class="product-desc">Everything above PLUS a second offensive system for just $10 more</div>
+                        <div class="product-includes">
+                            <span>&#10003; 87-Page Princeton Offense Playbook (PDF)</span>
+                            <span>&#10003; Learn the Princeton Video Walkthrough</span>
+                            <span>&#10003; Practice Plans &amp; Drills Guide (PDF)</span>
+                            <span>&#10003; <strong>BONUS:</strong> West Virginia 2-Guard Offense Playbook (PDF)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="product-price">$49</span>
+                            <span class="product-old-price">$59</span>
+                            <span class="product-savings">Save $10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-details">
+                <div class="order-line">
+                    <span id="summary-product">Complete Coaching Bundle</span>
+                    <span id="summary-price">$49.00</span>
+                </div>
+                <div class="order-line total">
+                    <span>Total</span>
+                    <span id="summary-total">$49.00</span>
+                </div>
+            </div>
+
+            <div class="guarantee-badge">
+                <div class="shield">&#128737;</div>
+                <p><strong>60-Day Money-Back Guarantee</strong><br>Not satisfied? Full refund, no questions asked.</p>
+            </div>
+        </div>
+
+        <!-- Right: Payment Form -->
+        <div class="payment-section">
+            <div class="payment-title">Payment Details</div>
+            <div class="payment-subtitle">Complete your purchase to get instant access</div>
+            <div class="secure-badge">&#128274; 256-bit SSL Encrypted &middot; Secure Payment</div>
+
+            <form id="paymentForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" id="fullName" placeholder="John Smith" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" id="emailAddress" placeholder="coach@school.edu" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Card Number</label>
+                    <input type="text" class="form-input" id="cardNumber" placeholder="4111 1111 1111 1111" required maxlength="19" autocomplete="cc-number" inputmode="numeric">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Expiration</label>
+                        <input type="text" class="form-input" id="expDate" placeholder="MM/YY" required maxlength="5" autocomplete="cc-exp">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">CVV</label>
+                        <input type="text" class="form-input" id="cvv" placeholder="123" required maxlength="4" autocomplete="cc-csc" inputmode="numeric">
+                    </div>
+                </div>
+
+                <button type="submit" class="pay-button" id="payButton">
+                    Complete Purchase — <span id="btn-price">$49.00</span>
+                </button>
+
+                <div class="error-message" id="errorMessage"></div>
+            </form>
+
+            <div class="trust-icons">
+                <span>&#128274; Secure</span>
+                <span>&#128179; Visa / MC / Amex</span>
+                <span>&#128737; 60-Day Guarantee</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-footer">
+        <p>&copy; 2026 Coach Princeton Basketball &middot; Florida Coastal Prep LLC &middot; <a href="mailto:coachdeforest@gmail.com">Support</a></p>
+    </div>
+
+    <script>
+        // ============ PRODUCT SELECTION ============
+        const products = {
+            system: { name: 'Princeton Offense System', price: 39.00 },
+            bundle: { name: 'Complete Coaching Bundle', price: 49.00 }
+        };
+
+        let selectedProduct = 'bundle';
+
+        function selectProduct(productId) {
+            selectedProduct = productId;
+            const product = products[productId];
+
+            // Update radio buttons
+            document.querySelectorAll('input[name="product"]').forEach(r => r.checked = false);
+            document.getElementById('prod-' + productId).checked = true;
+
+            // Update selected styling
+            document.querySelectorAll('.product-option').forEach(el => el.classList.remove('selected'));
+            document.querySelector(`[data-product="${productId}"]`).classList.add('selected');
+
+            // Update order summary
+            document.getElementById('summary-product').textContent = product.name;
+            document.getElementById('summary-price').textContent = '$' + product.price.toFixed(2);
+            document.getElementById('summary-total').textContent = '$' + product.price.toFixed(2);
+            document.getElementById('btn-price').textContent = '$' + product.price.toFixed(2);
+        }
+
+        // Pre-select from URL param
+        const urlParams = new URLSearchParams(window.location.search);
+        const preselect = urlParams.get('product');
+        if (preselect && products[preselect]) {
+            selectProduct(preselect);
+        } else {
+            selectProduct('bundle');
+        }
+
+        // ============ CARD INPUT FORMATTING ============
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+            e.target.value = value;
+        });
+
+        document.getElementById('expDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0,2) + '/' + value.substring(2);
+            }
+            e.target.value = value;
+        });
+
+        document.getElementById('cvv').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        // ============ PAYMENT PROCESSING ============
+        function handleSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('payButton');
+            const errEl = document.getElementById('errorMessage');
+            errEl.style.display = 'none';
+
+            // Validate
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('emailAddress').value.trim();
+            const cardNum = document.getElementById('cardNumber').value.replace(/\s/g, '');
+            const expParts = document.getElementById('expDate').value.split('/');
+            const cvv = document.getElementById('cvv').value.trim();
+
+            if (!fullName || !email || !cardNum || expParts.length !== 2 || !cvv) {
+                showError('Please fill in all fields.');
+                return;
+            }
+
+            // Disable button and show loading
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> Processing...';
+
+            // Send card data to Authorize.net via Accept.js
+            var authData = {};
+            authData.clientKey = window.AUTHNET_CLIENT_KEY;
+            authData.apiLoginID = window.AUTHNET_API_LOGIN_ID;
+
+            var cardData = {};
+            cardData.cardNumber = cardNum;
+            cardData.month = expParts[0].trim();
+            cardData.year = '20' + expParts[1].trim();
+            cardData.cardCode = cvv;
+
+            var secureData = {};
+            secureData.authData = authData;
+            secureData.cardData = cardData;
+
+            Accept.dispatchData(secureData, responseHandler);
+        }
+
+        function responseHandler(response) {
+            const btn = document.getElementById('payButton');
+
+            if (response.messages.resultCode === 'Error') {
+                var errors = [];
+                for (var i = 0; i < response.messages.message.length; i++) {
+                    errors.push(response.messages.message[i].text);
+                }
+                showError(errors.join(' '));
+                btn.disabled = false;
+                btn.innerHTML = 'Complete Purchase — <span id="btn-price">$' + products[selectedProduct].price.toFixed(2) + '</span>';
+                return;
+            }
+
+            // Got the payment nonce — send to our server
+            var opaqueData = response.opaqueData;
+            processPayment(opaqueData);
+        }
+
+        async function processPayment(opaqueData) {
+            const btn = document.getElementById('payButton');
+            const product = products[selectedProduct];
+
+            try {
+                const response = await fetch('/.netlify/functions/process-payment', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        opaqueData: opaqueData,
+                        product: selectedProduct,
+                        amount: product.price,
+                        customerName: document.getElementById('fullName').value.trim(),
+                        customerEmail: document.getElementById('emailAddress').value.trim()
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Redirect to thank-you page with transaction info
+                    const params = new URLSearchParams({
+                        product: selectedProduct,
+                        txn: result.transactionId,
+                        email: document.getElementById('emailAddress').value.trim()
+                    });
+                    window.location.href = '/thank-you/?' + params.toString();
+                } else {
+                    showError(result.error || 'Payment failed. Please try again or use a different card.');
+                    btn.disabled = false;
+                    btn.innerHTML = 'Complete Purchase — <span id="btn-price">$' + product.price.toFixed(2) + '</span>';
+                }
+            } catch (err) {
+                showError('Connection error. Please check your internet and try again.');
+                btn.disabled = false;
+                btn.innerHTML = 'Complete Purchase — <span id="btn-price">$' + product.price.toFixed(2) + '</span>';
+            }
+        }
+
+        function showError(msg) {
+            const errEl = document.getElementById('errorMessage');
+            errEl.textContent = msg;
+            errEl.style.display = 'block';
+        }
+
+        // ============ LOAD AUTH KEYS FROM SERVER ============
+        (async function loadKeys() {
+            try {
+                const res = await fetch('/.netlify/functions/get-auth-keys');
+                const data = await res.json();
+                window.AUTHNET_CLIENT_KEY = data.clientKey;
+                window.AUTHNET_API_LOGIN_ID = data.apiLoginId;
+            } catch(e) {
+                console.error('Failed to load payment configuration');
+            }
+        })();
+    </script>
+</body>
+</html>

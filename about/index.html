@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="About Coach Lee DeForest — 25 years of basketball coaching experience at NCAA DI, DII, NAIA, and JUCO levels. Athletic Director at Florida Coastal Prep. Learn about the Princeton Offense philosophy.">
+    <meta name="keywords" content="Coach Lee DeForest, basketball coaching, Princeton Offense, coaching experience">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Coach Lee DeForest">
+    <link rel="canonical" href="https://coachprincetonbasketball.com/about">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Coach Lee DeForest — Coach Princeton Basketball">
+    <meta property="og:description" content="25 years of basketball coaching experience at NCAA DI, DII, NAIA, and JUCO levels. Athletic Director at Florida Coastal Prep.">
+    <meta property="article:author" content="Coach Lee DeForest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coachprincetonbasketball.com/about">
+    <meta property="og:image" content="https://coachprincetonbasketball.com/og-image.jpg">
+
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Coach Lee DeForest — Coach Princeton Basketball">
+    <meta name="twitter:description" content="25 years of basketball coaching experience at multiple levels.">
+    <meta name="twitter:image" content="https://coachprincetonbasketball.com/og-image.jpg">
+
+    <title>About Coach Lee DeForest — Coach Princeton Basketball</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11158472206');
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 1.2rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c9a84c;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: #e8c96d;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-links a:hover {
+            color: #c9a84c;
+            border-bottom: 2px solid #c9a84c;
+        }
+
+        .nav-cta {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-cta:hover {
+            background-color: #e8c96d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, #111111 0%, #0a0a0a 50%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-subtext {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: #c9a84c;
+            color: #0a0a0a;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #e8c96d;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(201, 168, 76, 0.35);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 100px 2rem;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #ffffff;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bio-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #c9a84c;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-list {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .experience-list h3 {
+            color: #c9a84c;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-list ul {
+            list-style: none;
+        }
+
+        .experience-list li {
+            padding: 0.8rem 0;
+            color: #bbbbbb;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .experience-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #c9a84c;
+            font-weight: bold;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .highlight {
+            padding: 1.5rem;
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .highlight-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #c9a84c;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-text {
+            font-size: 0.9rem;
+            color: #888888;
+        }
+
+        .philosophy-section {
+            padding: 100px 2rem;
+            background: rgba(17, 17, 17, 0.5);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .philosophy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .philosophy-intro {
+            font-size: 1.15rem;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .philosophy-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .philosophy-card {
+            padding: 2.5rem;
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .philosophy-card:hover {
+            background: rgba(17, 17, 17, 0.9);
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .philosophy-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #c9a84c;
+        }
+
+        .philosophy-card p {
+            font-size: 0.95rem;
+            color: #bbbbbb;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.05) 100%);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 4rem 2rem 2rem;
+            color: #888888;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #888888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: #c9a84c;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .bio-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero {
+                padding: 60px 1rem;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Coach Princeton Basketball</a>
+            <ul class="nav-links">
+                <li><a href="/about">About</a></li>
+                <li><a href="/book">Playbook</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/#pricing" class="nav-cta">Get the Playbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <h1>About Coach Lee DeForest</h1>
+                <p class="hero-subtext">25 years of basketball coaching experience at every level. From NCAA Division I to youth leagues, Coach DeForest has taught, developed, and inspired thousands of players.</p>
+            </div>
+        </section>
+
+        <!-- Coach Bio Section -->
+        <section class="content-section scroll-animate">
+            <div class="container">
+                <div class="bio-grid">
+                    <div class="bio-content scroll-animate">
+                        <h2>Coach Lee DeForest</h2>
+                        <p>Coach Lee DeForest has spent 25 years in basketball, serving as a coach, mentor, and innovator at the highest levels of the sport. Currently, he serves as Athletic Director and Director of Operations at Florida Coastal Prep, where he oversees a comprehensive basketball program dedicated to player development and college placement.</p>
+                        <p>Throughout his career, Coach DeForest has coached at NCAA Division I, Division II, NAIA, and JUCO levels. He's developed numerous players who have gone on to compete at the college level, including successful placements at Missouri, DePaul, Houston Baptist, and SIU Edwardsville.</p>
+                        <p>Beyond coaching on the court, Coach DeForest is a published author on basketball offense strategy and has created instructional DVD materials that have influenced coaches worldwide. His expertise in the Princeton Offense—a read-based, system-oriented approach to basketball—has earned him recognition as one of the sport's most innovative offensive minds.</p>
+                    </div>
+
+                    <div class="highlights-grid scroll-animate">
+                        <div class="highlight">
+                            <div class="highlight-number">25</div>
+                            <div class="highlight-text">Years of Coaching Experience</div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-number">4</div>
+                            <div class="highlight-text">Coaching Levels</div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-number">200+</div>
+                            <div class="highlight-text">Athletes Coached</div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-number">12</div>
+                            <div class="highlight-text">Countries Teaching</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-list scroll-animate">
+                    <h3>Coaching Experience</h3>
+                    <ul>
+                        <li>NCAA Division I Basketball Coaching</li>
+                        <li>NCAA Division II Program Development</li>
+                        <li>NAIA Championship Experience</li>
+                        <li>JUCO Competitive Basketball</li>
+                        <li>AAU Program Leadership</li>
+                        <li>High School Championship Teams</li>
+                        <li>Youth Basketball Development Programs</li>
+                        <li>International Coaching Clinics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="philosophy-section scroll-animate">
+            <div class="philosophy-container">
+                <h2 class="section-title">Coaching Philosophy</h2>
+                <p class="philosophy-intro scroll-animate">Coach DeForest's approach to basketball is built on developing intelligent, confident players who understand the "why" behind every possession. The Princeton Offense is the foundation of this philosophy.</p>
+
+                <div class="philosophy-cards">
+                    <div class="philosophy-card scroll-animate">
+                        <h3>Basketball IQ First</h3>
+                        <p>Great basketball is about reading the defense and making the right decision. Coach DeForest teaches players to think, not just execute plays. A thinking player is unstoppable.</p>
+                    </div>
+
+                    <div class="philosophy-card scroll-animate">
+                        <h3>Systematic Approach</h3>
+                        <p>The Princeton Offense provides a complete system with six sets, fourteen counters, and infinite scoring opportunities. Coaches who use this system find themselves spending less time designing plays and more time developing players.</p>
+                    </div>
+
+                    <div class="philosophy-card scroll-animate">
+                        <h3>Works at Every Level</h3>
+                        <p>Coach DeForest has proven this system at middle school, high school, college, and professional levels. It scales from youth to elite competition. It's not about talent—it's about system and execution.</p>
+                    </div>
+
+                    <div class="philosophy-card scroll-animate">
+                        <h3>College Placement Focus</h3>
+                        <p>His programs consistently place players at college programs because the Princeton Offense develops the basketball skills and IQ that college coaches look for. Smart, skilled, confident players get recruited.</p>
+                    </div>
+
+                    <div class="philosophy-card scroll-animate">
+                        <h3>Complete Player Development</h3>
+                        <p>Running the Princeton Offense develops better shooters, better decision-makers, better ball handlers. It creates complete basketball players, not just specialists who can execute one role.</p>
+                    </div>
+
+                    <div class="philosophy-card scroll-animate">
+                        <h3>Proven Results</h3>
+                        <p>200+ coaches worldwide have adopted this system. Players placed at D1, D2, NAIA, and JUCO programs. Coaches seeing immediate offensive improvement. Real results, real coaches, real teams.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- College Placements -->
+        <section class="content-section scroll-animate">
+            <div class="container">
+                <h2 class="section-title">Players Placed at College Programs</h2>
+                <div class="experience-list scroll-animate" style="margin: 0 auto; max-width: 800px;">
+                    <h3>NCAA Division I Programs</h3>
+                    <ul>
+                        <li>University of Missouri</li>
+                        <li>DePaul University</li>
+                        <li>University of Houston Baptist</li>
+                    </ul>
+                </div>
+                <div class="experience-list scroll-animate" style="margin: 2rem auto 0; max-width: 800px;">
+                    <h3>NCAA Division II & NAIA</h3>
+                    <ul>
+                        <li>SIU Edwardsville</li>
+                        <li>Multiple NAIA National Programs</li>
+                        <li>Junior College Transfer Pathways</li>
+                        <li>Prep School Leadership Development</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section scroll-animate">
+            <div class="cta-container">
+                <h2 class="cta-title">Learn the Complete System</h2>
+                <p class="cta-text">Coach DeForest has spent 25 years perfecting the Princeton Offense. Now, you can learn the exact system he uses to develop players and win games. The complete playbook with all six sets, fourteen counters, and 42 detailed drills is available for coaches ready to transform their offense.</p>
+                <a href="/book" class="btn-primary">Get the Princeton Playbook</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about">About Coach</a></li>
+                        <li><a href="/book">The Playbook</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog">Coaching Blog</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/contact">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use">Terms of Use</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Coach Princeton Basketball. All rights reserved. | Coach Lee DeForest</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Coach Lee DeForest",
+        "jobTitle": "Basketball Coach and Author",
+        "url": "https://coachprincetonbasketball.com/about",
+        "description": "25 years of basketball coaching experience at NCAA DI, DII, NAIA, and JUCO levels",
+        "knowsAbout": ["Basketball Coaching", "Princeton Offense", "Player Development"],
+        "sameAs": [
+            "https://coachprincetonbasketball.com"
+        ]
+    }
+    </script>
+
+    <script>
+        // Sticky Navigation
+        const navbar = document.getElementById('navbar');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
