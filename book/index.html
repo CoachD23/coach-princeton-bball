@@ -59,17 +59,21 @@
             overflow-x: hidden;
         }
 
-        /* Sticky Navigation */
-        nav {
+        /* Fixed site header (wraps announcement bar + nav) */
+        .site-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
+            z-index: 1001;
+        }
+
+        /* Sticky Navigation */
+        nav {
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(201, 168, 76, 0.1);
             padding: 1.2rem 0;
-            z-index: 1000;
             transition: all 0.3s ease;
         }
 
@@ -162,9 +166,9 @@
             }
         }
 
-        /* Main Content */
+        /* Main Content — offset for fixed site-header (announcement bar + nav) */
         main {
-            margin-top: 60px;
+            margin-top: 105px;
         }
 
         .container {
@@ -880,6 +884,10 @@
                 padding: 60px 1rem;
             }
 
+            main {
+                margin-top: 120px;
+            }
+
             .pricing-card.featured {
                 transform: scaleY(1);
             }
@@ -934,8 +942,6 @@
             font-size: 0.88rem;
             font-weight: 700;
             letter-spacing: 0.02em;
-            position: relative;
-            z-index: 1001;
         }
         .announcement-bar a {
             color: #0a0a0a;
@@ -1026,18 +1032,21 @@
     </style>
 </head>
 <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        🏀 Spring Season — Introductory pricing ends soon. <a href="#pricing">Get the Complete System for $39 →</a>
-    </div>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">Coach Princeton Basketball</a>
-            <a href="#pricing" class="nav-cta">Get the Playbook</a>
+    <!-- Fixed Site Header: announcement bar + nav stacked together -->
+    <header class="site-header">
+        <!-- Announcement Bar -->
+        <div class="announcement-bar">
+            🏀 Spring Season — Introductory pricing ends soon. <a href="#pricing">Get the Complete System for $39 →</a>
         </div>
-    </nav>
+
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="/" class="nav-logo">Coach Princeton Basketball</a>
+                <a href="#pricing" class="nav-cta">Get the Playbook</a>
+            </div>
+        </nav>
+    </header>
 
     <!-- Main Content -->
     <main>
