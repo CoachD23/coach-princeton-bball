@@ -8,7 +8,7 @@ const PRODUCTS = {
     price: 39.00,
     downloads: [
       { label: '87-Page Princeton Offense Playbook (PDF)', url: 'https://coachprincetonbasketball.com/files/princeton-offense-playbook.pdf' },
-      { label: 'Learn the Princeton Video Walkthrough', url: 'https://www.youtube.com/watch?v=2FgWbwnToLc' },
+      { label: 'Learn the Princeton Video Walkthrough', url: 'https://youtu.be/oik75ML4kp0' },
       { label: 'Practice Plans & Drills Guide (PDF)', url: 'https://coachprincetonbasketball.com/files/practice-plans-drills.pdf' }
     ]
   },
@@ -17,7 +17,7 @@ const PRODUCTS = {
     price: 49.00,
     downloads: [
       { label: '87-Page Princeton Offense Playbook (PDF)', url: 'https://coachprincetonbasketball.com/files/princeton-offense-playbook.pdf' },
-      { label: 'Learn the Princeton Video Walkthrough', url: 'https://www.youtube.com/watch?v=2FgWbwnToLc' },
+      { label: 'Learn the Princeton Video Walkthrough', url: 'https://youtu.be/oik75ML4kp0' },
       { label: 'Practice Plans & Drills Guide (PDF)', url: 'https://coachprincetonbasketball.com/files/practice-plans-drills.pdf' },
       { label: 'West Virginia 2-Guard Offense Playbook (PDF)', url: 'https://coachprincetonbasketball.com/files/wv-2guard-offense.pdf' }
     ]

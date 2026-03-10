@@ -17,6 +17,22 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-11158472206');
+
+        // Fire begin_checkout when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            var preselect = new URLSearchParams(window.location.search).get('product');
+            var productId = (preselect === 'system') ? 'system' : 'bundle';
+            var items = {
+                system: { name: 'Princeton Offense System', price: 39.00 },
+                bundle: { name: 'Complete Coaching Bundle', price: 49.00 }
+            };
+            var item = items[productId];
+            gtag('event', 'begin_checkout', {
+                currency: 'USD',
+                value: item.price,
+                items: [{ item_name: item.name, price: item.price, quantity: 1 }]
+            });
+        });
     </script>
 
     <!-- Authorize.net Accept.js (Production) -->
@@ -448,9 +464,15 @@
             cardData.year = '20' + expParts[1].trim();
             cardData.cardCode = cvv;
 
+            var nameParts = fullName.split(' ');
+            var billTo = {};
+            billTo.firstName = nameParts[0] || 'Customer';
+            billTo.lastName = nameParts.slice(1).join(' ') || ' ';
+
             var secureData = {};
             secureData.authData = authData;
             secureData.cardData = cardData;
+            secureData.billTo = billTo;
 
             Accept.dispatchData(secureData, responseHandler);
         }

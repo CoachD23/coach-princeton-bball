@@ -622,6 +622,9 @@
             font-weight: bold;
         }
 
+        /* Playbook Preview Gallery */
+        /* Preview section removed */
+
         /* Pricing Section */
         .pricing-section {
             padding: 100px 2rem;
@@ -1269,6 +1272,17 @@
             </div>
         </section>
 
+        <!-- Sales Video -->
+        <section style="padding: 60px 2rem; background: linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%); border-bottom: 1px solid rgba(201, 168, 76, 0.1);">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 0.75rem;">See the System in Action</h2>
+                <p style="text-align: center; color: #999; font-size: 1rem; margin-bottom: 2rem;">Watch how the Princeton Offense creates open shots through reads, not memorized plays.</p>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:2px solid rgba(201,168,76,0.25);box-shadow:0 12px 40px rgba(0,0,0,0.4)">
+                    <iframe src="https://www.youtube.com/embed/2FgWbwnToLc" title="Princeton Offense System Breakdown" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px"></iframe>
+                </div>
+            </div>
+        </section>
+
         <!-- Stats Bar -->
         <section class="stats-bar">
             <div class="container stats-container">
@@ -1308,6 +1322,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Playbook Preview section removed -->
 
         <!-- Social Proof - All Testimonials -->
         <section class="testimonials-featured scroll-animate">
@@ -1421,7 +1437,7 @@
                             <li>Zone offense and press break</li>
                             <li>60-day guarantee</li>
                         </ul>
-                        <button class="pricing-button" onclick="location.href='/checkout/?product=system';">Get Started — $39</button>
+                        <button class="pricing-button" onclick="gtag('event','begin_checkout',{currency:'USD',value:39,items:[{item_name:'Princeton Offense System',price:39}]});location.href='/checkout/?product=system';">Get Started — $39</button>
                     </div>
 
                     <div class="pricing-card featured scroll-animate">
@@ -1438,7 +1454,7 @@
                             <li>Zone offense and press break</li>
                             <li>60-day guarantee</li>
                         </ul>
-                        <button class="pricing-button" onclick="location.href='/checkout/?product=bundle';">Get the Bundle — $49</button>
+                        <button class="pricing-button" onclick="gtag('event','begin_checkout',{currency:'USD',value:49,items:[{item_name:'Complete Coaching Bundle',price:49}]});location.href='/checkout/?product=bundle';">Get the Bundle — $49</button>
                     </div>
                 </div>
             </div>
@@ -1704,20 +1720,20 @@
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/blog">Coaching Blog</a></li>
-                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/blog/">Coaching Blog</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
                         <li><a href="#contact">Contact Support</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/contact/">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms of Use</a></li>
-                        <li><a href="/refunds">Refund Policy</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use/">Terms of Use</a></li>
+                        <li><a href="/privacy/">Refund Policy</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1725,7 +1741,7 @@
                     <h4>Follow Us</h4>
                     <ul>
                         <li><a href="https://www.youtube.com/@CoachPrincetonBasketball" target="_blank" rel="noopener">YouTube</a></li>
-                        <li><a href="mailto:info@floridacoastalprep.com">Email Us</a></li>
+                        <li><a href="mailto:coachdeforest@gmail.com">Email Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -1756,12 +1772,12 @@
         "logo": "https://coachprincetonbasketball.com/logo.png",
         "description": "Basketball coaching system and playbook for the Princeton Offense",
         "foundingDate": "2020",
-        "email": "info@floridacoastalprep.com",
+        "email": "coachdeforest@gmail.com",
         "sameAs": ["https://www.youtube.com/@CoachPrincetonBasketball"],
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Support",
-            "email": "info@floridacoastalprep.com",
+            "email": "coachdeforest@gmail.com",
             "url": "https://coachprincetonbasketball.com/contact"
         }
     }
@@ -1802,7 +1818,61 @@
             "reviewCount": "127",
             "bestRating": "5",
             "worstRating": "1"
-        }
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Coach Mike R."
+                },
+                "reviewBody": "We installed the Chin and Low sets from the Blueprint on Monday. By Thursday, my JV squad was making backdoor reads I had been trying to teach for three years. We went 8-2 down the stretch."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Coach David T."
+                },
+                "reviewBody": "The counter packages alone are worth ten times the price. Last season we faced a switching man defense in the state quarterfinals — we scored 14 straight using the switch counters from the playbook."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Coach Sarah K."
+                },
+                "reviewBody": "Our offensive efficiency jumped from 0.89 to 1.04 points per possession within the first month. The system is that clear and effective."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Coach James W."
+                },
+                "reviewBody": "Parents can't believe what they're watching. The offense is so beautiful, so clean, and our kids play with such confidence. This changed everything."
+            }
+        ]
     }
     </script>
 
@@ -1907,7 +1977,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Course",
-        "name": "Princeton Offense Mastery Blueprint",
+        "name": "Princeton Offense System",
         "description": "Complete coaching system for the Princeton Offense featuring six interchangeable sets, fourteen counter packages, zone offense, press break, out-of-bounds plays, and 42 breakdown drills.",
         "provider": {
             "@type": "Organization",
@@ -1950,8 +2020,8 @@
         "thumbnailUrl": "https://coachprincetonbasketball.com/og-image.jpg",
         "uploadDate": "2025-01-15",
         "duration": "PT10M41S",
-        "contentUrl": "https://www.youtube.com/@CoachPrincetonBasketball",
-        "embedUrl": "https://www.youtube.com/@CoachPrincetonBasketball",
+        "contentUrl": "https://www.youtube.com/watch?v=2FgWbwnToLc",
+        "embedUrl": "https://www.youtube.com/embed/2FgWbwnToLc",
         "publisher": {
             "@type": "Organization",
             "name": "Coach Princeton Basketball",
@@ -1993,77 +2063,6 @@
             "https://coachprincetonbasketball.com/contact/",
             "https://coachprincetonbasketball.com/checkout/?product=bundle"
         ]
-    }
-    </script>
-
-    <!-- Review Schemas - Individual Reviews for Rich Snippets -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "@id": "https://coachprincetonbasketball.com/#product",
-        "name": "Princeton Offense System — Complete Coaching Playbook",
-        "review": [
-            {
-                "@type": "Review",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "author": {
-                    "@type": "Person",
-                    "name": "Coach Mike R."
-                },
-                "reviewBody": "We installed the Chin and Low sets from the Blueprint on Monday. By Thursday, my JV squad was making backdoor reads I had been trying to teach for three years. We went 8-2 down the stretch."
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "author": {
-                    "@type": "Person",
-                    "name": "Coach David T."
-                },
-                "reviewBody": "The counter packages alone are worth ten times the price. Last season we faced a switching man defense in the state quarterfinals — we scored 14 straight using the switch counters from the playbook."
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "author": {
-                    "@type": "Person",
-                    "name": "Coach Sarah K."
-                },
-                "reviewBody": "Our offensive efficiency jumped from 0.89 to 1.04 points per possession within the first month. The system is that clear and effective."
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "author": {
-                    "@type": "Person",
-                    "name": "Coach James W."
-                },
-                "reviewBody": "Parents can't believe what they're watching. The offense is so beautiful, so clean, and our kids play with such confidence. This changed everything."
-            }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "127",
-            "bestRating": "5",
-            "worstRating": "1"
-        }
     }
     </script>
 
@@ -2158,10 +2157,24 @@
         }
 
         // Google Ads micro-conversion tracking
-        // Track CTA button clicks
+        // Track CTA button clicks (both <a> links and <button onclick> elements)
         document.querySelectorAll('a[href*="/checkout/"]').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var product = this.href.indexOf('bundle') > -1 ? 'bundle' : 'system';
+                gtag('event', 'begin_checkout', {
+                    'event_category': 'engagement',
+                    'event_label': product,
+                    'value': product === 'bundle' ? 49 : 39,
+                    'currency': 'USD'
+                });
+            });
+        });
+
+        // Track pricing section button clicks (these use onclick, not href)
+        document.querySelectorAll('.pricing-button').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var onclickStr = this.getAttribute('onclick') || '';
+                var product = onclickStr.indexOf('bundle') > -1 ? 'bundle' : 'system';
                 gtag('event', 'begin_checkout', {
                     'event_category': 'engagement',
                     'event_label': product,
@@ -2215,6 +2228,124 @@
                 }
             });
         });
+    </script>
+
+    <!-- ============ EXIT-INTENT EMAIL CAPTURE POPUP ============ -->
+    <!-- Hidden Netlify form for bot detection (required by Netlify Forms) -->
+    <form name="email-capture" netlify netlify-honeypot="bot-field" hidden>
+        <input name="bot-field">
+        <input name="email" type="email">
+        <input name="source" type="hidden">
+    </form>
+
+    <div id="exitPopup" style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,0.8); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
+        <div style="background:#111; border:1px solid rgba(201,168,76,0.3); border-radius:16px; max-width:480px; width:90%; padding:2.5rem; position:relative; text-align:center; box-shadow:0 25px 50px rgba(0,0,0,0.5);">
+            <button onclick="closeExitPopup()" style="position:absolute; top:12px; right:16px; background:none; border:none; color:#666; font-size:1.5rem; cursor:pointer; line-height:1;">&times;</button>
+            <div style="font-size:2.5rem; margin-bottom:0.75rem;">🏀</div>
+            <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:0.5rem; background:linear-gradient(135deg,#c9a84c,#e8c96d); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Wait — Free Coaching Guide</h3>
+            <p style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">Get our <strong style="color:#fff;">5 Princeton Offense Quick Hitters</strong> PDF — the plays that work in the first week of practice. Free, instant download.</p>
+            <form id="exitPopupForm" style="display:flex; flex-direction:column; gap:0.75rem;">
+                <input type="email" id="exitEmail" placeholder="Your coaching email" required style="padding:0.85rem 1rem; border-radius:8px; border:1px solid rgba(201,168,76,0.2); background:#1a1a1a; color:#fff; font-size:1rem; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='#c9a84c'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'">
+                <button type="submit" style="padding:0.85rem 1rem; border-radius:8px; border:none; background:linear-gradient(135deg,#c9a84c,#b8943f); color:#0a0a0a; font-size:1rem; font-weight:700; cursor:pointer; transition:transform 0.2s, box-shadow 0.2s; font-family:inherit;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(201,168,76,0.3)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">Send Me the Free Plays →</button>
+            </form>
+            <div id="exitSuccess" style="display:none; padding:1rem 0;">
+                <div style="font-size:1.8rem; margin-bottom:0.5rem;">✅</div>
+                <p style="color:#4ade80; font-weight:600; margin-bottom:0.25rem;">You're in!</p>
+                <p style="color:#999; font-size:0.85rem;">Check your inbox for the free plays guide.</p>
+            </div>
+            <p style="color:#555; font-size:0.75rem; margin-top:1rem;">No spam ever. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var popup = document.getElementById('exitPopup');
+        var shown = false;
+        var COOKIE_NAME = 'cpb_popup_seen';
+
+        // Don't show if already seen (7-day cookie) or on checkout/thank-you pages
+        function getCookie(name) {
+            var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+        }
+        function setCookie(name, val, days) {
+            var d = new Date();
+            d.setTime(d.getTime() + days * 86400000);
+            document.cookie = name + '=' + val + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+        }
+
+        if (getCookie(COOKIE_NAME) || location.pathname.indexOf('checkout') > -1 || location.pathname.indexOf('thank-you') > -1) return;
+
+        function showPopup() {
+            if (shown) return;
+            shown = true;
+            popup.style.display = 'flex';
+            setCookie(COOKIE_NAME, '1', 7);
+            gtag('event', 'popup_shown', { 'event_category': 'email_capture', 'event_label': 'exit_intent' });
+        }
+
+        // Desktop: exit intent (mouse leaves viewport top)
+        document.addEventListener('mouseout', function(e) {
+            if (e.clientY < 5 && !e.relatedTarget && !e.toElement) {
+                showPopup();
+            }
+        });
+
+        // Mobile: show after 45 seconds
+        if (window.innerWidth < 768) {
+            setTimeout(showPopup, 45000);
+        }
+
+        // Also show after 60s of scrolling engagement (desktop fallback)
+        setTimeout(function() {
+            if (!shown && window.scrollY > 800) showPopup();
+        }, 60000);
+
+        // Close popup
+        window.closeExitPopup = function() {
+            popup.style.display = 'none';
+            gtag('event', 'popup_closed', { 'event_category': 'email_capture' });
+        };
+
+        // Close on backdrop click
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) window.closeExitPopup();
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') window.closeExitPopup();
+        });
+
+        // Form submission via Netlify Forms
+        document.getElementById('exitPopupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('exitEmail').value;
+            if (!email) return;
+
+            var formData = new FormData();
+            formData.append('form-name', 'email-capture');
+            formData.append('email', email);
+            formData.append('source', 'exit-intent-popup');
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            }).then(function() {
+                document.getElementById('exitPopupForm').style.display = 'none';
+                document.getElementById('exitSuccess').style.display = 'block';
+                gtag('event', 'generate_lead', {
+                    'event_category': 'email_capture',
+                    'event_label': 'exit_intent_popup',
+                    'value': 5
+                });
+                setTimeout(function() { popup.style.display = 'none'; }, 3000);
+            }).catch(function() {
+                alert('Something went wrong. Email coachdeforest@gmail.com for the free guide.');
+            });
+        });
+    })();
     </script>
 </body>
 </html>

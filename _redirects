@@ -10,15 +10,16 @@
 # -----------------------------------------------
 # Old WordPress page URLs → new pages
 # -----------------------------------------------
-/basketball-playbook-video/        /book/                301
-/chin-set/                         /                     301
-/5-common-myths-about-the-princeton-offense/   /blog/    301
-/3-reasons-to-learn-the-princeton-offense/     /blog/    301
+# RECOVERED — these pages now exist as static HTML:
+# /basketball-playbook-video/  (restored 2026-02-21)
+# /chin-set/                   (restored 2026-02-21)
+# /5-common-myths-about-the-princeton-offense/  (restored 2026-02-21)
+# /3-reasons-to-learn-the-princeton-offense/    (restored 2026-02-21)
 /contact-us/                       /contact/             301
 /princeton-playbook/               /book/                301
 /services/                         /                     301
 /privacy-policy/                   /privacy/             301
-/terms-of-use/                     /privacy/             301
+# /terms-of-use/ has its own page — no redirect needed
 
 # -----------------------------------------------
 # WordPress default cruft
@@ -28,20 +29,71 @@
 /wp-admin                          /                     301
 /wp-admin/*                        /                     301
 /wp-login.php                      /                     301
+# Chin Set PDF (Google-indexed) → redirect to article page
+/wp-content/uploads/2023/08/Chin-Set-Princeton-Offense.pdf  /chin-set/  301
 /wp-content/*                      /                     301
 /wp-includes/*                     /                     301
 /wp-json/*                         /                     301
 /xmlrpc.php                        /                     301
-/wp-sitemap.xml                    /                     301
-/wp-sitemap-posts-post-1.xml       /                     301
-/wp-sitemap-posts-page-1.xml       /                     301
-/wp-sitemap-taxonomies-category-1.xml  /                 301
-/wp-sitemap-users-1.xml            /                     301
+/wp-sitemap.xml                    /sitemap.xml          301
+/wp-sitemap-posts-post-1.xml       /sitemap.xml          301
+/wp-sitemap-posts-page-1.xml       /sitemap.xml          301
+/wp-sitemap-taxonomies-category-1.xml  /sitemap.xml      301
+/wp-sitemap-users-1.xml            /sitemap.xml          301
 /feed/                             /                     301
 /comments/feed/                    /                     301
 /?p=*                              /                     301
 /?page_id=*                        /                     301
 /author/*                          /about/               301
+
+# -----------------------------------------------
+# Old WordPress pages found via Wayback Machine audit
+# (confirmed 200-status pages that need redirects)
+# -----------------------------------------------
+/pricing/                          /#pricing             301
+/pricing                           /#pricing             301
+/princeton-offense-blueprint/      /book/                301
+/princeton-offense-blueprint       /book/                301
+/princeton-offense-secrets/        /book/                301
+/princeton-offense-secrets         /book/                301
+/terms-use/                        /terms-of-use/        301
+/terms-use                         /terms-of-use/        301
+/princeton-offense-chin-breakdown/ /chin-set/            301
+/princeton-offense-chin-breakdown  /chin-set/            301
+/hubiebrown/                       /blog/                301
+/hubiebrown                        /blog/                301
+/florida/                          /                     301
+/florida                           /                     301
+/readmore-2/                       /                     301
+/readmore-2                        /                     301
+/seven-essential-roles-basketball-coach/   /blog/        301
+/seven-essential-roles-basketball-coach    /blog/        301
+/2014-ncaa-tournament-best-xs-os-man-set-plays-zone-offense/  /blog/  301
+/belmont-blob-series-baseline-bounds/      /blog/        301
+/gonzaga-pick-and-roll-continuity/         /blog/        301
+/veer-back-pick-and-roll-defense/          /blog/        301
+/2015/09/12/blog-posty/                    /blog/        301
+
+# Old WordPress category pages
+/category/basketball-coaching-philosophy/  /blog/        301
+/category/basketball-coaching-tactics-and-strategies/  /blog/  301
+/category/basketball-offense-sets-and-plays/  /blog/    301
+/category/ncaa-man-to-man-offense-sets-and-plays/  /blog/  301
+/category/offensive-practice-drills/       /blog/        301
+/category/practice-organization/           /blog/        301
+/category/slobs/                           /blog/        301
+/category/*                                /blog/        301
+
+# Old WordPress nested blog posts
+/basketball-coaching-tactics-and-strategies/*  /blog/    301
+
+# Old WordPress date archives
+/2015/*                            /blog/                301
+/2016/*                            /blog/                301
+/2017/*                            /blog/                301
+
+# Old WordPress portfolio items
+/portfolio-item/*                  /book/                301
 
 # -----------------------------------------------
 # Missing pages → sensible destinations

@@ -1,0 +1,64 @@
+COACH PRINCETON BASKETBALL — PRE-ADS FIX CHECKLIST
+====================================================
+Site: coachprincetonbasketball.com
+Last Updated: 2026-02-21
+Goal: Complete all fixes before launching Google Ads at $20-40/day
+
+
+DAY 1 — CRITICAL (Revenue-Blocking)
+------------------------------------
+[x] Build /thank-you/ page with purchase conversion pixel
+[x] Fix pricing button gtag tracking (button onclick not captured)
+[x] Fix mobile navigation on About, Contact, Privacy pages
+[x] Fix book page bottom CTA (add ?product=system param)
+[x] Fix VideoObject schema URLs (was YouTube channel, not content)
+
+
+DAY 2 — HIGH PRIORITY (Conversion Optimization)
+-------------------------------------------------
+[x] Create og-image.jpg (1200x630px social sharing image)
+[x] Create logo.png (for Organization schema / Google Knowledge Panel)
+[ ] Add real Google Ads purchase conversion label to thank-you page
+[x] Fix Course schema name (says "Blueprint" but product is "System")
+[x] Add email capture (exit-intent popup or inline form)
+
+
+DAY 3 — MEDIUM PRIORITY (Trust & Engagement)
+----------------------------------------------
+[ ] Build contact form (Netlify Forms — free, 5 min setup)
+[ ] Add Content Security Policy header to netlify.toml
+[ ] Add HSTS header to netlify.toml
+[ ] Fix email inconsistency across pages
+[ ] Add testimonial photos to review section
+
+
+WEEK 1 — PRE-ADS OPTIMIZATION
+-------------------------------
+[ ] Create dedicated Google Ads landing page (no nav, focused CTA)
+[ ] Set up Google Ads conversion tracking (get conversion label)
+[ ] Set up remarketing pixel for non-buyers
+[ ] Add urgency elements (countdown timer, limited-time offer)
+[ ] Build post-purchase upsell flow
+
+
+WEEK 2 — GROWTH INFRASTRUCTURE
+--------------------------------
+[ ] Connect GitHub repo (gh auth login + push)
+[ ] Set up email automation (welcome sequence)
+[ ] Add FAQ schema to subpages
+[ ] Optimize page speed (inline CSS, lazy-load images)
+[ ] Add A/B testing for headlines and CTAs
+[ ] Create blog content calendar for SEO
+[ ] Build affiliate/referral program
+[ ] Add live chat or chatbot (Crisp/Tawk.to = free)
+[ ] Create video testimonials page
+[ ] Set up Google Search Console + submit sitemap
+
+
+QUICK REFERENCE
+----------------
+Deploy command:     netlify deploy --prod --dir=.
+Site ID (prod):     ef469341-8cde-437a-be68-a9fba72c47d6
+Google Ads ID:      AW-11158472206
+DNS:                Netlify DNS via GoDaddy (dns1-4.p02.nsone.net)
+Payment processor:  Authorize.net via Accept.js + Netlify Functions

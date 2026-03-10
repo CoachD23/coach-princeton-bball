@@ -10,7 +10,7 @@
     <meta name="keywords" content="contact, coaching inquiry, support, Coach Lee DeForest">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Coach Lee DeForest">
-    <link rel="canonical" href="https://coachprincetonbasketball.com/contact">
+    <link rel="canonical" href="https://coachprincetonbasketball.com/contact/">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Contact Coach Princeton Basketball">
@@ -143,9 +143,64 @@
             box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
         }
 
+        /* Hamburger Menu */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .nav-hamburger span {
+            width: 24px;
+            height: 2px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .nav-hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav-hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
         @media (max-width: 768px) {
+            .nav-hamburger {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
             }
 
             .nav-container {
@@ -467,6 +522,89 @@
             transform: translateY(0);
         }
 
+        /* Contact Form */
+        .contact-form-wrapper {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+
+        .form-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #c9a84c;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: #0a0a0a;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #555;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #c9a84c;
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a84c' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: #111;
+            color: #fff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 1.05rem;
+            padding: 1rem;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -484,6 +622,10 @@
             .nav-cta {
                 display: none;
             }
+
+            .contact-form-wrapper {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -492,11 +634,14 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="/" class="nav-logo">Coach Princeton Basketball</a>
-            <ul class="nav-links">
-                <li><a href="/about">About</a></li>
-                <li><a href="/book">Playbook</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/book/">Playbook</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
                 <li><a href="/#pricing" class="nav-cta">Get the Playbook</a></li>
             </ul>
         </div>
@@ -522,7 +667,7 @@
 
                         <div class="contact-detail">
                             <h3>Email</h3>
-                            <p><a href="mailto:info@coachprincetonbasketball.com">info@coachprincetonbasketball.com</a></p>
+                            <p><a href="mailto:coachdeforest@gmail.com">coachdeforest@gmail.com</a></p>
                         </div>
 
                         <div class="contact-detail">
@@ -536,22 +681,39 @@
                         </div>
                     </div>
 
-                    <div class="contact-message scroll-animate">
-                        <h3>Common Reasons to Reach Out</h3>
-                        <p>We love hearing from coaches. Here are some common reasons coaches contact us:</p>
-                        <ul>
-                            <li>Questions about implementing the Princeton Offense</li>
-                            <li>Technical support or account issues</li>
-                            <li>Coaching inquiries and partnership opportunities</li>
-                            <li>Speaking engagements and clinic inquiries</li>
-                            <li>Video demonstration or content requests</li>
-                            <li>General feedback or suggestions</li>
-                            <li>Refund requests (we honor our 60-day guarantee)</li>
-                        </ul>
-
-                        <h3 style="margin-top: 2rem; color: #c9a84c;">Ready to Get Started?</h3>
-                        <p>If you haven't already, grab the Princeton Offense Mastery Blueprint. It's the complete system with everything you need to transform your offense.</p>
-                        <a href="/book" class="btn-primary">Get the Playbook</a>
+                    <div class="contact-form-wrapper scroll-animate">
+                        <h3 class="form-title">Send a Message</h3>
+                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="contact">
+                            <p class="hidden-field" style="display:none;">
+                                <label>Don't fill this out: <input name="bot-field"></label>
+                            </p>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Coach John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="coach@school.edu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select a topic...</option>
+                                    <option value="Princeton Offense Questions">Princeton Offense Questions</option>
+                                    <option value="Purchase Support">Purchase Support</option>
+                                    <option value="Coaching Inquiry">Coaching Inquiry / Partnership</option>
+                                    <option value="Speaking / Clinic">Speaking Engagement / Clinic</option>
+                                    <option value="Refund Request">Refund Request</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="How can we help you, Coach?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-submit">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -560,8 +722,9 @@
         <!-- CTA Section -->
         <section class="cta-section scroll-animate">
             <div class="cta-container">
-                <h2 class="cta-title">Have a Question?</h2>
-                <p class="cta-text">Email us at info@coachprincetonbasketball.com and we'll get back to you within 24-48 hours. We're here to support you and your team.</p>
+                <h2 class="cta-title">Ready to Transform Your Offense?</h2>
+                <p class="cta-text">Join 200+ coaches who've implemented the Princeton Offense system. The complete playbook, video breakdowns, and practice plans — all backed by a 60-day money-back guarantee.</p>
+                <a href="/#pricing" class="btn-primary">Get the Playbook</a>
             </div>
         </section>
     </main>
@@ -573,28 +736,28 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/about">About Coach</a></li>
-                        <li><a href="/book">The Playbook</a></li>
+                        <li><a href="/about/">About Coach</a></li>
+                        <li><a href="/book/">The Playbook</a></li>
                         <li><a href="/#pricing">Pricing</a></li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/blog">Coaching Blog</a></li>
+                        <li><a href="/blog/">Coaching Blog</a></li>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/contact">Contact Support</a></li>
+                        <li><a href="/contact/">Contact Support</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms-of-use">Terms of Use</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use/">Terms of Use</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                         <li><a href="/">Home</a></li>
                     </ul>
                 </div>
@@ -619,7 +782,7 @@
             "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Customer Service",
-                "email": "info@coachprincetonbasketball.com"
+                "email": "coachdeforest@gmail.com"
             }
         }
     }
@@ -656,6 +819,22 @@
         document.querySelectorAll('.scroll-animate').forEach(element => {
             observer.observe(element);
         });
+
+        // Hamburger Menu
+        const hamburger = document.getElementById('navHamburger');
+        const navLinks = document.getElementById('navLinks');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+{
+  "name": "coach-princeton-bball",
+  "private": true,
+  "dependencies": {
+    "authorizenet": "^1.0.8"
+  }
+}

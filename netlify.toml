@@ -6,6 +6,9 @@
   publish = "."
   # No build command needed — pure static HTML
 
+[functions]
+  directory = "netlify/functions"
+
 # -----------------------------------------------
 # Security & performance headers
 # -----------------------------------------------
@@ -16,6 +19,15 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com https://jstest.authorize.net https://js.authorize.net https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://pagead2.googlesyndication.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://apitest.authorize.net https://api2.authorize.net; frame-src https://www.youtube.com https://youtube.com https://www.googletagmanager.com https://bid.g.doubleclick.net https://td.doubleclick.net;"
+
+# PDF downloads
+[[headers]]
+  for = "/files/*.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Disposition = "attachment"
 
 # Cache static assets aggressively
 [[headers]]
@@ -65,3 +77,9 @@
   to = "https://coachprincetonbasketball.com/:splat"
   status = 301
   force = true
+
+# Legacy /terms path redirect
+[[redirects]]
+  from = "/terms"
+  to = "/terms-of-use/"
+  status = 301

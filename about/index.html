@@ -10,7 +10,7 @@
     <meta name="keywords" content="Coach Lee DeForest, basketball coaching, Princeton Offense, coaching experience">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Coach Lee DeForest">
-    <link rel="canonical" href="https://coachprincetonbasketball.com/about">
+    <link rel="canonical" href="https://coachprincetonbasketball.com/about/">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="About Coach Lee DeForest — Coach Princeton Basketball">
@@ -143,9 +143,64 @@
             box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
         }
 
+        /* Hamburger Menu */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .nav-hamburger span {
+            width: 24px;
+            height: 2px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .nav-hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav-hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
         @media (max-width: 768px) {
+            .nav-hamburger {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
             }
 
             .nav-container {
@@ -536,11 +591,14 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="/" class="nav-logo">Coach Princeton Basketball</a>
-            <ul class="nav-links">
-                <li><a href="/about">About</a></li>
-                <li><a href="/book">Playbook</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/book/">Playbook</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
                 <li><a href="/#pricing" class="nav-cta">Get the Playbook</a></li>
             </ul>
         </div>
@@ -672,7 +730,7 @@
             <div class="cta-container">
                 <h2 class="cta-title">Learn the Complete System</h2>
                 <p class="cta-text">Coach DeForest has spent 25 years perfecting the Princeton Offense. Now, you can learn the exact system he uses to develop players and win games. The complete playbook with all six sets, fourteen counters, and 42 detailed drills is available for coaches ready to transform their offense.</p>
-                <a href="/book" class="btn-primary">Get the Princeton Playbook</a>
+                <a href="/book/" class="btn-primary">Get the Princeton Playbook</a>
             </div>
         </section>
     </main>
@@ -684,28 +742,28 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/about">About Coach</a></li>
-                        <li><a href="/book">The Playbook</a></li>
+                        <li><a href="/about/">About Coach</a></li>
+                        <li><a href="/book/">The Playbook</a></li>
                         <li><a href="/#pricing">Pricing</a></li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/blog">Coaching Blog</a></li>
+                        <li><a href="/blog/">Coaching Blog</a></li>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/contact">Contact Support</a></li>
+                        <li><a href="/contact/">Contact Support</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms-of-use">Terms of Use</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use/">Terms of Use</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                         <li><a href="/">Home</a></li>
                     </ul>
                 </div>
@@ -764,6 +822,22 @@
         document.querySelectorAll('.scroll-animate').forEach(element => {
             observer.observe(element);
         });
+
+        // Hamburger Menu
+        const hamburger = document.getElementById('navHamburger');
+        const navLinks = document.getElementById('navLinks');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
     </script>
 </body>
 </html>

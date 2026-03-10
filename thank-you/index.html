@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Thank You — Coach Princeton Basketball</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11158472206');
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Nav */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 1.2rem 0;
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem; font-weight: 700; color: #c9a84c;
+            text-decoration: none; letter-spacing: 0.5px;
+        }
+
+        /* Main */
+        .thank-you-wrapper {
+            max-width: 700px; margin: 0 auto; padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px; height: 80px; margin: 0 auto 2rem;
+            background: rgba(74, 222, 128, 0.1);
+            border: 2px solid #4ade80;
+            border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .thank-you-title {
+            font-size: 2.2rem; font-weight: 800; margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #c9a84c, #e8c96d);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .thank-you-subtitle {
+            font-size: 1.1rem; color: #bbb; margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .order-confirmation {
+            background: #111; border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 12px; padding: 2rem; margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .order-confirmation h3 {
+            font-size: 1.1rem; color: #c9a84c; margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .order-detail {
+            display: flex; justify-content: space-between;
+            padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95rem;
+        }
+
+        .order-detail:last-child { border-bottom: none; }
+        .order-detail .label { color: #999; }
+        .order-detail .value { color: #fff; font-weight: 500; }
+
+        .next-steps {
+            background: #111; border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 12px; padding: 2rem; margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .next-steps h3 {
+            font-size: 1.1rem; color: #c9a84c; margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        .step {
+            display: flex; gap: 1rem; margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: rgba(201, 168, 76, 0.15); color: #c9a84c;
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+        }
+
+        .step-text { color: #ccc; font-size: 0.95rem; line-height: 1.5; }
+        .step-text strong { color: #fff; }
+
+        .support-note {
+            font-size: 0.9rem; color: #777; margin-top: 2rem;
+            line-height: 1.6;
+        }
+
+        .support-note a { color: #c9a84c; text-decoration: none; }
+        .support-note a:hover { text-decoration: underline; }
+
+        /* Footer */
+        .checkout-footer {
+            text-align: center; padding: 2rem;
+            font-size: 0.8rem; color: #555;
+        }
+        .checkout-footer a { color: #c9a84c; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .thank-you-wrapper { padding: 2rem 1rem; }
+            .thank-you-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Coach Princeton</a>
+        </div>
+    </nav>
+
+    <div class="thank-you-wrapper">
+        <div class="success-icon">&#10003;</div>
+
+        <h1 class="thank-you-title">You're In, Coach!</h1>
+        <p class="thank-you-subtitle">
+            Your purchase is confirmed. Check your email for instant access to your coaching materials.
+        </p>
+
+        <div class="order-confirmation">
+            <h3>Order Confirmation</h3>
+            <div class="order-detail">
+                <span class="label">Product</span>
+                <span class="value" id="conf-product">—</span>
+            </div>
+            <div class="order-detail">
+                <span class="label">Amount</span>
+                <span class="value" id="conf-amount">—</span>
+            </div>
+            <div class="order-detail">
+                <span class="label">Email</span>
+                <span class="value" id="conf-email">—</span>
+            </div>
+            <div class="order-detail">
+                <span class="label">Transaction ID</span>
+                <span class="value" id="conf-txn">—</span>
+            </div>
+        </div>
+
+        <div class="next-steps">
+            <h3>What Happens Next</h3>
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-text"><strong>Check your inbox</strong> — Your download links are being sent to the email above right now.</div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-text"><strong>Download your files</strong> — Click the links in the email to download your playbook, video, and practice plans.</div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-text"><strong>Start implementing</strong> — Begin with the first two sets and the introductory drills. Most coaches see results within the first week.</div>
+            </div>
+        </div>
+
+        <p class="support-note">
+            Questions? Email <a href="mailto:coachdeforest@gmail.com">coachdeforest@gmail.com</a> — I personally respond to every message.<br>
+            Remember: you have a full <strong style="color:#c9a84c;">60-day money-back guarantee</strong>.
+        </p>
+    </div>
+
+    <div class="checkout-footer">
+        <p>&copy; 2026 Coach Princeton Basketball &middot; Florida Coastal Prep LLC &middot; <a href="mailto:coachdeforest@gmail.com">Support</a></p>
+    </div>
+
+    <script>
+        // ============ PURCHASE CONVERSION TRACKING ============
+        // Fire the Google Ads purchase conversion event
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product') || 'bundle';
+        const txn = urlParams.get('txn') || '';
+        const email = urlParams.get('email') || '';
+
+        const products = {
+            system: { name: 'Princeton Offense System', price: 39.00 },
+            bundle: { name: 'Complete Coaching Bundle', price: 49.00 }
+        };
+
+        const purchased = products[product] || products['bundle'];
+
+        // Fire Google Ads purchase conversion
+        gtag('event', 'conversion', {
+            'send_to': 'AW-11158472206/Ek5eCKys6PwbEI6M48gp',
+            'value': purchased.price,
+            'currency': 'USD',
+            'transaction_id': txn
+        });
+
+        // Also fire a standard purchase event for analytics
+        gtag('event', 'purchase', {
+            'transaction_id': txn,
+            'value': purchased.price,
+            'currency': 'USD',
+            'items': [{
+                'item_name': purchased.name,
+                'price': purchased.price,
+                'quantity': 1
+            }]
+        });
+
+        // Populate confirmation details
+        document.getElementById('conf-product').textContent = purchased.name;
+        document.getElementById('conf-amount').textContent = '$' + purchased.price.toFixed(2);
+        document.getElementById('conf-email').textContent = email || '(check your inbox)';
+        document.getElementById('conf-txn').textContent = txn || '—';
+    </script>
+</body>
+</html>
