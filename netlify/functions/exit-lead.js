@@ -130,19 +130,26 @@ exports.handler = async (event) => {
   // ── 2. GHL: create/update contact ───────────────────────────────────────────
   let contactId = null;
   try {
-    // Search for existing contact by email
-    const searchRes = await ghlFetch(
-      'GET',
-      `/contacts/?locationId=${GHL_LOCATION_ID}&email=${encodeURIComponent(email)}&limit=1`
-    );
+    // Search for existing contact by email (POST /contacts/search)
+    const searchRes = await ghlFetch('POST', '/contacts/search', {
+      locationId: GHL_LOCATION_ID,
+      query: email,
+      pageLimit: 5,
+    });
     if (searchRes.ok) {
       const searchData = await searchRes.json();
       if (searchData.contacts && searchData.contacts.length > 0) {
-        contactId = searchData.contacts[0].id;
-        // Tag existing contact
-        await ghlFetch('POST', `/contacts/${contactId}/tags`, {
-          tags: ['exit-intent-popup', 'book-page', 'chin-set-downloaded'],
-        });
+        // Match exact email since query does a loose search
+        const match = searchData.contacts.find(
+          (c) => (c.email || '').toLowerCase() === email
+        );
+        if (match) {
+          contactId = match.id;
+          // Tag existing contact
+          await ghlFetch('POST', `/contacts/${contactId}/tags`, {
+            tags: ['exit-intent-popup', 'book-page', 'chin-set-downloaded'],
+          });
+        }
       }
     }
 
