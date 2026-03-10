@@ -1853,30 +1853,19 @@
                 if (e.key === 'Escape') hidePopup();
             });
 
-            // Form submit — Netlify Forms + optional GHL webhook
+            // Form submit — posts to server-side Netlify function
+            // (function handles Airtable write + GHL webhook — API keys stay server-side)
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                var email = form.querySelector('input[type="email"]').value;
-                var formData = new FormData(form);
+                var email = form.querySelector('input[type="email"]').value.trim();
 
-                // 1. Submit to Netlify Forms
-                fetch('/', {
+                fetch('/.netlify/functions/exit-lead', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData).toString()
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email })
                 }).catch(function(){});
 
-                // 2. Submit to GHL webhook (swap in your actual webhook URL)
-                var GHL_WEBHOOK = 'YOUR_GHL_WEBHOOK_URL';
-                if (GHL_WEBHOOK !== 'YOUR_GHL_WEBHOOK_URL') {
-                    fetch(GHL_WEBHOOK, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email: email, source: 'exit-intent-popup', page: window.location.href })
-                    }).catch(function(){});
-                }
-
-                // Show success state
+                // Show success immediately — don't block UX on server round-trip
                 form.style.display = 'none';
                 success.style.display = 'block';
                 setTimeout(hidePopup, 3000);
