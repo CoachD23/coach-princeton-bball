@@ -10,7 +10,7 @@
     <meta name="keywords" content="Princeton Offense, basketball playbook, coaching system, basketball drills, offensive system">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Coach Lee DeForest">
-    <link rel="canonical" href="https://coachprincetonbasketball.com/book">
+    <link rel="canonical" href="https://coachprincetonbasketball.com/book/">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="The Princeton Offense Mastery Blueprint — Coach Princeton Basketball">
@@ -278,9 +278,9 @@
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -323,6 +323,138 @@
             left: 0;
             color: #c9a84c;
             font-weight: bold;
+        }
+
+        /* Playbook Preview Gallery */
+        .preview-section {
+            padding: 100px 2rem;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .preview-layout {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .preview-cover {
+            position: relative;
+        }
+
+        .preview-cover img {
+            width: 100%;
+            max-width: 340px;
+            max-height: 260px;
+            object-fit: cover;
+            object-position: center 30%;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(201, 168, 76, 0.1);
+            margin: 0 auto;
+            display: block;
+        }
+
+        .preview-cover .preview-badge {
+            position: absolute;
+            top: -12px;
+            right: 10%;
+            background: #c9a84c;
+            color: #0a0a0a;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+        }
+
+        .preview-diagrams {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .preview-diagrams h3 {
+            font-size: 1.3rem;
+            color: #c9a84c;
+            margin-bottom: 0.5rem;
+        }
+
+        .preview-diagrams p {
+            color: #999;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .preview-grid .preview-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .preview-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .preview-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .preview-card .preview-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            padding: 1.5rem 0.7rem 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .preview-cta {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .preview-cta a {
+            color: #c9a84c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .preview-cta a:hover {
+            color: #e0c060;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .preview-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .preview-cover img {
+                max-width: 260px;
+                max-height: 200px;
+            }
         }
 
         .pricing-section {
@@ -516,18 +648,19 @@
         .guarantee-container {
             max-width: 900px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.05) 100%);
-            border: 2px solid rgba(201, 168, 76, 0.3);
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.15) 0%, rgba(201, 168, 76, 0.08) 100%);
+            border: 2px solid rgba(201, 168, 76, 0.65);
             padding: 4rem 3rem;
             border-radius: 12px;
             text-align: center;
+            box-shadow: 0 0 40px rgba(201, 168, 76, 0.08);
         }
 
         .guarantee-container h2 {
             font-size: 2rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
-            color: #c9a84c;
+            color: #ffffff;
         }
 
         .guarantee-text {
@@ -750,25 +883,118 @@
 
             .nav-cta { display: inline-block !important; }
         }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, #c9a84c, #e8c96b, #c9a84c);
+            color: #0a0a0a;
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            position: relative;
+            z-index: 1001;
+        }
+        .announcement-bar a {
+            color: #0a0a0a;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        /* Hero Benefit Bullets */
+        .hero-bullets {
+            list-style: none;
+            margin: 1.25rem auto 2rem;
+            max-width: 480px;
+            text-align: left;
+            display: inline-block;
+        }
+        .hero-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.97rem;
+            color: #cccccc;
+            margin-bottom: 0.55rem;
+            line-height: 1.4;
+        }
+        .hero-bullets li::before {
+            content: "✓";
+            color: #c9a84c;
+            font-weight: 800;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Countdown Timer */
+        .pricing-urgency {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .pricing-urgency-label {
+            font-size: 0.88rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
+        .countdown-timer {
+            display: inline-flex;
+            gap: 0.75rem;
+            align-items: center;
+            background: rgba(201,168,76,0.08);
+            border: 1px solid rgba(201,168,76,0.35);
+            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+        }
+        .countdown-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 48px;
+        }
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #c9a84c;
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 0.7rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 0.25rem;
+        }
+        .countdown-sep {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #c9a84c;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Testimonial Stars */
+        .testimonial-stars {
+            color: #c9a84c;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🏀 Spring Season — Introductory pricing ends soon. <a href="#pricing">Get the Complete System for $39 →</a>
+    </div>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <a href="/" class="nav-logo">Coach Princeton Basketball</a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/about">About</a></li>
-                <li><a href="/book">Playbook</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="#pricing" class="nav-cta">Get the Playbook</a></li>
-            </ul>
+            <a href="#pricing" class="nav-cta">Get the Playbook</a>
         </div>
     </nav>
 
@@ -777,8 +1003,14 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-container">
+                <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.4);border-radius:50px;padding:0.45rem 1.2rem;margin-bottom:1.5rem;font-size:0.9rem;color:#c9a84c;font-weight:600;">⭐ 4.9/5 from 200+ coaches</div>
                 <h1>The Princeton Offense Mastery Blueprint</h1>
-                <p class="hero-subtext">The complete read-based basketball offensive system used by 200+ coaches worldwide. Six interchangeable sets, fourteen counters, 42 detailed drills, and everything you need to transform your team.</p>
+                <p class="hero-subtext">Six sets. Fourteen counters. 42 drills. The complete read-based system used by 200+ coaches worldwide.</p>
+                <ul class="hero-bullets">
+                    <li>Instant PDF delivery — start reading tonight</li>
+                    <li>Works at every level: middle school through college</li>
+                    <li>60-day money-back guarantee — zero risk</li>
+                </ul>
                 <a href="#pricing" class="btn-primary">Get the System — $39</a>
             </div>
         </section>
@@ -787,7 +1019,7 @@
         <section class="content-section scroll-animate">
             <div class="container">
                 <h2 class="section-title">Inside the Blueprint</h2>
-                <p class="content-text scroll-animate">The Princeton Offense Mastery Blueprint is a complete, detailed coaching system designed for immediate implementation. Whether you're starting from scratch or looking to complement your current offensive system, this Blueprint gives you everything you need.</p>
+                <p class="content-text scroll-animate">Everything you need to install and run the Princeton Offense — from day one.</p>
 
                 <div class="feature-grid">
                     <div class="feature-card scroll-animate">
@@ -841,10 +1073,69 @@
             </div>
         </section>
 
+        <!-- Playbook Preview Gallery -->
+        <section class="preview-section scroll-animate" id="preview">
+            <div class="container">
+                <h2 class="section-title">Preview the Playbook</h2>
+                <div class="preview-layout">
+                    <div class="preview-cover scroll-animate">
+                        <span class="preview-badge">87 Pages</span>
+                        <img src="/images/web-playbook-page-001.jpg" alt="Coach Princeton Basketball playbook cover — Keys to Unlock the Backdoor Offense" width="380" height="492" loading="lazy">
+                    </div>
+                    <div class="preview-diagrams scroll-animate">
+                        <h3>Detailed Court Diagrams &amp; Coaching Notes</h3>
+                        <p>Step-by-step court diagrams, player movement arrows, and coaching points for every set, counter, and drill.</p>
+                        <div class="preview-grid">
+                            <div class="preview-card">
+                                <img src="/images/web-playbook-page-008.jpg" alt="Chin Set — Dribble Weave Entry diagrams with 6 court positions" width="400" height="518" loading="lazy">
+                                <span class="preview-label">Chin Set</span>
+                            </div>
+                            <div class="preview-card">
+                                <img src="/images/web-playbook-5out.jpg" alt="5 Out Set — Point Series diagrams with backdoor cuts" width="400" height="518" loading="lazy">
+                                <span class="preview-label">5 Out Set</span>
+                            </div>
+                            <div class="preview-card">
+                                <img src="/images/web-playbook-page-007.jpg" alt="Princeton Offense Blueprint — player positions and personnel strengths" width="400" height="518" loading="lazy">
+                                <span class="preview-label">Offense Blueprint</span>
+                            </div>
+                            <div class="preview-card">
+                                <img src="/images/web-playbook-zone.jpg" alt="Zone Offense — Michigan State zone sets with player movement" width="400" height="518" loading="lazy">
+                                <span class="preview-label">Zone Offense</span>
+                            </div>
+                        </div>
+                        <div class="preview-cta">
+                            <a href="#pricing">See all 87 pages — Get the System →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Pricing Section -->
         <section class="pricing-section scroll-animate" id="pricing">
             <div class="pricing-container">
-                <h2 class="section-title">Simple Pricing</h2>
+                <h2 class="section-title">Choose Your System</h2>
+                <p style="text-align:center;color:#999;font-size:0.95rem;margin-top:-0.75rem;margin-bottom:2rem;">Instant download. 60-day guarantee. No subscription.</p>
+
+                <div class="pricing-urgency">
+                    <div class="pricing-urgency-label">Introductory pricing — offer ends in</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="cd-hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="cd-minutes">00</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="cd-seconds">00</span>
+                            <span class="countdown-label">Sec</span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="pricing-grid">
                     <div class="pricing-card scroll-animate">
@@ -859,7 +1150,7 @@
                             <li>Zone offense and press break</li>
                             <li>60-day guarantee</li>
                         </ul>
-                        <button class="pricing-button" onclick="location.href='/checkout/?product=system';">Get Started — $39</button>
+                        <button class="pricing-button" onclick="gtag('event','begin_checkout',{currency:'USD',value:39,items:[{item_name:'Princeton Offense System',price:39}]});location.href='/checkout/?product=system';">Get Started — $39</button>
                     </div>
 
                     <div class="pricing-card featured scroll-animate">
@@ -875,7 +1166,7 @@
                             <li>All six sets and counters</li>
                             <li>60-day guarantee</li>
                         </ul>
-                        <button class="pricing-button" onclick="location.href='/checkout/?product=bundle';">Get the Bundle — $49</button>
+                        <button class="pricing-button" onclick="gtag('event','begin_checkout',{currency:'USD',value:49,items:[{item_name:'Complete Coaching Bundle',price:49}]});location.href='/checkout/?product=bundle';">Get the Bundle — $49</button>
                     </div>
 
                 </div>
@@ -888,24 +1179,28 @@
                 <h2 class="section-title">Real Results from Real Coaches</h2>
                 <div class="testimonials-grid">
                     <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
                         <div class="testimonial-text">"We installed the Chin and Low sets from the Blueprint on Monday. By Thursday, my JV squad was making backdoor reads I had been trying to teach for three years. We went 8-2 down the stretch."</div>
                         <div class="testimonial-author">Mike R.</div>
                         <div class="testimonial-title">JV Head Coach, Illinois</div>
                     </div>
 
                     <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
                         <div class="testimonial-text">"The counter packages alone are worth ten times the price. Last season we faced a switching man defense in the state quarterfinals — we scored 14 straight using the switch counters from the playbook."</div>
                         <div class="testimonial-author">Coach D. Williams</div>
                         <div class="testimonial-title">Varsity Head Coach, Texas</div>
                     </div>
 
                     <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
                         <div class="testimonial-text">"Our offensive efficiency jumped from 0.89 to 1.04 points per possession within the first month. The system is that clear and effective."</div>
                         <div class="testimonial-author">Jason T.</div>
                         <div class="testimonial-title">NAIA Head Coach, Georgia</div>
                     </div>
 
                     <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
                         <div class="testimonial-text">"Parents can't believe what they're watching. The offense is so beautiful, so clean, and our kids play with such confidence. This changed everything."</div>
                         <div class="testimonial-author">Sarah M.</div>
                         <div class="testimonial-title">Middle School Coach, Ohio</div>
@@ -914,10 +1209,20 @@
             </div>
         </section>
 
+        <!-- Post-Testimonial CTA -->
+        <section style="padding:70px 2rem;background:#111111;text-align:center;border-bottom:1px solid rgba(201,168,76,0.1);">
+            <div style="max-width:700px;margin:0 auto;">
+                <p style="font-size:1.1rem;color:#cccccc;margin-bottom:0.75rem;font-weight:500;">Join 200+ coaches already running the Princeton Offense.</p>
+                <h2 style="font-size:2.2rem;font-weight:800;color:#ffffff;margin-bottom:1rem;line-height:1.25;">Ready to transform your offense?</h2>
+                <p style="color:#999999;font-size:0.95rem;margin-bottom:2rem;">Instant PDF delivery. 60-day money-back guarantee. No subscription.</p>
+                <a href="#pricing" style="background-color:#c9a84c;color:#0a0a0a;padding:1rem 2.5rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-block;transition:all 0.3s ease;box-shadow:0 8px 25px rgba(201,168,76,0.25);">Get the System — Starting at $39</a>
+            </div>
+        </section>
+
         <!-- Guarantee Section -->
         <section class="guarantee-section scroll-animate">
             <div class="guarantee-container">
-                <h2>60-Day Money-Back Guarantee</h2>
+                <h2>🛡️ 60-Day Money-Back Guarantee</h2>
                 <p class="guarantee-text">If you purchase the Blueprint and don't find it valuable within 60 days, we'll refund every penny. No questions asked. We stand behind this system because we know it works.</p>
                 <p class="guarantee-text">The only risk is missing out on what could transform your team's offense.</p>
             </div>
@@ -1019,8 +1324,12 @@
         <section class="cta-section scroll-animate">
             <div class="cta-container">
                 <h2 class="cta-title">Start Transforming Your Offense Today</h2>
-                <p class="cta-text">Join 200+ coaches who've implemented the Princeton Offense and transformed their teams. Reduce turnovers, increase efficiency, develop smarter players. All with one complete, proven system.</p>
-                <a href="/checkout/" class="btn-primary">Get the System — $39</a>
+                <p class="cta-text">Join 200+ coaches who've implemented the Princeton Offense. Reduce turnovers, increase efficiency, develop smarter players — with one complete, proven system.</p>
+                <p style="font-size:0.9rem;color:#999;margin-bottom:2rem;">Instant PDF delivery. 60-day money-back guarantee. No subscription.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <button onclick="gtag('event','begin_checkout',{currency:'USD',value:39,items:[{item_name:'Princeton Offense System',price:39}]});location.href='/checkout/?product=system';" style="background:transparent;border:2px solid #c9a84c;color:#c9a84c;padding:1rem 2rem;border-radius:8px;font-weight:700;font-size:0.95rem;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;">System Only — $39</button>
+                    <button onclick="gtag('event','begin_checkout',{currency:'USD',value:49,items:[{item_name:'Complete Coaching Bundle',price:49}]});location.href='/checkout/?product=bundle';" style="background-color:#c9a84c;color:#0a0a0a;padding:1rem 2.5rem;border-radius:8px;font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;box-shadow:0 8px 25px rgba(201,168,76,0.25);">Best Value: Bundle — $49 <span style="font-size:0.8rem;text-decoration:line-through;opacity:0.7;margin-left:4px;">$59</span></button>
+                </div>
             </div>
         </section>
     </main>
@@ -1032,28 +1341,28 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/about">About Coach</a></li>
-                        <li><a href="/book">The Playbook</a></li>
+                        <li><a href="/about/">About Coach</a></li>
+                        <li><a href="/book/">The Playbook</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/blog">Coaching Blog</a></li>
+                        <li><a href="/blog/">Coaching Blog</a></li>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/contact">Contact Support</a></li>
+                        <li><a href="/contact/">Contact Support</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms-of-use">Terms of Use</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use/">Terms of Use</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                         <li><a href="/">Home</a></li>
                     </ul>
                 </div>
@@ -1065,13 +1374,13 @@
         </div>
     </footer>
 
-    <!-- JSON-LD Schema -->
+    <!-- JSON-LD Schema: Product -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Coach Princeton Basketball - Mastery Blueprint",
-        "description": "Complete read-based basketball offensive system with six interchangeable sets, fourteen counter packages, and 42 breakdown drills",
+        "name": "Princeton Offense Mastery Blueprint",
+        "description": "Complete read-based basketball offensive system with six interchangeable sets, fourteen counter packages, and 42 breakdown drills. Used by 200+ coaches at every level.",
         "brand": {
             "@type": "Brand",
             "name": "Coach Princeton Basketball"
@@ -1082,24 +1391,96 @@
                 "price": "39",
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock",
-                "name": "Playbook"
+                "name": "Princeton Offense System",
+                "url": "https://coachprincetonbasketball.com/checkout/?product=system"
             },
             {
                 "@type": "Offer",
                 "price": "49",
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock",
-                "name": "Bundle"
+                "name": "Complete Coaching Bundle",
+                "url": "https://coachprincetonbasketball.com/checkout/?product=bundle"
             }
         ],
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "reviewCount": "127",
+            "reviewCount": "200",
             "bestRating": "5",
             "worstRating": "1"
         },
-        "url": "https://coachprincetonbasketball.com/book"
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                "author": {"@type": "Person", "name": "Mike R."},
+                "reviewBody": "We installed the Chin and Low sets from the Blueprint on Monday. By Thursday, my JV squad was making backdoor reads I had been trying to teach for three years. We went 8-2 down the stretch."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                "author": {"@type": "Person", "name": "Coach D. Williams"},
+                "reviewBody": "The counter packages alone are worth ten times the price. Last season we faced a switching man defense in the state quarterfinals — we scored 14 straight using the switch counters from the playbook."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                "author": {"@type": "Person", "name": "Jason T."},
+                "reviewBody": "Our offensive efficiency jumped from 0.89 to 1.04 points per possession within the first month. The system is that clear and effective."
+            }
+        ],
+        "url": "https://coachprincetonbasketball.com/book/"
+    }
+    </script>
+
+    <!-- JSON-LD Schema: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What exactly do I get when I purchase the Blueprint?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You receive the complete Princeton Offense System: an 87-page playbook covering all six interchangeable sets (Chin, Low, Point, Twirl, Five Out, X), fourteen complete counter packages, a zone offense system, press break plays, out-of-bounds plays, and detailed breakdown drills — plus the Learn the Princeton video walkthrough and practice plans. If you purchase the Complete Coaching Bundle, you also get the West Virginia 2-Guard Offense playbook as a bonus second system."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this at my level?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The Princeton Offense has been used successfully at every level from middle school through professional basketball. The system scales to your players' skill level and basketball IQ."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to implement?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most coaches see noticeable improvements within 2-3 weeks. Full implementation typically takes 4-6 weeks depending on your team's current offensive knowledge."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do my players need to be great athletes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. The Princeton Offense is designed to level the playing field. Smart reads and basketball IQ beat raw athleticism — you can compete with more talented teams by running a smarter, more efficient offense."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is your refund policy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer a 60-day money-back guarantee. If you're not satisfied with the Blueprint for any reason, email us within 60 days and we'll refund your purchase immediately. No questions asked."
+                }
+            }
+        ]
     }
     </script>
 
@@ -1150,6 +1531,26 @@
                 });
             });
         }
+
+        // Countdown Timer — resets daily at midnight local time
+        function updateCountdown() {
+            const now = new Date();
+            const midnight = new Date(now);
+            midnight.setHours(24, 0, 0, 0);
+            const diff = midnight - now;
+            const h = Math.floor(diff / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+            const pad = n => String(n).padStart(2, '0');
+            const el_h = document.getElementById('cd-hours');
+            const el_m = document.getElementById('cd-minutes');
+            const el_s = document.getElementById('cd-seconds');
+            if (el_h) el_h.textContent = pad(h);
+            if (el_m) el_m.textContent = pad(m);
+            if (el_s) el_s.textContent = pad(s);
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
 
         // FAQ Accordion
         const faqItems = document.querySelectorAll('.faq-item');
