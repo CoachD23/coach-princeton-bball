@@ -1029,6 +1029,111 @@
             letter-spacing: 0.05em;
             margin-bottom: 1rem;
         }
+
+        /* ── Exit Intent Popup ── */
+        #exit-popup-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.75);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        #exit-popup-overlay.active {
+            display: flex;
+        }
+        #exit-popup {
+            background: #111111;
+            border: 1px solid rgba(201,168,76,0.35);
+            border-radius: 14px;
+            max-width: 520px;
+            width: 100%;
+            padding: 2.5rem 2.25rem 2rem;
+            position: relative;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+        #exit-popup-close {
+            position: absolute;
+            top: 0.9rem;
+            right: 1.1rem;
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 1.4rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            transition: color 0.2s;
+        }
+        #exit-popup-close:hover { color: #ccc; }
+        #exit-popup .popup-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #c9a84c;
+            margin-bottom: 0.6rem;
+        }
+        #exit-popup h3 {
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+        }
+        #exit-popup p {
+            color: #aaaaaa;
+            font-size: 0.93rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        #exit-popup-form {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        #exit-popup-form input[type="email"] {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(201,168,76,0.3);
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+        }
+        #exit-popup-form input[type="email"]:focus {
+            border-color: #c9a84c;
+        }
+        #exit-popup-form button {
+            background: #c9a84c;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 8px;
+            padding: 0.8rem 1.4rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        #exit-popup-form button:hover { background: #e8c96b; }
+        #exit-popup-success {
+            display: none;
+            color: #c9a84c;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+        }
+        #exit-popup .popup-fine-print {
+            font-size: 0.75rem;
+            color: #555;
+            margin-top: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -1191,6 +1296,42 @@
             </div>
         </section>
 
+        <!-- Testimonials Section -->
+        <section class="testimonials-section scroll-animate">
+            <div class="container">
+                <h2 class="section-title">Real Results from Real Coaches</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <div class="testimonial-text">"We installed the Chin and Low sets from the Blueprint on Monday. By Thursday, my JV squad was making backdoor reads I had been trying to teach for three years. We went 8-2 down the stretch."</div>
+                        <div class="testimonial-author">Mike R.</div>
+                        <div class="testimonial-title">JV Head Coach, Illinois</div>
+                    </div>
+
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <div class="testimonial-text">"The counter packages alone are worth ten times the price. Last season we faced a switching man defense in the state quarterfinals — we scored 14 straight using the switch counters from the playbook."</div>
+                        <div class="testimonial-author">Coach D. Williams</div>
+                        <div class="testimonial-title">Varsity Head Coach, Texas</div>
+                    </div>
+
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <div class="testimonial-text">"Our offensive efficiency jumped from 0.89 to 1.04 points per possession within the first month. The system is that clear and effective."</div>
+                        <div class="testimonial-author">Jason T.</div>
+                        <div class="testimonial-title">NAIA Head Coach, Georgia</div>
+                    </div>
+
+                    <div class="testimonial-card scroll-animate">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <div class="testimonial-text">"Parents can't believe what they're watching. The offense is so beautiful, so clean, and our kids play with such confidence. This changed everything."</div>
+                        <div class="testimonial-author">Sarah M.</div>
+                        <div class="testimonial-title">Middle School Coach, Ohio</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Pricing Section -->
         <section class="pricing-section scroll-animate" id="pricing">
             <div class="pricing-container">
@@ -1249,42 +1390,6 @@
                         <button class="pricing-button" onclick="gtag('event','begin_checkout',{currency:'USD',value:49,items:[{item_name:'Complete Coaching Bundle',price:49}]});location.href='/checkout/?product=bundle';">Get the Bundle — $49</button>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials-section scroll-animate">
-            <div class="container">
-                <h2 class="section-title">Real Results from Real Coaches</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card scroll-animate">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <div class="testimonial-text">"We installed the Chin and Low sets from the Blueprint on Monday. By Thursday, my JV squad was making backdoor reads I had been trying to teach for three years. We went 8-2 down the stretch."</div>
-                        <div class="testimonial-author">Mike R.</div>
-                        <div class="testimonial-title">JV Head Coach, Illinois</div>
-                    </div>
-
-                    <div class="testimonial-card scroll-animate">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <div class="testimonial-text">"The counter packages alone are worth ten times the price. Last season we faced a switching man defense in the state quarterfinals — we scored 14 straight using the switch counters from the playbook."</div>
-                        <div class="testimonial-author">Coach D. Williams</div>
-                        <div class="testimonial-title">Varsity Head Coach, Texas</div>
-                    </div>
-
-                    <div class="testimonial-card scroll-animate">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <div class="testimonial-text">"Our offensive efficiency jumped from 0.89 to 1.04 points per possession within the first month. The system is that clear and effective."</div>
-                        <div class="testimonial-author">Jason T.</div>
-                        <div class="testimonial-title">NAIA Head Coach, Georgia</div>
-                    </div>
-
-                    <div class="testimonial-card scroll-animate">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <div class="testimonial-text">"Parents can't believe what they're watching. The offense is so beautiful, so clean, and our kids play with such confidence. This changed everything."</div>
-                        <div class="testimonial-author">Sarah M.</div>
-                        <div class="testimonial-title">Middle School Coach, Ohio</div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -1687,6 +1792,96 @@
                 }
             });
         });
+    </script>
+
+    <!-- ── Exit Intent Popup ── -->
+    <div id="exit-popup-overlay" role="dialog" aria-modal="true" aria-label="Special offer">
+        <div id="exit-popup">
+            <button id="exit-popup-close" aria-label="Close">&times;</button>
+            <div class="popup-eyebrow">Wait — before you go</div>
+            <h3>Get a Free Sample Chapter of the Princeton Blueprint</h3>
+            <p>Drop your email and we'll send you 10 pages of real court diagrams, sets, and coaching notes — free. No strings attached.</p>
+            <form id="exit-popup-form" name="exit-intent-leads" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="exit-intent-leads" />
+                <input type="hidden" name="bot-field" />
+                <input type="email" name="email" placeholder="Your email address" required autocomplete="email" />
+                <button type="submit">Send Me the Sample</button>
+            </form>
+            <div id="exit-popup-success">✓ Check your inbox — sample chapter is on the way!</div>
+            <p class="popup-fine-print">No spam. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var POPUP_KEY = 'exitPopupShown';
+            var overlay   = document.getElementById('exit-popup-overlay');
+            var closeBtn  = document.getElementById('exit-popup-close');
+            var form      = document.getElementById('exit-popup-form');
+            var success   = document.getElementById('exit-popup-success');
+            var shown     = false;
+
+            function showPopup() {
+                if (shown || sessionStorage.getItem(POPUP_KEY)) return;
+                shown = true;
+                sessionStorage.setItem(POPUP_KEY, '1');
+                overlay.classList.add('active');
+                var emailInput = form.querySelector('input[type="email"]');
+                if (emailInput) setTimeout(function(){ emailInput.focus(); }, 100);
+            }
+
+            function hidePopup() {
+                overlay.classList.remove('active');
+            }
+
+            // Exit intent: cursor leaves viewport toward the top
+            document.addEventListener('mouseleave', function(e) {
+                if (e.clientY <= 10) showPopup();
+            });
+
+            // Fallback: show after 60s if still on page
+            setTimeout(showPopup, 60000);
+
+            // Close on X or overlay click
+            closeBtn.addEventListener('click', hidePopup);
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) hidePopup();
+            });
+
+            // Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') hidePopup();
+            });
+
+            // Form submit — Netlify Forms + optional GHL webhook
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var email = form.querySelector('input[type="email"]').value;
+                var formData = new FormData(form);
+
+                // 1. Submit to Netlify Forms
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
+                }).catch(function(){});
+
+                // 2. Submit to GHL webhook (swap in your actual webhook URL)
+                var GHL_WEBHOOK = 'YOUR_GHL_WEBHOOK_URL';
+                if (GHL_WEBHOOK !== 'YOUR_GHL_WEBHOOK_URL') {
+                    fetch(GHL_WEBHOOK, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email: email, source: 'exit-intent-popup', page: window.location.href })
+                    }).catch(function(){});
+                }
+
+                // Show success state
+                form.style.display = 'none';
+                success.style.display = 'block';
+                setTimeout(hidePopup, 3000);
+            });
+        })();
     </script>
 </body>
 </html>
