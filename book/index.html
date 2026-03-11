@@ -1417,6 +1417,181 @@
             </div>
         </section>
 
+        <!-- Inline Lead Form Section -->
+        <section class="book-inline-form-section">
+            <div class="book-inline-form-wrap">
+                <div class="book-inline-form-badge">DIRECT ACCESS</div>
+                <h2 class="book-inline-form-heading">Have Questions Before You Buy?</h2>
+                <p class="book-inline-form-sub">Drop your name and email — Coach DeForest will personally answer your questions about fitting the Princeton Offense into your program.</p>
+                <form id="bookInlineForm" class="book-inline-form" novalidate>
+                    <div class="book-inline-form-fields">
+                        <input type="text" id="bookLeadName" class="book-inline-input" placeholder="Your Name" autocomplete="name" required>
+                        <input type="email" id="bookLeadEmail" class="book-inline-input" placeholder="Your Email Address" autocomplete="email" required>
+                        <button type="submit" class="book-inline-btn" id="bookLeadBtn">
+                            <span id="bookLeadBtnText">Send My Question →</span>
+                        </button>
+                    </div>
+                    <p id="bookLeadMsg" class="book-inline-msg" style="display:none;"></p>
+                </form>
+                <p class="book-inline-privacy">No spam. No pressure. Unsubscribe anytime.</p>
+            </div>
+        </section>
+
+        <style>
+        .book-inline-form-section {
+            background: #111;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        .book-inline-form-wrap {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .book-inline-form-badge {
+            display: inline-block;
+            background: rgba(201,168,76,0.12);
+            color: #c9a84c;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            padding: 0.35rem 0.9rem;
+            border-radius: 3px;
+            border: 1px solid rgba(201,168,76,0.3);
+            margin-bottom: 1.2rem;
+        }
+        .book-inline-form-heading {
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 0.85rem;
+            line-height: 1.2;
+        }
+        .book-inline-form-sub {
+            color: #aaa;
+            font-size: 1rem;
+            line-height: 1.65;
+            margin: 0 0 2rem;
+        }
+        .book-inline-form-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+        }
+        .book-inline-input {
+            width: 100%;
+            max-width: 420px;
+            padding: 0.85rem 1.1rem;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        .book-inline-input:focus {
+            border-color: #c9a84c;
+        }
+        .book-inline-input::placeholder { color: #555; }
+        .book-inline-btn {
+            width: 100%;
+            max-width: 420px;
+            padding: 0.9rem 2rem;
+            background: #c9a84c;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-sizing: border-box;
+        }
+        .book-inline-btn:hover { background: #d4b55a; }
+        .book-inline-btn:active { transform: scale(0.98); }
+        .book-inline-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .book-inline-msg {
+            margin-top: 0.85rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .book-inline-msg.success { color: #68d391; }
+        .book-inline-msg.error   { color: #fc8181; }
+        .book-inline-privacy {
+            margin-top: 0.85rem;
+            color: #555;
+            font-size: 0.78rem;
+        }
+        @media (min-width: 600px) {
+            .book-inline-form-fields {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .book-inline-input,
+            .book-inline-btn {
+                max-width: 300px;
+            }
+        }
+        </style>
+
+        <script>
+        (function () {
+            const form    = document.getElementById('bookInlineForm');
+            const nameEl  = document.getElementById('bookLeadName');
+            const emailEl = document.getElementById('bookLeadEmail');
+            const btn     = document.getElementById('bookLeadBtn');
+            const btnText = document.getElementById('bookLeadBtnText');
+            const msg     = document.getElementById('bookLeadMsg');
+
+            if (!form) return;
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const name  = (nameEl.value  || '').trim();
+                const email = (emailEl.value || '').trim().toLowerCase();
+
+                if (!email || !email.includes('@')) {
+                    showMsg('Please enter a valid email address.', 'error');
+                    return;
+                }
+
+                btn.disabled = true;
+                btnText.textContent = 'Sending…';
+                msg.style.display = 'none';
+
+                try {
+                    const res = await fetch('/.netlify/functions/book-lead', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name, email }),
+                    });
+                    const data = await res.json().catch(() => ({}));
+
+                    if (res.ok && data.ok) {
+                        form.innerHTML = '<p class="book-inline-msg success" style="display:block;font-size:1.05rem;">✓ Got it! Check your inbox — Coach DeForest will be in touch.</p>';
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch (err) {
+                    btn.disabled = false;
+                    btnText.textContent = 'Send My Question →';
+                    showMsg('Something went wrong. Please try again.', 'error');
+                }
+            });
+
+            function showMsg(text, type) {
+                msg.textContent = text;
+                msg.className = 'book-inline-msg ' + type;
+                msg.style.display = 'block';
+            }
+        })();
+        </script>
+
         <!-- Pricing Section -->
         <section class="pricing-section scroll-animate" id="pricing">
             <div class="pricing-container">

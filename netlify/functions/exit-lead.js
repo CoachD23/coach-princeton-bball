@@ -1,13 +1,17 @@
 // exit-lead.js
 // Handles exit-intent popup submissions from coachprincetonbasketball.com/book/
 // 1. Writes lead to Airtable
-// 2. Sends email via Resend with Chin Set PDF download link
+// 2. Creates contact in GoHighLevel
+// 3. Sends email via Resend with Chin Set PDF download link
 
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
 const AIRTABLE_TABLE   = process.env.AIRTABLE_TABLE_NAME || 'Exit Intent Leads';
 
 const RESEND_API_KEY   = process.env.RESEND_API_KEY;
+
+const GHL_API_KEY     = process.env.GHL_API_KEY;
+const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
 
 const PDF_URL = 'https://coachprincetonbasketball.com/files/princeton-chin-set.pdf';
 
@@ -111,7 +115,41 @@ exports.handler = async (event) => {
     }
   }
 
-  // ── 2. Resend: send email with PDF link ──────────────────────────────────────
+  // ── 2. GoHighLevel — create/update contact ────────────────────────────────────
+  if (GHL_API_KEY && GHL_LOCATION_ID) {
+    try {
+      const ghlRes = await fetch('https://services.leadconnectorhq.com/contacts/', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${GHL_API_KEY}`,
+          'Version': '2021-07-28',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          locationId: GHL_LOCATION_ID,
+          email,
+          source: 'exit-intent-popup',
+          tags: ['exit-intent', 'book-page', 'free-pdf-request'],
+        }),
+      });
+      if (!ghlRes.ok) {
+        const errText = await ghlRes.text().catch(() => '');
+        console.error('GHL error:', ghlRes.status, errText);
+        errors.push('ghl');
+      } else {
+        const ghlData = await ghlRes.json().catch(() => ({}));
+        console.log('GHL contact created/updated:', ghlData?.contact?.id || 'ok');
+      }
+    } catch (e) {
+      console.error('GHL exception:', e.message);
+      errors.push('ghl');
+    }
+  } else {
+    console.error('GHL env vars not set — skipping GHL');
+    errors.push('ghl-config');
+  }
+
+  // ── 3. Resend: send email with PDF link ──────────────────────────────────────
   if (RESEND_API_KEY) {
     try {
       const emailRes = await fetch('https://api.resend.com/emails', {
