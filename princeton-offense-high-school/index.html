@@ -1,200 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Princeton Offense for High School Basketball | Coach Princeton Basketball</title>
-<meta name="description" content="Why the Princeton Offense is one of the best systems for high school basketball — and how to install it with your team regardless of your roster's athleticism.">
-<link rel="canonical" href="https://coachprincetonbasketball.com/princeton-offense-high-school/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11158472206');</script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#e0e0e0;line-height:1.6;}
-a{color:#c9a84c;text-decoration:none;}
-a:hover{text-decoration:underline;}
-#navbar{position:fixed;top:0;width:100%;z-index:1000;background:rgba(10,10,10,0.95);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 2rem;transition:all 0.3s ease;}
-#navbar.scrolled{background:#0a0a0a;box-shadow:0 2px 20px rgba(0,0,0,0.5);}
-.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;}
-.nav-logo a{color:#c9a84c;font-size:1.3rem;font-weight:700;text-decoration:none;}
-.nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{color:#e0e0e0;text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.3s ease;}
-.nav-links a:hover{color:#c9a84c;}
-.nav-cta{background:#c9a84c;color:#0a0a0a!important;padding:0.5rem 1.2rem;border-radius:4px;font-weight:600!important;}
-.nav-cta:hover{background:#b8963e!important;text-decoration:none!important;}
-.hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;}
-.hamburger span{width:25px;height:2px;background:#e0e0e0;transition:all 0.3s;}
-.hero{background:linear-gradient(135deg,#0d0d0d 0%,#1a1a1a 50%,#0d0d0d 100%);padding:80px 2rem 60px;margin-top:70px;border-bottom:1px solid rgba(201,168,76,0.15);}
-.hero-container{max-width:900px;margin:0 auto;}
-.breadcrumb{font-size:0.85rem;color:#888;margin-bottom:1.5rem;}
-.breadcrumb a{color:#888;text-decoration:none;}
-.breadcrumb a:hover{color:#c9a84c;}
-.breadcrumb span{margin:0 0.5rem;}
-h1{font-size:2.5rem;font-weight:800;line-height:1.2;color:#ffffff;margin-bottom:1.5rem;}
-.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.9rem;color:#888;flex-wrap:wrap;}
-.meta-author{color:#c9a84c;font-weight:600;}
-.reading-time{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);color:#c9a84c;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.8rem;}
-.content-wrapper{max-width:900px;margin:0 auto;padding:50px 2rem;}
-.article-body h2{font-size:1.6rem;font-weight:700;color:#ffffff;margin:2.5rem 0 1rem;border-left:4px solid #c9a84c;padding-left:1rem;}
-.article-body p{color:#ccc;line-height:1.8;margin-bottom:1.25rem;font-size:1rem;}
-.article-body ul,.article-body ol{color:#ccc;line-height:1.8;margin:0 0 1.25rem 1.5rem;}
-.article-body li{margin-bottom:0.5rem;}
-blockquote{border-left:4px solid #c9a84c;padding:1rem 1.5rem;background:#111;border-radius:0 8px 8px 0;margin:2rem 0;color:#ccc;font-style:italic;}
-.cta-box{background:linear-gradient(135deg,#1a1500 0%,#2a2000 100%);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:2.5rem;text-align:center;margin:3rem 0;}
-.cta-box h3{color:#c9a84c;font-size:1.5rem;font-weight:700;margin-bottom:1rem;}
-.cta-box p{color:#ccc;margin-bottom:1.5rem;}
-.btn-primary{display:inline-block;background:#c9a84c;color:#0a0a0a;padding:0.85rem 2rem;border-radius:6px;font-weight:700;font-size:1rem;text-decoration:none;transition:all 0.3s ease;}
-.btn-primary:hover{background:#b8963e;text-decoration:none;transform:translateY(-2px);box-shadow:0 4px 15px rgba(201,168,76,0.3);}
-.related-posts{margin-top:3rem;}
-.section-title{font-size:1.5rem;font-weight:700;color:#ffffff;margin-bottom:1.5rem;border-left:4px solid #c9a84c;padding-left:1rem;}
-.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.post-card{background:#111;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:1.5rem;transition:border-color 0.3s ease;}
-.post-card:hover{border-color:rgba(201,168,76,0.3);}
-.post-card h3{color:#ffffff;font-size:1.1rem;margin-bottom:0.5rem;margin-top:0;}
-.post-card p{color:#999;font-size:0.9rem;margin-bottom:0;}
-footer{background:linear-gradient(180deg,#0a0a0a 0%,#050505 100%);border-top:1px solid rgba(201,168,76,0.15);padding:50px 2rem 30px;}
-.footer-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;}
-.footer-section h3{color:#c9a84c;font-size:1.3rem;margin-bottom:1rem;}
-.footer-section h4{color:#ffffff;font-size:1rem;margin-bottom:1rem;font-weight:600;}
-.footer-section p{color:#888;font-size:0.9rem;line-height:1.6;}
-.footer-section a{display:block;color:#888;text-decoration:none;font-size:0.9rem;margin-bottom:0.5rem;transition:color 0.3s;}
-.footer-section a:hover{color:#c9a84c;}
-.footer-bottom{max-width:1200px;margin:2rem auto 0;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.05);text-align:center;color:#555;font-size:0.85rem;}
-@media(max-width:768px){
-    h1{font-size:2rem;}
-    .hero{padding:40px 1rem;}
-    .content-wrapper{padding:40px 1rem;}
-    .footer-content{grid-template-columns:1fr;gap:2rem;}
-    .posts-grid{grid-template-columns:1fr;}
-    .hamburger{display:flex;}
-    .nav-links{display:none;position:absolute;top:70px;left:0;width:100%;background:#0a0a0a;flex-direction:column;padding:1rem 2rem;border-bottom:1px solid rgba(201,168,76,0.2);gap:1rem;}
-    .nav-links.open{display:flex;}
-}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://coachprincetonbasketball.com/"},
-        {"@type":"ListItem","position":2,"name":"Blog","item":"https://coachprincetonbasketball.com/blog/"},
-        {"@type":"ListItem","position":3,"name":"Princeton Offense for High School Basketball","item":"https://coachprincetonbasketball.com/princeton-offense-high-school/"}
-      ]
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Princeton Offense for High School Basketball",
-      "description": "Why the Princeton Offense is one of the best systems for high school basketball — and how to install it with your team regardless of your roster's athleticism.",
-      "datePublished": "2025-02-03",
-      "dateModified": "2025-02-03",
-      "author": {"@type":"Person","name":"Coach Lee DeForest"},
-      "publisher": {"@type":"Organization","name":"Coach Princeton Basketball"},
-      "url": "https://coachprincetonbasketball.com/princeton-offense-high-school/"
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Princeton Offense for High School Basketball: A Complete Coaching Guide | CoachPrincetonBasketball.com</title>
+  <meta name="description" content="Learn how to implement the Princeton offense at the high school level. Practical drills, lineup tips, and player development strategies for varsity coaches." />
+  <meta name="author" content="Coach Lee" />
+  <link rel="canonical" href="https://www.coachprincetonbasketball.com/princeton-offense-high-school/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="The Princeton Offense for High School Basketball: A Complete Coaching Guide" />
+  <meta property="og:description"        content="Learn how to implement the Princeton offense at the high school level. Practical drills, lineup tips, and player development strategies for varsity coaches." />
+  <meta property="og:url"                content="https://www.coachprincetonbasketball.com/princeton-offense-high-school/" />
+  <meta property="og:site_name"          content="CoachPrincetonBasketball.com" />
+  <meta property="og:image"             content="https://www.coachprincetonbasketball.com/assets/princeton-offense-og-image.jpg" />
+  <meta property="article:published_time" content="2026-03-04T08:00:00+00:00" />
+  <meta property="article:modified_time"  content="2026-03-10T08:00:00+00:00" />
+  <meta property="article:author"         content="Coach Lee" />
+  
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="The Princeton Offense for High School Basketball: A Complete Coaching Guide" />
+  <meta name="twitter:description" content="Learn how to implement the Princeton offense at the high school level. Practical drills, lineup tips, and player development strategies for varsity coaches." />
+  <meta name="twitter:site"        content="@CoachPrincetonBB" />
+  <meta name="twitter:image"       content="https://www.coachprincetonbasketball.com/assets/princeton-offense-og-image.jpg" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11158472206');
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.coachprincetonbasketball.com/"},
+          {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.coachprincetonbasketball.com/blog/"},
+          {"@type":"ListItem","position":3,"name":"The Princeton Offense for High School Basketball: A Complete Coaching Guide","item":"https://www.coachprincetonbasketball.com/princeton-offense-high-school/"}
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "The Princeton Offense for High School Basketball: A Complete Coaching Guide",
+        "description": "Learn how to implement the Princeton offense at the high school level. Practical drills, lineup tips, and player development strategies for varsity coaches.",
+        "url": "https://www.coachprincetonbasketball.com/princeton-offense-high-school/",
+        "datePublished": "2026-03-04T08:00:00+00:00",
+        "dateModified": "2026-03-10T08:00:00+00:00",
+        "author": {
+          "@type": "Person",
+          "name": "Coach Lee",
+          "url": "https://www.coachprincetonbasketball.com/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "CoachPrincetonBasketball.com",
+          "url": "https://www.coachprincetonbasketball.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.coachprincetonbasketball.com/assets/logo.png"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.coachprincetonbasketball.com/assets/princeton-offense-og-image.jpg"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.coachprincetonbasketball.com/princeton-offense-high-school/"
+        },
+        "wordCount": 782,
+        "inLanguage": "en",
+        "articleSection": "Basketball Coaching",
+        "keywords": "The Princeton Offense for High School Basketball: A Complete Coaching Guide",
+        "about": []
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #0a0a0a;
+      color: #e8e0d0;
+      line-height: 1.75;
     }
-  ]
-}
-</script>
+    /* NAV */
+    nav {
+      background: #111;
+      border-bottom: 2px solid #c9a84c;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: #c9a84c;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    nav a:hover { text-decoration: underline; }
+    .nav-brand { font-size: 1rem; font-weight: bold; }
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+      border-bottom: 2px solid #c9a84c;
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: #fff;
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+    }
+    .hero .meta {
+      font-size: 0.85rem;
+      color: #999;
+      font-family: 'Arial', sans-serif;
+    }
+    .hero .meta span { margin: 0 0.4rem; }
+    /* ARTICLE */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    .article-wrap h2 {
+      font-size: 1.5rem;
+      color: #c9a84c;
+      margin: 2rem 0 0.75rem;
+      border-left: 4px solid #c9a84c;
+      padding-left: 0.75rem;
+    }
+    .article-wrap h3 {
+      font-size: 1.2rem;
+      color: #e8e0d0;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .article-wrap p  { margin-bottom: 1.25rem; }
+    .article-wrap ul,
+    .article-wrap ol { margin: 0 0 1.25rem 1.5rem; }
+    .article-wrap li { margin-bottom: 0.4rem; }
+    .article-wrap a  { color: #c9a84c; }
+    .article-wrap blockquote {
+      border-left: 4px solid #c9a84c;
+      padding: 0.5rem 1rem;
+      margin: 1.5rem 0;
+      background: #111;
+      font-style: italic;
+      color: #bbb;
+    }
+    /* RELATED */
+    .related {
+      background: #111;
+      border-top: 2px solid #333;
+      padding: 2rem 1.5rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .related h3 {
+      color: #c9a84c;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+      font-family: 'Arial', sans-serif;
+    }
+    .related ul { list-style: none; padding: 0; }
+    .related li { margin-bottom: 0.4rem; font-size: 0.9rem; }
+    /* FOOTER */
+    footer {
+      background: #0a0a0a;
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: #555;
+      font-family: 'Arial', sans-serif;
+    }
+    footer a { color: #c9a84c; }
+  </style>
 </head>
 <body>
-<nav id="navbar">
-  <div class="nav-container">
-    <div class="nav-logo"><a href="/">Coach Princeton Basketball</a></div>
-    <div class="hamburger" id="navHamburger"><span></span><span></span><span></span></div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/about/">About</a></li>
-      <li><a href="/book/">Playbook</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact/">Contact</a></li>
-      <li><a href="/book/" class="nav-cta">Get the Playbook</a></li>
-    </ul>
-  </div>
-</nav>
-<section class="hero">
-  <div class="hero-container">
-    <div class="breadcrumb">
-      <a href="/">Home</a><span>›</span>
-      <a href="/blog/">Blog</a><span>›</span>
-      <span>Princeton Offense for High School Basketball</span>
-    </div>
-    <h1>Princeton Offense for High School Basketball</h1>
-    <div class="article-meta">
-      <span class="meta-author">Coach Lee DeForest</span>
-      <span>|</span>
-      <span>February 3, 2025</span>
-      <span class="reading-time">8 min read</span>
-    </div>
-  </div>
-</section>
-<div class="content-wrapper">
-  <div class="article-body">
-<h2>Why High School Coaches Choose the Princeton Offense</h2>
-<p>The Princeton Offense levels the playing field. High school coaches who run it consistently describe the same experience: their teams compete and beat opponents with significantly more athletic talent.</p>
-<p>The reason is simple. The Princeton Offense puts decision-making at the center of the game — and good decisions beat athleticism more often than coaches expect.</p>
-<h2>Matching the System to Your Roster</h2>
-<p>The Princeton Offense works with almost any roster. You don't need elite athletes, elite shooters, or a dominant post player. You need players who can pass, cut, and read.</p>
-<p>The key personnel requirement is a point guard who can make decisions under pressure and a team that buys into ball movement. Everything else is teachable.</p>
-<h2>Installation for High School Teams</h2>
-<p>Start with the core read: overplayed means backdoor. This single concept, drilled in the first week, establishes the foundation for everything that follows.</p>
-<p>Week 1: Spacing and the basic cut. Week 2: The Chin set entry. Week 3: Counters and reads. Week 4: Full offense with competitive drills. This four-week framework gets most teams functional with the system.</p>
-<h2>Managing Player Buy-In</h2>
-<p>High school players accustomed to isolation basketball may resist ball movement initially. Show them the data: teams that average more assists per game outscore opponents at a significantly higher rate.</p>
-<p>Culture change takes time. Celebrate every extra pass, every back-cut, every unselfish play — and the system will take hold.</p>
-<h2>Common Mistakes at the High School Level</h2>
-<p>The most common mistake is running the offense too fast. The Princeton Offense requires patience. Coaches who allow players to rush and force shots before the defense is broken lose the system's primary advantage.</p>
-<p>The second mistake is skipping the read teaching. Players who run the movements without understanding the reads will be lost the moment a defense adjusts.</p>
-<h2>Complete Installation Guide</h2>
-<p>The <a href='/book/'>Princeton Offense Playbook</a> was built with high school coaches in mind — complete diagrams, teaching progressions, drills, and the practice plans that make installation manageable.</p>
 
-  </div>
-  <div class="cta-box">
-    <h3>Take Your Princeton Offense to the Next Level</h3>
-    <p>Get the complete playbook with detailed diagrams, drills, and coaching progressions.</p>
-    <a href="/book/" class="btn-primary">Get the Complete Playbook →</a>
-  </div>
-  <div class="related-posts">
-    <h2 class="section-title">Related Articles</h2>
-    <div class="posts-grid">
-<div class="post-card"><h3><a href="/princeton-offense-youth-basketball/" style="color:#fff;text-decoration:none;">Princeton Offense for Youth Basketball</a></h3><p>Install the Princeton system at the youth level</p></div>
-<div class="post-card"><h3><a href="/princeton-offense-practice-plan/" style="color:#fff;text-decoration:none;">Princeton Offense Practice Plan: 4-Week Guide</a></h3><p>A week-by-week practice guide</p></div>
-<div class="post-card"><h3><a href="/basketball-coaching-tips-offense/" style="color:#fff;text-decoration:none;">15 Basketball Coaching Tips for Better Offense</a></h3><p>Proven tips for any offensive system</p></div>
-    </div>
-  </div>
-</div>
+<nav>
+  <a class="nav-brand" href="https://www.coachprincetonbasketball.com/">CoachPrincetonBasketball</a>
+  <a href="https://www.coachprincetonbasketball.com/princeton-offense-complete-guide/">Offense Guide</a>
+  <a href="https://www.coachprincetonbasketball.com/princeton-offense-drills/">Drills</a>
+  <a href="https://www.coachprincetonbasketball.com/chin-set/">Chin Set</a>
+  <a href="https://www.coachprincetonbasketball.com/low-set-princeton-offense/">Low Set</a>
+  <a href="https://www.coachprincetonbasketball.com/point-set-princeton-offense/">Point Set</a>
+</nav>
+
+<header class="hero">
+  <h1>The Princeton Offense for High School Basketball: A Complete Coaching Guide</h1>
+  <p class="meta">
+    <span>By Coach Lee</span> &bull;
+    <span>Published: March 4, 2026</span> &bull;
+    <span>Last Updated: March 10, 2026</span> &bull;
+    <span>4 min read</span>
+  </p>
+</header>
+
+<article class="article-wrap">
+
+<p>High school basketball is the perfect environment to install the <a href="https://www.coachprincetonbasketball.com/princeton-offense-complete-guide/" style="color:#c9a84c">Princeton offense</a>. Your players are old enough to grasp its concepts, hungry enough to master something different, and still young enough to build the habits that will serve them for life. I've coached this system for years at the prep and high school level, and I'm convinced there's no better offensive system for developing smart, skilled players.</p>
+<h2 id="why-the-princeton-offense-works-at-the-high-school-level">Why the Princeton Offense Works at the High School Level</h2>
+<p>Most high school offenses rely on one or two skilled players dominating with isolations or pick-and-roll sets. The Princeton offense flips that model entirely. It's a four-out, one-in motion system built on reads, cuts, and spacing — not athleticism.</p>
+<p>That matters at the high school level for three reasons:</p>
+<p><strong>1. You probably don't have a McDonald's All-American.</strong> The Princeton offense was designed to beat teams with superior athletes by outthinking them. <a href="https://en.wikipedia.org/wiki/Pete_Carril" target="_blank" rel="noopener noreferrer" style="color:#c9a84c">Pete Carril</a> built it specifically to compete with more talented rosters at Ivy League schools, and it worked.</p>
+<p><strong>2. It develops all five players.</strong> Every player in the Princeton offense must be able to pass, cut, set screens, and read the defense. That develops complete players — not ball-stoppers.</p>
+<p><strong>3. It creates a culture of basketball IQ.</strong> When your players understand why the offense works, they become better defenders, better communicators, and better teammates.</p>
+<h2 id="the-core-concepts-to-teach-first">The Core Concepts to Teach First</h2>
+<p>Before you run a single Princeton set, make sure your players own these concepts:</p>
+<h3 id="ball-reversal">Ball Reversal</h3>
+<p>The Princeton offense lives and dies by ball reversal. The defense wants to load up on one side — ball reversal forces them to recover, and that recovery creates cuts. Spend the first two weeks of every season drilling nothing but ball reversal to wings and corners until it's automatic.</p>
+<h3 id="the-backdoor-cut">The Backdoor Cut</h3>
+<p>The signature play of the Princeton offense is the backdoor cut. When a defender overplays a wing, the wing cuts hard to the basket behind the defense for a layup. Teach this on day one and run it relentlessly. At the high school level, most defenders overplay — you'll score 15 easy points a game with disciplined backdoor reads.</p>
+<h3 id="the-dribble-entry-pass">The Dribble-Entry Pass</h3>
+<p>When the point guard dribbles toward a wing, that wing cuts backdoor. This is the dribble-entry action that makes Princeton so hard to guard — it converts normal dribble penetration into a backdoor opportunity instead of a dead end.</p>
+<h3 id="the-hi-lo-post-entry">The Hi-Lo Post Entry</h3>
+<p>The post player flashes to the elbow (high post) and the wing cuts to the low post (or vice versa). This hi-lo action creates easy baskets against zone and man alike.</p>
+<h2 id="practice-structure-for-installing-the-princeton-offense">Practice Structure for Installing the Princeton Offense</h2>
+<p>Here's how I structure the first four weeks with a new team:</p>
+<p><strong>Week 1 — Fundamentals only.</strong> Passing, cutting, spacing. No sets. Players must be in good triple-threat position before every catch. Run 5-on-0 to build muscle memory.</p>
+<p><strong>Week 2 — Introduce the basic side-action.</strong> Wing entry, backdoor cut, reversal. Walk through it in slow motion. Talk through every read out loud.</p>
+<p><strong>Week 3 — Add the post.</strong> Now the post player is active in the hi-lo. Focus on the elbow-flash and the timing of cuts.</p>
+<p><strong>Week 4 — 5-on-5 with constraints.</strong> No dribbling except dribble-entry or to attack the basket. This forces players to use their feet and think two passes ahead.</p>
+<h2 id="common-mistakes-high-school-coaches-make">Common Mistakes High School Coaches Make</h2>
+<p><strong>Installing too many plays too fast.</strong> The Princeton offense isn't a set play system — it's a read-and-react system. If you try to install 10 sets in two weeks, players will play by rote instead of by read. Keep it simple and build.</p>
+<p><strong>Allowing lazy spacing.</strong> When players drift out of position, the spacing collapses and cuts die in traffic. Be relentless about maintaining the four-out structure.</p>
+<p><strong>Skipping the drill work.</strong> The backdoor cut only works if players have the footwork and timing to execute it in game conditions. Drill it daily until it's reflexive.</p>
+<h2 id="conditioning-the-princeton-way">Conditioning the Princeton Way</h2>
+<p>One bonus: the Princeton offense keeps all five players moving, which means your conditioning translates directly to offensive efficiency. No standing around — if a player isn't cutting, screening, or spacing, they're out of position.</p>
+<p>I run a simple "five-second rule" in practice: no player can be stationary for more than five seconds without the ball. It changes the energy of your practice immediately.</p>
+<h2 id="ready-to-go-deeper">Ready to Go Deeper?</h2>
+<p>The Princeton offense rewards the coaches who invest in it. For more drills, teaching progressions, and film breakdowns, explore the resources at <a href="{SITE}">{SITE}</a>. Whether you're installing it for the first time or fine-tuning an established system, there's always more to learn from this beautiful offense.</p>
+</article>
+
+<aside class="related">
+  <h3>More Resources</h3>
+  <ul>
+          <li><a href="https://www.coachprincetonbasketball.com/princeton-offense-complete-guide/" style="color:#c9a84c">Complete Princeton Offense Guide</a></li>
+          <li><a href="https://www.coachprincetonbasketball.com/princeton-offense-drills/" style="color:#c9a84c">Princeton Offense Drills</a></li>
+          <li><a href="https://www.coachprincetonbasketball.com/chin-set/" style="color:#c9a84c">Chin Set</a></li>
+  </ul>
+</aside>
+
 <footer>
-  <div class="footer-content">
-    <div class="footer-section">
-      <h3>Coach Princeton Basketball</h3>
-      <p>Dedicated to teaching the Princeton Offense to coaches and players at every level.</p>
-    </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <a href="/about/">About</a>
-      <a href="/blog/">Blog</a>
-      <a href="/contact/">Contact</a>
-    </div>
-    <div class="footer-section">
-      <h4>Resources</h4>
-      <a href="/book/">The Playbook</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Use</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Coach Princeton Basketball. All rights reserved.</p>
-  </div>
+  <p>&copy; 2026 <a href="https://www.coachprincetonbasketball.com/">CoachPrincetonBasketball.com</a> &mdash; All rights reserved.</p>
 </footer>
-<script>
-window.addEventListener('scroll',function(){
-  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
-});
-document.getElementById('navHamburger').addEventListener('click',function(){
-  document.getElementById('navLinks').classList.toggle('open');
-});
-</script>
+
 </body>
 </html>
