@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Set - Princeton Offense | OUA Reads from a Different Angle</title>
+  <meta name="description" content="The X Set runs the Princeton Offense OUA reads from a different angle — forwards run the screens, guards fill the corners, and the high post delivers. Same reads, new look.">
+  <meta name="keywords" content="x set princeton offense, princeton x set, OUA basketball, forwards screening basketball, high post princeton, princeton offense sets, guards fill corners">
+  <meta property="og:title" content="X Set - Princeton Offense">
+  <meta property="og:description" content="Same OUA reads as the Point Set, but from a completely different angle. Forwards run the screens, guards fill corners, and the defense faces the same impossible choices from a new look.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://coachprincetonbasketball.com/x-set-princeton-offense/">
+  <meta property="og:image" content="https://coachprincetonbasketball.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="X Set - Princeton Offense">
+  <meta name="twitter:description" content="Same OUA reads as the Point Set, but from a completely different angle. Forwards run the screens, guards fill corners, and the defense faces the same choices from a new look.">
+  <link rel="canonical" href="https://coachprincetonbasketball.com/x-set-princeton-offense/">
+  <meta property="article:published_time" content="2024-10-15T08:00:00Z">
+  <meta property="article:author" content="Coach Princeton Basketball">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11158472206');
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; line-height: 1.6; }
+    a { color: #c9a84c; text-decoration: none; }
+    a:hover { color: #e8c96d; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    nav.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+    .nav-logo { font-size: 1.1rem; font-weight: 700; color: #c9a84c; letter-spacing: 0.5px; }
+    .nav-logo span { color: #ffffff; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: #cccccc; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #c9a84c; }
+    .nav-cta {
+      background: #c9a84c; color: #000 !important; padding: 0.5rem 1.2rem;
+      border-radius: 4px; font-weight: 600; font-size: 0.85rem;
+    }
+    .nav-cta:hover { background: #e8c96d; color: #000 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: #ffffff; display: block; transition: all 0.3s; }
+    .mobile-menu {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: #0a0a0a; z-index: 999; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: #ffffff; font-size: 1.3rem; font-weight: 600; }
+    .mobile-menu a:hover { color: #c9a84c; }
+    .mobile-close { position: absolute; top: 1.5rem; right: 2rem; font-size: 2rem; color: #ffffff; cursor: pointer; }
+
+    /* HERO */
+    .hero {
+      min-height: 45vh;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%);
+      display: flex; align-items: center;
+      padding: 8rem 2rem 4rem;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 1.5rem; }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #c9a84c; }
+    .hero-tag {
+      display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.3);
+      color: #c9a84c; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.2rem;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 span { color: #c9a84c; }
+    .hero-sub { font-size: 1.1rem; color: #aaaaaa; max-width: 640px; margin-bottom: 1.5rem; }
+    .hero-meta { display: flex; gap: 1.5rem; font-size: 0.8rem; color: #555; flex-wrap: wrap; }
+
+    /* CONTENT */
+    .content-section { padding: 4rem 2rem; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .container h2 { font-size: 1.6rem; font-weight: 700; color: #c9a84c; margin: 2.5rem 0 1rem; }
+    .container h2:first-child { margin-top: 0; }
+    .container h3 { font-size: 1.15rem; font-weight: 600; color: #e8c96d; margin: 1.8rem 0 0.7rem; }
+    .container p { color: #cccccc; margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; }
+    .container strong { color: #e8c96d; }
+    .container ul { color: #cccccc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .container ul li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    /* KEY CONCEPT BOX */
+    .concept-box {
+      background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+      border-left: 4px solid #c9a84c; border-radius: 6px;
+      padding: 1.5rem 1.8rem; margin: 2rem 0;
+    }
+    .concept-box p { color: #dddddd; margin: 0; font-size: 1.05rem; line-height: 1.8; }
+    .concept-box strong { color: #c9a84c; }
+
+    /* SEQUENCE BOX */
+    .sequence-box {
+      background: #111111; border: 1px solid #1e1e1e; border-radius: 8px;
+      padding: 1.5rem 1.8rem; margin: 1.5rem 0;
+    }
+    .sequence-box .sequence-title {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #555; margin-bottom: 1rem;
+    }
+    .sequence-steps { display: flex; flex-direction: column; gap: 0.7rem; }
+    .sequence-step { display: flex; align-items: flex-start; gap: 1rem; }
+    .step-num {
+      flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.4);
+      color: #c9a84c; font-size: 0.75rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-text { font-size: 0.9rem; color: #bbbbbb; line-height: 1.6; padding-top: 3px; }
+
+    /* OUA GRID */
+    .oua-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+    .oua-card {
+      background: #111111; border: 1px solid #222222; border-radius: 8px;
+      padding: 1.4rem 1.2rem;
+    }
+    .oua-card-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #c9a84c; margin-bottom: 0.5rem;
+    }
+    .oua-card h4 { font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem; }
+    .oua-card p { font-size: 0.85rem; color: #999999; margin: 0; line-height: 1.55; }
+
+    /* DIFF TABLE */
+    .diff-table {
+      width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.9rem;
+    }
+    .diff-table th {
+      background: #111; color: #c9a84c; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase; padding: 0.8rem 1rem; text-align: left;
+      border-bottom: 1px solid #222;
+    }
+    .diff-table td {
+      padding: 0.75rem 1rem; color: #cccccc; border-bottom: 1px solid #111;
+      line-height: 1.5;
+    }
+    .diff-table tr:last-child td { border-bottom: none; }
+    .diff-table tr:hover td { background: #0f0f0f; }
+    .diff-table td:first-child { color: #888; font-weight: 500; }
+
+    /* EMAIL FORM */
+    .email-capture {
+      background: linear-gradient(135deg, #111111 0%, #161008 100%);
+      border: 1px solid #2a2010; border-radius: 10px;
+      padding: 2rem; margin: 3rem 0;
+    }
+    .email-capture h3 { color: #c9a84c; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .email-capture p { color: #999999; font-size: 0.9rem; margin-bottom: 1.3rem; }
+    .form-row { display: flex; gap: 0.7rem; }
+    .form-row input[type="email"] {
+      flex: 1; padding: 0.7rem 1rem; background: #0a0a0a; border: 1px solid #333;
+      border-radius: 5px; color: #ffffff; font-size: 0.9rem; font-family: 'Inter', sans-serif;
+    }
+    .form-row input[type="email"]::placeholder { color: #555; }
+    .form-row input[type="email"]:focus { outline: none; border-color: #c9a84c; }
+    .form-row button {
+      background: #c9a84c; color: #000; border: none; padding: 0.7rem 1.5rem;
+      border-radius: 5px; font-weight: 700; font-size: 0.9rem; cursor: pointer;
+      font-family: 'Inter', sans-serif; white-space: nowrap;
+    }
+    .form-row button:hover { background: #e8c96d; }
+
+    /* RELATED CONTENT */
+    .related-box {
+      background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 8px; padding: 1.8rem; margin: 2.5rem 0;
+    }
+    .related-box h3 { color: #c9a84c; font-size: 1rem; margin-bottom: 1.2rem; letter-spacing: 0.5px; }
+    .related-links { display: flex; flex-direction: column; gap: 0.6rem; }
+    .related-links a {
+      color: #aaaaaa; font-size: 0.9rem; padding: 0.5rem 0;
+      border-bottom: 1px solid #1a1a1a; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .related-links a:last-child { border-bottom: none; }
+    .related-links a:hover { color: #c9a84c; }
+    .related-links a::before { content: '→'; color: #c9a84c; font-size: 0.8rem; }
+
+    /* CTA BOX */
+    .cta-box {
+      background: linear-gradient(135deg, #1a1208 0%, #0f0a04 100%);
+      border: 1px solid rgba(201,168,76,0.3); border-radius: 10px;
+      padding: 2.5rem; text-align: center; margin: 2.5rem 0;
+    }
+    .cta-box h3 { color: #c9a84c; font-size: 1.4rem; margin-bottom: 0.8rem; }
+    .cta-box p { color: #aaaaaa; margin-bottom: 1.5rem; }
+    .cta-box a {
+      display: inline-block; background: #c9a84c; color: #000;
+      padding: 0.85rem 2rem; border-radius: 5px; font-weight: 700; font-size: 0.95rem;
+    }
+    .cta-box a:hover { background: #e8c96d; }
+
+    /* CONTINUE READING */
+    .continue-reading { padding: 3rem 2rem; border-top: 1px solid #1a1a1a; }
+    .continue-reading h2 { max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.2rem; color: #888; font-weight: 600; }
+    .posts-grid { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .post-card {
+      background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 8px; padding: 1.3rem;
+      transition: border-color 0.2s;
+    }
+    .post-card:hover { border-color: #c9a84c; }
+    .post-card-tag { font-size: 0.65rem; color: #c9a84c; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .post-card h4 { font-size: 0.95rem; color: #ffffff; font-weight: 600; line-height: 1.4; }
+
+    /* FOOTER */
+    footer { background: #050505; border-top: 1px solid #111; padding: 3rem 2rem 2rem; }
+    .footer-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
+    .footer-col h4 { color: #c9a84c; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; }
+    .footer-col a { display: block; color: #555; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .footer-col a:hover { color: #c9a84c; }
+    .footer-bottom { max-width: 1000px; margin: 0 auto; text-align: center; font-size: 0.8rem; color: #333; border-top: 1px solid #111; padding-top: 1.5rem; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .oua-grid { grid-template-columns: 1fr; }
+      .form-row { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .diff-table { font-size: 0.82rem; }
+      .diff-table th, .diff-table td { padding: 0.6rem 0.7rem; }
+    }
+  </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "X Set - Princeton Offense | OUA Reads from a Different Angle",
+        "description": "The X Set runs the Princeton Offense OUA reads from a different angle — forwards run the screens, guards fill the corners, and the high post delivers. Same reads, new look.",
+        "url": "https://coachprincetonbasketball.com/x-set-princeton-offense/",
+        "datePublished": "2025-01-01",
+        "dateModified": "2026-03-10",
+        "author": {
+            "@type": "Person",
+            "name": "Coach Lee DeForest",
+            "url": "https://coachprincetonbasketball.com/about/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Coach Princeton Basketball",
+            "url": "https://coachprincetonbasketball.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://coachprincetonbasketball.com/images/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://coachprincetonbasketball.com/x-set-princeton-offense/"
+        },
+        "keywords": "Princeton Offense X Set, OUA reads different angle, high post basketball"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://coachprincetonbasketball.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Princeton Offense Sets",
+                "item": "https://coachprincetonbasketball.com/princeton-offense-complete-guide/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "X Set",
+                "item": "https://coachprincetonbasketball.com/x-set-princeton-offense/"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a href="/" class="nav-logo">Coach<span>Princeton</span></a>
+    <ul class="nav-links">
+      <li><a href="/#offense">The System</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/book/" class="nav-cta">Get the Playbook</a></li>
+    </ul>
+    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <span class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">&times;</span>
+    <a href="/" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
+    <a href="/blog/" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Blog</a>
+    <a href="/book/" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Get the Playbook</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> › <a href="/blog/">Blog</a> › X Set</div>
+      <div class="hero-tag">The Sets</div>
+      <h1>X Set<br><span>OUA Reads from a Different Angle</span></h1>
+      <p class="hero-sub">The X Set delivers the same Over, Away, and Under reads as the Point Set — but from a completely different angle. Forwards run the screens, guards fill the corners, and the high post distributes.</p>
+      <div class="hero-meta">
+        <span>Princeton Offense</span>
+        <span>·</span>
+        <span>X Set</span>
+        <span>·</span>
+        <span>OUA Series</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container">
+
+      <p>Every set in the Princeton Offense is built around the same core principle: <strong>the post catches, the guard reads the defense, and the correct pass delivers the advantage</strong>. The X Set applies that principle from an angle the defense hasn't prepared for.</p>
+
+      <p>In the <a href="/point-set-princeton-offense/">Point Set</a>, guards cut off screens set by guards. In the X Set, <strong>forwards set the screens</strong>. Both guards drop to the corners. The high post receives and runs the OUA reads from a different position on the floor. Same decision tree — completely different personnel assignments and spacing.</p>
+
+      <div class="concept-box">
+        <p><strong>The X Set Difference:</strong> The key departure from other sets is <strong>who sets the screens</strong>. In the X Set, your forwards (3 and 4) are the screeners. Your guards fill the corners. This inverts typical positional expectations and forces the defense to make adjustments they haven't practiced against standard Princeton alignment.</p>
+      </div>
+
+      <h2>The Entry</h2>
+      <p>The X Set entry is clean and deliberate. It begins with a guard-to-forward pass — the same type of entry pass that starts the Low Set — but the alignment that follows is distinct.</p>
+
+      <div class="sequence-box">
+        <div class="sequence-title">X Set Entry Sequence</div>
+        <div class="sequence-steps">
+          <div class="sequence-step">
+            <div class="step-num">1</div>
+            <div class="step-text"><strong>1 hits 3</strong> on the wing — guard passes to the forward</div>
+          </div>
+          <div class="sequence-step">
+            <div class="step-num">2</div>
+            <div class="step-text"><strong>Both guards fill the corners</strong> — 1 and 2 drop to opposite corners</div>
+          </div>
+          <div class="sequence-step">
+            <div class="step-num">3</div>
+            <div class="step-text"><strong>5 fills the high post</strong> — receiving the ball at or above the free throw line</div>
+          </div>
+          <div class="sequence-step">
+            <div class="step-num">4</div>
+            <div class="step-text"><strong>3 hits 5</strong> at the high post — now 5 is the distributor with two corners and two screeners available</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Once 5 catches at the high post, the alignment is set. Guards are in the corners. Forwards are positioned to set screens. 5 holds the ball and reads the defense, looking for the first cutter.</p>
+
+      <h2>The OUA Reads from the X Alignment</h2>
+      <p>With 5 at the high post and guards in the corners, the X Set runs the same Over, Away, and Under reads that appear in the Point Set. The reads are identical in concept — what changes is the angle, the screeners, and the initial positions of the cutters.</p>
+
+      <div class="oua-grid">
+        <div class="oua-card">
+          <div class="oua-card-label">X Over</div>
+          <h4>Cut Over, Fake Screen, Backdoor</h4>
+          <p>3 cuts over toward the ball side. 3 sets a fake screen for 4. 4 reads the defense — if their defender follows 4 through the screen, 4 backdoors. 5 delivers the direct pass for a layup. 3's fake screen is the trigger.</p>
+        </div>
+        <div class="oua-card">
+          <div class="oua-card-label">X Away</div>
+          <h4>Cut Away, Ball Reversal</h4>
+          <p>Guard cuts away from the ball toward the opposite corner. 5 passes back to the cutting guard — or reverses the ball to the weak side. Resets the attack from a new angle with fresh positioning for all cutters.</p>
+        </div>
+        <div class="oua-card">
+          <div class="oua-card-label">X Under</div>
+          <h4>Continue to Rim</h4>
+          <p>Guard takes the same initial step as the Over cut but continues all the way to the rim without stopping. 5 delivers a direct pass for a layup. Works when the defender is caught flat-footed on the first cut step.</p>
+        </div>
+      </div>
+
+      <h3>X Over — The Fake Screen Counter</h3>
+      <p>The X Over is the most distinctive action in the X Set. It begins with 3 cutting over toward the ball side — a motion that looks like a standard cut. But instead of receiving the ball, 3 sets a fake screen for 4.</p>
+
+      <p>4's defender has a decision to make: stay with 4 through the screen, or help on 3. If they trail 4, <strong>4 cuts backdoor</strong> — the space is clear because both guards are in the corners and the paint is open. 5 makes the pass directly to 4 at the rim.</p>
+
+      <p>This action is called X Over because it creates an X-shaped movement pattern on the floor — 3 cuts one way, 4 cuts the other. Two players crossing in opposite directions, with the pass going to whichever one the defense abandons.</p>
+
+      <h2>How X Set Differs from Point Set</h2>
+      <p>The X Set and the Point Set run the same OUA decision tree. A coach who has taught one has largely taught the other. But the differences in alignment create completely different defensive problems.</p>
+
+      <table class="diff-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Point Set</th>
+            <th>X Set</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Post Position</td>
+            <td>Elbow (high post side)</td>
+            <td>High post (above free throw line)</td>
+          </tr>
+          <tr>
+            <td>Who Sets Screens</td>
+            <td>Guards</td>
+            <td>Forwards (3 and 4)</td>
+          </tr>
+          <tr>
+            <td>Guard Starting Position</td>
+            <td>Wing / top of key</td>
+            <td>Corners</td>
+          </tr>
+          <tr>
+            <td>OUA Reads</td>
+            <td>Over / Away / Under</td>
+            <td>Over / Away / Under (same)</td>
+          </tr>
+          <tr>
+            <td>Unique Action</td>
+            <td>Pearl Counter (post spin)</td>
+            <td>X Over (fake screen, 4 backdoors)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The critical coaching point is that players learn the reads once — and then apply them across multiple sets. A guard who understands OUA from the Point Set needs only to learn the new starting positions to run the X Set. The decision-making is the same. The recognition is the same. Only the starting alignment is different.</p>
+
+      <h2>Why Forwards Running Screens Changes Everything</h2>
+      <p>Most Princeton Offense sets feature guards cutting and forwards setting down or back screens from conventional positions. The X Set flips this. When forwards (3 and 4) are the screeners and guards fill the corners, <strong>defenders have to guard unfamiliar alignments</strong>.</p>
+
+      <p>A defense that has prepared for the Point Set has watched guards cut off guards at the elbow. In the X Set, the elbow is empty. The guards they've been tracking are in the corners. The forwards are setting screens. Everything the defense has practiced looks wrong.</p>
+
+      <p>This is the core strategic value of running multiple sets from the same read structure. Defenses scout reads — but they also scout alignments. The X Set keeps the reads identical while making the alignment unrecognizable.</p>
+
+      <!-- EMAIL CAPTURE -->
+      <div class="email-capture">
+        <h3>Get the X Set Breakdown</h3>
+        <p>Entry diagrams, X Over breakdown, and how it connects to the Point Set OUA series — delivered to your inbox.</p>
+        <form name="x-set-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/x-set-princeton-offense/?success=1">
+          <input type="hidden" name="form-name" value="x-set-guide">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Your email address" required>
+            <button type="submit">Send It</button>
+          </div>
+        </form>
+      </div>
+
+      <h2>Teaching the X Set</h2>
+      <p>The X Set is most effective after players have learned the Point Set. Because the OUA reads are identical, you don't have to reteach the decision-making — you only need to introduce the new starting positions.</p>
+
+      <p>The teaching sequence works like this: run the Point Set until players can identify Over, Away, and Under reads automatically. Then shift the alignment — put guards in the corners, forwards as screeners, post at the high post. Run the same reads. Players who know OUA will adapt quickly because the decision tree hasn't changed.</p>
+
+      <p>The X Over fake screen action is the one truly new element. Teach it separately: 3 cuts toward the ball, sets a fake for 4, and 4 reads whether to continue through the screen or cut backdoor. Once that reaction is automatic, the X Over becomes a reliable counter whenever defenders chase 4 too aggressively.</p>
+
+      <h2>The X Set in the Full System</h2>
+      <p>The six Princeton Offense sets are designed to be learned as a system, not as isolated plays. Each set introduces a new angle, a new post position, or a new personnel assignment — but they all share the same core reads. A team that knows all six sets can attack from six different alignments with the same read structure.</p>
+
+      <ul>
+        <li>The <a href="/low-set-princeton-offense/">Low Set</a> is a guard-to-forward entry that looks inside first, with three wing options that trigger different sets</li>
+        <li>The <a href="/point-set-princeton-offense/">Point Set</a> uses a wave entry to the high post elbow and runs the three OUA reads</li>
+        <li>The <a href="/chin-set/">Chin Set</a> begins with a dribble weave and builds into counters and continuations</li>
+        <li>The <a href="/five-out-princeton-offense/">Five Out Set</a> puts the post at the top of the key with wing dribble-to-cut reads</li>
+        <li>The <a href="/twirl-set-princeton-offense/">Twirl Set</a> uses a circle entry with the post near the volleyball lines and phases naturally into the Chin</li>
+      </ul>
+
+      <!-- RELATED -->
+      <div class="related-box">
+        <h3>THE SETS</h3>
+        <div class="related-links">
+          <a href="/chin-set/">Chin Set — Dribble Entry &amp; Weave Series</a>
+          <a href="/low-set-princeton-offense/">Low Set — Guard-to-Forward Entry</a>
+          <a href="/point-set-princeton-offense/">Point Set — High Post Elbow &amp; OUA Reads</a>
+          <a href="/five-out-princeton-offense/">Five Out Set — Post at the Top of the Key</a>
+          <a href="/twirl-set-princeton-offense/">Twirl Set — Circle Entry Near Volleyball Lines</a>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h3>Get the Complete Playbook</h3>
+        <p>Every set, every read, every counter — fully diagrammed in one Princeton Offense playbook.</p>
+        <a href="/book/">Get the Playbook →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTINUE READING -->
+  <section class="continue-reading">
+    <h2>Continue Reading</h2>
+    <div class="posts-grid">
+      <a href="/point-set-princeton-offense/" class="post-card">
+        <div class="post-card-tag">The Sets</div>
+        <h4>Point Set — High Post Elbow &amp; OUA</h4>
+      </a>
+      <a href="/twirl-set-princeton-offense/" class="post-card">
+        <div class="post-card-tag">The Sets</div>
+        <h4>Twirl Set — Circle Entry</h4>
+      </a>
+      <a href="/chin-set/" class="post-card">
+        <div class="post-card-tag">The Sets</div>
+        <h4>Chin Set — Dribble Weave Entry</h4>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>The Sets</h4>
+        <a href="/chin-set/">Chin Set</a>
+        <a href="/low-set-princeton-offense/">Low Set</a>
+        <a href="/point-set-princeton-offense/">Point Set</a>
+        <a href="/five-out-princeton-offense/">Five Out Set</a>
+        <a href="/twirl-set-princeton-offense/">Twirl Set</a>
+        <a href="/x-set-princeton-offense/">X Set</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn More</h4>
+        <a href="/blog/">All Articles</a>
+        <a href="/#offense">The System</a>
+        <a href="/book/">Get the Playbook</a>
+      </div>
+      <div class="footer-col">
+        <h4>Coach Princeton</h4>
+        <a href="/">Home</a>
+        <a href="mailto:info@floridacoastalprep.com">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Coach Princeton Basketball. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>

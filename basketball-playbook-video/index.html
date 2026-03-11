@@ -88,7 +88,7 @@
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px; }
 
         /* Learn list */
-        .learn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .learn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 2rem 0; }
         .learn-card { background: rgba(201, 168, 76, 0.05); border: 1px solid rgba(201, 168, 76, 0.15); border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease; }
         .learn-card:hover { border-color: rgba(201, 168, 76, 0.4); transform: translateY(-2px); }
         .learn-card h4 { color: #c9a84c; font-size: 1.1rem; margin-bottom: 0.5rem; }
@@ -113,7 +113,7 @@
         .related-posts { padding: 60px 2rem; background: rgba(255, 255, 255, 0.02); border-top: 1px solid rgba(201, 168, 76, 0.1); }
         .related-posts .container { max-width: 1000px; }
         .related-posts h2 { text-align: center; margin-bottom: 2rem; }
-        .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+        .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .post-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(201, 168, 76, 0.1); border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease; text-decoration: none; display: block; }
         .post-card:hover { border-color: rgba(201, 168, 76, 0.4); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); }
         .post-card h3 { color: #ffffff; font-size: 1.1rem; margin-bottom: 0.5rem; margin-top: 0; }
@@ -133,8 +133,14 @@
             .content-section { padding: 40px 1rem; }
             .container { padding: 0 1rem; }
             .footer-container { grid-template-columns: 1fr; gap: 2rem; }
-            .learn-grid { grid-template-columns: 1fr; }
+            .learn-grid { grid-template-columns: repeat(2, 1fr); }
             .posts-grid { grid-template-columns: 1fr; }
+        }
+    
+        @media (max-width: 480px) {
+            .learn-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>

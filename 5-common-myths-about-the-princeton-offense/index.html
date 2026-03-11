@@ -92,7 +92,7 @@
         .btn-primary:hover { background-color: #e8c96d; transform: translateY(-3px); box-shadow: 0 12px 35px rgba(201, 168, 76, 0.35); }
         .related-posts { margin-top: 4rem; }
         .related-posts h3 { color: #ffffff; margin-bottom: 1.5rem; }
-        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         footer { background-color: #000000; border-top: 1px solid rgba(201, 168, 76, 0.1); padding: 4rem 2rem 2rem; color: #888888; }
         .footer-container { max-width: 1200px; margin: 0 auto; }
         .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
@@ -103,6 +103,12 @@
         .footer-section a:hover { color: #c9a84c; }
         .footer-bottom { border-top: 1px solid rgba(201, 168, 76, 0.1); padding-top: 2rem; text-align: center; font-size: 0.85rem; color: #666666; }
         @media (max-width: 768px) { h1 { font-size: 2rem; } .hero { padding: 40px 1rem; } }
+    
+        @media (max-width: 768px) {
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>

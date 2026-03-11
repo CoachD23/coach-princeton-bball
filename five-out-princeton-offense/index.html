@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Five Out Set - Princeton Offense | Post at the Top of the Key</title>
+  <meta name="description" content="The Five Out Set puts your post at the top of the key, forcing the defense into impossible reads. Wing dribble triggers over cuts for threes or backdoor layups.">
+  <meta name="keywords" content="five out princeton offense, 5 out basketball, post at top of key, princeton five out set, dribble reads basketball, high school princeton offense">
+  <meta property="og:title" content="Five Out Set - Princeton Offense">
+  <meta property="og:description" content="Post at the top of the key. Wing dribble forces over cut for a three or backdoor layup — defense can't stop both.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://coachprincetonbasketball.com/five-out-princeton-offense/">
+  <meta property="og:image" content="https://coachprincetonbasketball.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Five Out Set - Princeton Offense">
+  <meta name="twitter:description" content="Post at the top of the key. Wing dribble forces over cut for a three or backdoor layup — defense can't stop both.">
+  <link rel="canonical" href="https://coachprincetonbasketball.com/five-out-princeton-offense/">
+  <meta property="article:published_time" content="2024-10-15T08:00:00Z">
+  <meta property="article:author" content="Coach Princeton Basketball">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11158472206');
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; line-height: 1.6; }
+    a { color: #c9a84c; text-decoration: none; }
+    a:hover { color: #e8c96d; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    nav.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+    .nav-logo { font-size: 1.1rem; font-weight: 700; color: #c9a84c; letter-spacing: 0.5px; }
+    .nav-logo span { color: #ffffff; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: #cccccc; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #c9a84c; }
+    .nav-cta {
+      background: #c9a84c; color: #000 !important; padding: 0.5rem 1.2rem;
+      border-radius: 4px; font-weight: 600; font-size: 0.85rem;
+    }
+    .nav-cta:hover { background: #e8c96d; color: #000 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: #ffffff; display: block; transition: all 0.3s; }
+    .mobile-menu {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: #0a0a0a; z-index: 999; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: #ffffff; font-size: 1.3rem; font-weight: 600; }
+    .mobile-menu a:hover { color: #c9a84c; }
+    .mobile-close { position: absolute; top: 1.5rem; right: 2rem; font-size: 2rem; color: #ffffff; cursor: pointer; }
+
+    /* HERO */
+    .hero {
+      min-height: 45vh;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%);
+      display: flex; align-items: center;
+      padding: 8rem 2rem 4rem;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 1.5rem; }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #c9a84c; }
+    .hero-tag {
+      display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.3);
+      color: #c9a84c; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.2rem;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 span { color: #c9a84c; }
+    .hero-sub { font-size: 1.1rem; color: #aaaaaa; max-width: 640px; margin-bottom: 1.5rem; }
+    .hero-meta { display: flex; gap: 1.5rem; font-size: 0.8rem; color: #555; flex-wrap: wrap; }
+
+    /* CONTENT */
+    .content-section { padding: 4rem 2rem; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .container h2 { font-size: 1.6rem; font-weight: 700; color: #c9a84c; margin: 2.5rem 0 1rem; }
+    .container h2:first-child { margin-top: 0; }
+    .container h3 { font-size: 1.15rem; font-weight: 600; color: #e8c96d; margin: 1.8rem 0 0.7rem; }
+    .container p { color: #cccccc; margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; }
+    .container strong { color: #e8c96d; }
+    .container ul { color: #cccccc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .container ul li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    /* KEY CONCEPT BOX */
+    .concept-box {
+      background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+      border-left: 4px solid #c9a84c; border-radius: 6px;
+      padding: 1.5rem 1.8rem; margin: 2rem 0;
+    }
+    .concept-box p { color: #dddddd; margin: 0; font-size: 1.05rem; line-height: 1.8; }
+    .concept-box strong { color: #c9a84c; }
+
+    /* READS GRID */
+    .reads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+    .read-card {
+      background: #111111; border: 1px solid #222222; border-radius: 8px;
+      padding: 1.5rem; position: relative;
+    }
+    .read-card-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #c9a84c; margin-bottom: 0.6rem;
+    }
+    .read-card h4 { font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; }
+    .read-card p { font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.6; }
+
+    /* VERSION CARDS */
+    .version-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+    .version-card {
+      background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 8px; padding: 1.5rem;
+    }
+    .version-badge {
+      display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 3px; margin-bottom: 0.8rem;
+    }
+    .version-badge.high-school { background: rgba(100,200,100,0.15); color: #6dc86d; }
+    .version-badge.air-force { background: rgba(100,150,255,0.15); color: #7aadff; }
+    .version-card h4 { font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; }
+    .version-card p { font-size: 0.9rem; color: #999999; line-height: 1.6; margin: 0; }
+
+    /* SEQUENCE BOX */
+    .sequence-box {
+      background: #111111; border: 1px solid #1e1e1e; border-radius: 8px;
+      padding: 1.5rem 1.8rem; margin: 1.5rem 0;
+    }
+    .sequence-box .sequence-title {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #555; margin-bottom: 1rem;
+    }
+    .sequence-steps { display: flex; flex-direction: column; gap: 0.7rem; }
+    .sequence-step { display: flex; align-items: flex-start; gap: 1rem; }
+    .step-num {
+      flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.4);
+      color: #c9a84c; font-size: 0.75rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-text { font-size: 0.9rem; color: #bbbbbb; line-height: 1.6; padding-top: 3px; }
+
+    /* EMAIL FORM */
+    .email-capture {
+      background: linear-gradient(135deg, #111111 0%, #161008 100%);
+      border: 1px solid #2a2010; border-radius: 10px;
+      padding: 2rem; margin: 3rem 0;
+    }
+    .email-capture h3 { color: #c9a84c; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .email-capture p { color: #999999; font-size: 0.9rem; margin-bottom: 1.3rem; }
+    .form-row { display: flex; gap: 0.7rem; }
+    .form-row input[type="email"] {
+      flex: 1; padding: 0.7rem 1rem; background: #0a0a0a; border: 1px solid #333;
+      border-radius: 5px; color: #ffffff; font-size: 0.9rem; font-family: 'Inter', sans-serif;
+    }
+    .form-row input[type="email"]::placeholder { color: #555; }
+    .form-row input[type="email"]:focus { outline: none; border-color: #c9a84c; }
+    .form-row button {
+      background: #c9a84c; color: #000; border: none; padding: 0.7rem 1.5rem;
+      border-radius: 5px; font-weight: 700; font-size: 0.9rem; cursor: pointer;
+      font-family: 'Inter', sans-serif; white-space: nowrap;
+    }
+    .form-row button:hover { background: #e8c96d; }
+
+    /* RELATED CONTENT */
+    .related-box {
+      background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 8px; padding: 1.8rem; margin: 2.5rem 0;
+    }
+    .related-box h3 { color: #c9a84c; font-size: 1rem; margin-bottom: 1.2rem; letter-spacing: 0.5px; }
+    .related-links { display: flex; flex-direction: column; gap: 0.6rem; }
+    .related-links a {
+      color: #aaaaaa; font-size: 0.9rem; padding: 0.5rem 0;
+      border-bottom: 1px solid #1a1a1a; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .related-links a:last-child { border-bottom: none; }
+    .related-links a:hover { color: #c9a84c; }
+    .related-links a::before { content: '→'; color: #c9a84c; font-size: 0.8rem; }
+
+    /* CTA BOX */
+    .cta-box {
+      background: linear-gradient(135deg, #1a1208 0%, #0f0a04 100%);
+      border: 1px solid rgba(201,168,76,0.3); border-radius: 10px;
+      padding: 2.5rem; text-align: center; margin: 2.5rem 0;
+    }
+    .cta-box h3 { color: #c9a84c; font-size: 1.4rem; margin-bottom: 0.8rem; }
+    .cta-box p { color: #aaaaaa; margin-bottom: 1.5rem; }
+    .cta-box a {
+      display: inline-block; background: #c9a84c; color: #000;
+      padding: 0.85rem 2rem; border-radius: 5px; font-weight: 700; font-size: 0.95rem;
+    }
+    .cta-box a:hover { background: #e8c96d; }
+
+    /* CONTINUE READING */
+    .continue-reading { padding: 3rem 2rem; border-top: 1px solid #1a1a1a; }
+    .continue-reading h2 { max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.2rem; color: #888; font-weight: 600; }
+    .posts-grid { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .post-card {
+      background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 8px; padding: 1.3rem;
+      transition: border-color 0.2s;
+    }
+    .post-card:hover { border-color: #c9a84c; }
+    .post-card-tag { font-size: 0.65rem; color: #c9a84c; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .post-card h4 { font-size: 0.95rem; color: #ffffff; font-weight: 600; line-height: 1.4; }
+
+    /* FOOTER */
+    footer { background: #050505; border-top: 1px solid #111; padding: 3rem 2rem 2rem; }
+    .footer-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
+    .footer-col h4 { color: #c9a84c; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; }
+    .footer-col a { display: block; color: #555; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .footer-col a:hover { color: #c9a84c; }
+    .footer-bottom { max-width: 1000px; margin: 0 auto; text-align: center; font-size: 0.8rem; color: #333; border-top: 1px solid #111; padding-top: 1.5rem; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .reads-grid { grid-template-columns: 1fr; }
+      .version-grid { grid-template-columns: 1fr; }
+      .form-row { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Five Out Set - Princeton Offense | Post at the Top of the Key",
+        "description": "The Five Out Set puts your post at the top of the key, forcing the defense into impossible reads. Wing dribble triggers over cuts for threes or backdoor layups.",
+        "url": "https://coachprincetonbasketball.com/five-out-princeton-offense/",
+        "datePublished": "2025-01-01",
+        "dateModified": "2026-03-10",
+        "author": {
+            "@type": "Person",
+            "name": "Coach Lee DeForest",
+            "url": "https://coachprincetonbasketball.com/about/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Coach Princeton Basketball",
+            "url": "https://coachprincetonbasketball.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://coachprincetonbasketball.com/images/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://coachprincetonbasketball.com/five-out-princeton-offense/"
+        },
+        "keywords": "Princeton Offense Five Out Set, five out basketball, post at top of key"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://coachprincetonbasketball.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Princeton Offense Sets",
+                "item": "https://coachprincetonbasketball.com/princeton-offense-complete-guide/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Five Out Set",
+                "item": "https://coachprincetonbasketball.com/five-out-princeton-offense/"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a href="/" class="nav-logo">Coach<span>Princeton</span></a>
+    <ul class="nav-links">
+      <li><a href="/#offense">The System</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/book/" class="nav-cta">Get the Playbook</a></li>
+    </ul>
+    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <span class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">&times;</span>
+    <a href="/" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
+    <a href="/blog/" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Blog</a>
+    <a href="/book/" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Get the Playbook</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> › <a href="/blog/">Blog</a> › Five Out Set</div>
+      <div class="hero-tag">The Sets</div>
+      <h1>Five Out Set<br><span>Post at the Top of the Key</span></h1>
+      <p class="hero-sub">When your post catches at the top of the key, the defense has no good answers. The wing dribble forces an over cut for an open three or a backdoor layup — and the post delivers.</p>
+      <div class="hero-meta">
+        <span>Princeton Offense</span>
+        <span>·</span>
+        <span>5 Out Set</span>
+        <span>·</span>
+        <span>All Levels</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="container">
+
+      <p>Every Princeton Offense set starts with a post catch — but the Five Out Set changes where that catch happens. Instead of catching on the block or the elbow, <strong>your post (5) catches at the top of the key</strong>. That single positioning change forces the defense into a completely different set of problems.</p>
+
+      <div class="concept-box">
+        <p><strong>The Core Principle:</strong> In Five Out, the post is at the top. A wing dribbles at the post, and 5 reads the defense: go over for an open three, or make the backdoor cut for a layup. The post always delivers the correct pass — and the defense can't stop both options.</p>
+      </div>
+
+      <h2>The Entry</h2>
+      <p>The Five Out Set begins when a wing player <strong>dribbles toward the post at the top of the key</strong>. This dribble is the trigger — not a pass. The moment the wing begins dribbling at 5, the entire set is in motion.</p>
+
+      <div class="sequence-box">
+        <div class="sequence-title">Entry Sequence</div>
+        <div class="sequence-steps">
+          <div class="sequence-step">
+            <div class="step-num">1</div>
+            <div class="step-text">5 catches at the <strong>top of the key</strong> — high, above the three-point arc</div>
+          </div>
+          <div class="sequence-step">
+            <div class="step-num">2</div>
+            <div class="step-text">A wing player begins dribbling toward 5 at the top</div>
+          </div>
+          <div class="sequence-step">
+            <div class="step-num">3</div>
+            <div class="step-text">The cutting guard reads the defense and executes the correct option</div>
+          </div>
+          <div class="sequence-step">
+            <div class="step-num">4</div>
+            <div class="step-text">5 delivers the right pass — over cut for a three or backdoor for a layup</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>The Two Reads</h2>
+      <p>As the wing dribbles at the post, the defense must choose. There is no middle ground. Either the defender stays tight and gives up the over cut, or they cheat toward the over cut and give up the backdoor. The guard's job is to read what the defense gives and execute.</p>
+
+      <div class="reads-grid">
+        <div class="read-card">
+          <div class="read-card-label">Read 1</div>
+          <h4>Over Cut → Three-Pointer</h4>
+          <p>Defender is playing below the screen or sagging. The guard cuts over the top of 5, catches the pass at the wing or corner, and fires a catch-and-shoot three. 5 delivers the pass immediately as the cutter comes over.</p>
+        </div>
+        <div class="read-card">
+          <div class="read-card-label">Read 2</div>
+          <h4>Backdoor → Layup</h4>
+          <p>Defender is cheating toward the over cut or denying. The guard plants and cuts backdoor — hard to the rim. 5 delivers a direct pass on the catch for a layup. The harder the denial, the better the backdoor.</p>
+        </div>
+      </div>
+
+      <p>This is a true constraint read. The guard doesn't decide before the play — they let the defense decide for them. If the defender takes away the three, the backdoor opens. If the defender takes away the backdoor, the three opens. The guard simply executes the read that the defense reveals.</p>
+
+      <h2>Positioning in Five Out</h2>
+      <p>The Five Out Set earns its name from the spacing: <strong>all five players are positioned outside the paint</strong>. The post is at the top of the key. Two wings are spread to the corners or wings. The point guard initiates. No one is clogging the lane.</p>
+
+      <p>This spacing creates two effects. First, if the guard cuts backdoor and gets the layup, there are no defenders near the basket to help. Second, if the guard cuts over and catches for three, the floor is spread enough that the defense can't recover in time without leaving another shooter open.</p>
+
+      <h2>Two Versions of Five Out</h2>
+      <p>The Five Out Set is flexible enough to work at every level, from high school programs just learning the Princeton system to elite college programs with interchangeable players. Two specific versions have emerged over time — each designed for a different roster type.</p>
+
+      <div class="version-grid">
+        <div class="version-card">
+          <span class="version-badge high-school">High School Version</span>
+          <h4>Post UCLA Cuts to Block</h4>
+          <p>After passing to the wing, 5 uses a screen from 3 (a UCLA cut) to cut from the top down to the block. 3 then fills the top spot. This gets your post into a more traditional low post position for teams that rely on that advantage.</p>
+        </div>
+        <div class="version-card">
+          <span class="version-badge air-force">Air Force Version</span>
+          <h4>Position-Less Rotation</h4>
+          <p>After the initial Five Out action, 3 becomes the new post at the top and 5 rotates to a perimeter spot. Every player learns every position. Defenders can't key on your biggest player — anyone can be the post in the next sequence.</p>
+        </div>
+      </div>
+
+      <h3>High School Version: UCLA Cut to Block</h3>
+      <p>In the High School Version, once 5 passes to the wing, 5 immediately uses a UCLA cut off a screen set by 3. This cut takes 5 from the top of the key down to the low block. At the same time, 3 fills the top spot that 5 vacated. The offense continues from this new alignment, with 3 now functioning as the post at the top for the next action.</p>
+
+      <p>This version works well when you have a strong post player who is more effective inside than at the top of the key. The UCLA cut gets them positioned at the block while maintaining the Five Out spacing for the initial read.</p>
+
+      <h3>Air Force Version: Full Rotation</h3>
+      <p>The Air Force Version was built for teams that don't rely on a traditional post player. After the Five Out action runs, 3 becomes the new post at the top of the key while 5 rotates out to the perimeter. The next possession runs with a different player in the post role.</p>
+
+      <p>This version requires every player to know every role — guard cuts, post reads, perimeter spacing. It's harder to defend because the defense can't identify your post by position. Anyone catching at the top of the key can be the distributor for that sequence.</p>
+
+      <h2>DribbleUp Variation</h2>
+      <p>The Five Out Set can also be triggered from transition. In the <strong>DribbleUp variation</strong>, the point guard pushes the ball up the floor quickly — before the defense can set — and initiates the Five Out read in transition rather than in halfcourt. This gives your team two transition opportunities from the same set:</p>
+
+      <ul>
+        <li><strong>Early DribbleUp:</strong> Push before the defense organizes. The over cut or backdoor hits before help defense arrives.</li>
+        <li><strong>Late DribbleUp:</strong> If the transition window closes, reset into the halfcourt Five Out sequence seamlessly — no new play call needed.</li>
+      </ul>
+
+      <!-- EMAIL CAPTURE -->
+      <div class="email-capture">
+        <h3>Get the Five Out Set Breakdown</h3>
+        <p>Diagrams, reads, and both versions — the complete Five Out guide delivered to your inbox.</p>
+        <form name="five-out-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/five-out-princeton-offense/?success=1">
+          <input type="hidden" name="form-name" value="five-out-guide">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Your email address" required>
+            <button type="submit">Send It</button>
+          </div>
+        </form>
+      </div>
+
+      <h2>Why It Works</h2>
+      <p>The Five Out Set creates problems that traditional man-to-man defense isn't built to handle. Most defenders expect the post to be inside — on the block, at the elbow, somewhere near the paint. When the post catches at the top of the key, defenders are out of position from the start.</p>
+
+      <p>The wing dribble toward a post at the top is an unusual action. Defenders who haven't seen it before tend to over-communicate, switch late, or make the wrong read about whether to trail or cheat early. Either mistake leads to a layup or an open three.</p>
+
+      <p>At the high school level, most opponents will have never defended a post at the top of the key. At more advanced levels, even prepared defenses have to choose — and choosing wrong costs them two points.</p>
+
+      <h2>The Five Out in the Full System</h2>
+      <p>The Five Out Set is one entry in a complete Princeton Offense that teaches players to read and react rather than run scripted plays. It connects directly to the other sets:</p>
+
+      <ul>
+        <li>The <a href="/low-set-princeton-offense/">Low Set</a> starts with a guard-to-forward entry that looks inside first</li>
+        <li>The <a href="/point-set-princeton-offense/">Point Set</a> uses a high post elbow catch and three OUA reads</li>
+        <li>The <a href="/chin-set/">Chin Set</a> begins with a dribble weave that triggers a series of counters</li>
+        <li>The <a href="/twirl-set-princeton-offense/">Twirl Set</a> is a circle entry with the post near the volleyball lines</li>
+        <li>The <a href="/x-set-princeton-offense/">X Set</a> runs the OUA series from a different angle with different screeners</li>
+      </ul>
+
+      <p>Once your players understand all six sets, they can move fluidly between them based on what the defense allows — not based on a play that's been scouted and defended before.</p>
+
+      <!-- RELATED -->
+      <div class="related-box">
+        <h3>THE SETS</h3>
+        <div class="related-links">
+          <a href="/chin-set/">Chin Set — Dribble Entry &amp; Weave Series</a>
+          <a href="/low-set-princeton-offense/">Low Set — Guard-to-Forward Entry</a>
+          <a href="/point-set-princeton-offense/">Point Set — High Post Elbow &amp; OUA Reads</a>
+          <a href="/twirl-set-princeton-offense/">Twirl Set — Circle Entry Near Volleyball Lines</a>
+          <a href="/x-set-princeton-offense/">X Set — OUA from a Different Angle</a>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h3>Get the Complete Playbook</h3>
+        <p>Every set, every read, every counter — fully diagrammed in one Princeton Offense playbook.</p>
+        <a href="/book/">Get the Playbook →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTINUE READING -->
+  <section class="continue-reading">
+    <h2>Continue Reading</h2>
+    <div class="posts-grid">
+      <a href="/chin-set/" class="post-card">
+        <div class="post-card-tag">The Sets</div>
+        <h4>Chin Set — Dribble Weave Entry</h4>
+      </a>
+      <a href="/low-set-princeton-offense/" class="post-card">
+        <div class="post-card-tag">The Sets</div>
+        <h4>Low Set — Guard-to-Forward Entry</h4>
+      </a>
+      <a href="/point-set-princeton-offense/" class="post-card">
+        <div class="post-card-tag">The Sets</div>
+        <h4>Point Set — High Post Elbow &amp; OUA</h4>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>The Sets</h4>
+        <a href="/chin-set/">Chin Set</a>
+        <a href="/low-set-princeton-offense/">Low Set</a>
+        <a href="/point-set-princeton-offense/">Point Set</a>
+        <a href="/five-out-princeton-offense/">Five Out Set</a>
+        <a href="/twirl-set-princeton-offense/">Twirl Set</a>
+        <a href="/x-set-princeton-offense/">X Set</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn More</h4>
+        <a href="/blog/">All Articles</a>
+        <a href="/#offense">The System</a>
+        <a href="/book/">Get the Playbook</a>
+      </div>
+      <div class="footer-col">
+        <h4>Coach Princeton</h4>
+        <a href="/">Home</a>
+        <a href="mailto:info@floridacoastalprep.com">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Coach Princeton Basketball. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>

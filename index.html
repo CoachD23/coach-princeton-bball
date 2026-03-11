@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="description" content="Learn the Princeton Offense from Coach Lee DeForest. 25 years of coaching experience. Six interchangeable sets, fourteen counters, 42 drills. Used by 200+ coaches in 12 countries.">
-    <meta name="keywords" content="Princeton Offense, basketball coaching, playbook, coaching system, basketball drills">
+    <!-- Preload LCP hero background -->
+    <link rel="preload" as="image" href="/files/arena-bg.webp" fetchpriority="high" type="image/webp">
+    <meta name="description" content="Master the Princeton Offense with Coach Lee DeForest — 25 years teaching Pete Carril's read-based system. Six interchangeable sets, 14 counter packages, 42 drills. Used by 200+ coaches in 12 countries.">
+    <meta name="keywords" content="Princeton Offense, Princeton offense playbook, read-based offense, Pete Carril offense, basketball coaching system, basketball drills, Princeton basketball sets">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Coach Lee DeForest">
     <link rel="canonical" href="https://coachprincetonbasketball.com/">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Coach Princeton Basketball — Master the Princeton Offense | Playbook & Coaching System">
-    <meta property="og:description" content="Learn the Princeton Offense from Coach Lee DeForest. 25 years of coaching experience. Six interchangeable sets, fourteen counters, 42 drills. Used by 200+ coaches in 12 countries.">
+    <meta property="og:title" content="Princeton Offense Playbook & Coaching System | Coach Lee DeForest">
+    <meta property="og:description" content="Master the Princeton Offense with Coach Lee DeForest — 25 years teaching Pete Carril's read-based system. Six sets, 14 counters, 42 drills. Used by 200+ coaches in 12 countries.">
     <meta property="article:author" content="Coach Lee DeForest">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://coachprincetonbasketball.com">
@@ -24,1216 +24,35 @@
     <!-- Twitter Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Coach Princeton Basketball — Master the Princeton Offense">
-    <meta name="twitter:description" content="Learn the Princeton Offense from Coach Lee DeForest. 25 years of coaching experience. Six interchangeable sets, fourteen counters, 42 drills.">
+    <meta name="twitter:description" content="Master the Princeton Offense with Coach Lee DeForest — Pete Carril's read-based system. Six sets, 14 counters, 42 drills. Used by 200+ coaches worldwide.">
     <meta name="twitter:image" content="https://coachprincetonbasketball.com/og-image.jpg">
 
-    <title>Coach Princeton Basketball — Master the Princeton Offense | Playbook & Coaching System</title>
+    <title>Princeton Offense Playbook & Coaching System | Coach Lee DeForest</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11158472206"></script>
+    <!-- Google Ads tag — lazy-loaded after first interaction or 3s to improve LCP -->
     <script>
-        window.dataLayer = window.dataLayer || [];
+        window.dataLayer=window.dataLayer||[];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-11158472206');
+        gtag('js',new Date());
+        gtag('config','AW-11158472206');
+        function _loadGtag(){
+            if(window._gtagLoaded)return;
+            window._gtagLoaded=true;
+            var s=document.createElement('script');
+            s.async=true;
+            s.src='https://www.googletagmanager.com/gtag/js?id=AW-11158472206';
+            document.head.appendChild(s);
+        }
+        ['click','scroll','keydown','touchstart'].forEach(function(e){
+            document.addEventListener(e,_loadGtag,{once:true,passive:true});
+        });
+        setTimeout(_loadGtag,3000);
     </script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Sticky Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-            padding: 1.2rem 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #c9a84c;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-logo:hover {
-            color: #e8c96d;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 0.25rem;
-        }
-
-        .nav-links a:hover {
-            color: #c9a84c;
-            border-bottom: 2px solid #c9a84c;
-        }
-
-        .nav-cta {
-            background-color: #c9a84c;
-            color: #0a0a0a;
-            padding: 0.7rem 1.5rem;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .nav-cta:hover {
-            background-color: #e8c96d;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
-        }
-
-        /* Hamburger Menu */
-        .nav-hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-            z-index: 1001;
-        }
-
-        .nav-hamburger span {
-            width: 24px;
-            height: 2px;
-            background: #ffffff;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        .nav-hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .nav-hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .nav-hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        @media (max-width: 768px) {
-            .nav-hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: rgba(10, 10, 10, 0.98);
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-links a {
-                font-size: 1.1rem;
-            }
-
-            .nav-container {
-                padding: 0 1rem;
-            }
-        }
-
-        /* Main Content */
-        main {
-            margin-top: 60px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 2rem;
-            background: linear-gradient(135deg, #111111 0%, #0a0a0a 50%, #1a1a1a 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(201, 168, 76, 0.03) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-rating {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(201, 168, 76, 0.1);
-            border: 1px solid rgba(201, 168, 76, 0.3);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-            color: #c9a84c;
-            animation: fadeInDown 0.8s ease 0.1s both;
-        }
-
-        .hero-rating .stars {
-            color: #c9a84c;
-            letter-spacing: 2px;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-            animation: fadeInDown 0.8s ease 0.2s both;
-        }
-
-        .hero-subtext {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: #cccccc;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-            animation: fadeInUp 0.8s ease 0.4s both;
-        }
-
-        .btn-primary {
-            background-color: #c9a84c;
-            color: #0a0a0a;
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            border: none;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
-        }
-
-        .btn-primary:hover {
-            background-color: #e8c96d;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(201, 168, 76, 0.35);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #cccccc;
-            padding: 0.85rem 2rem;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            border-color: #c9a84c;
-            color: #c9a84c;
-            background-color: rgba(201, 168, 76, 0.1);
-        }
-
-        .hero-trust {
-            font-size: 0.95rem;
-            color: #999999;
-            animation: fadeInUp 0.8s ease 0.5s both;
-        }
-
-        .hero-trust strong {
-            color: #c9a84c;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .scroll-animate {
-            opacity: 1;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .scroll-animate.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Stats Bar */
-        .stats-bar {
-            background: rgba(17, 17, 17, 0.8);
-            border-top: 1px solid rgba(201, 168, 76, 0.1);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-            padding: 80px 2rem;
-            position: relative;
-        }
-
-        .stats-bar::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #c9a84c;
-            margin-bottom: 0.5rem;
-            counter-increment: stat-counter;
-        }
-
-        .stat-item p {
-            font-size: 0.95rem;
-            color: #999999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Problem Section */
-        .problem-section {
-            padding: 100px 2rem;
-            background-color: #0a0a0a;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .section-title {
-            font-size: 2.8rem;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 4rem;
-            color: #ffffff;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .problem-card {
-            padding: 2.5rem;
-            background: rgba(17, 17, 17, 0.6);
-            border: 1px solid rgba(201, 168, 76, 0.15);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .problem-card:hover {
-            background: rgba(17, 17, 17, 0.9);
-            border-color: rgba(201, 168, 76, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .problem-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .problem-card p {
-            font-size: 0.95rem;
-            color: #bbbbbb;
-            line-height: 1.7;
-        }
-
-        /* Testimonials Section */
-        .testimonials-featured {
-            padding: 100px 2rem;
-            background: rgba(17, 17, 17, 0.5);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .testimonials-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .testimonial-card {
-            background: rgba(26, 26, 26, 0.8);
-            border: 1px solid rgba(201, 168, 76, 0.2);
-            border-left: 4px solid #c9a84c;
-            padding: 3rem 2.5rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .testimonial-card:hover {
-            background: rgba(26, 26, 26, 1);
-            border-color: rgba(201, 168, 76, 0.4);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(201, 168, 76, 0.1);
-        }
-
-        .testimonial-text {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: #dddddd;
-            font-style: italic;
-        }
-
-        .testimonial-stars {
-            color: #c9a84c;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #c9a84c;
-            font-size: 0.95rem;
-        }
-
-        .testimonial-title {
-            font-size: 0.85rem;
-            color: #888888;
-            margin-top: 0.3rem;
-        }
-
-        .testimonial-verified {
-            font-size: 0.75rem;
-            color: #4CAF50;
-            margin-top: 0.4rem;
-        }
-
-        /* Blueprint Section */
-        .blueprint-section {
-            padding: 100px 2rem;
-            background-color: #0a0a0a;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .blueprint-intro {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 4rem;
-            font-size: 1.2rem;
-            color: #cccccc;
-            line-height: 1.8;
-        }
-
-        .blueprint-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .blueprint-card {
-            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(26, 26, 26, 0.7) 100%);
-            border: 1px solid rgba(201, 168, 76, 0.15);
-            padding: 3rem;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .blueprint-card:hover {
-            border-color: rgba(201, 168, 76, 0.4);
-            background: linear-gradient(135deg, rgba(17, 17, 17, 1) 0%, rgba(26, 26, 26, 0.9) 100%);
-            transform: translateY(-8px);
-        }
-
-        .blueprint-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-            color: #c9a84c;
-            font-weight: 700;
-        }
-
-        .blueprint-card ul {
-            list-style: none;
-        }
-
-        .blueprint-card li {
-            padding: 0.6rem 0;
-            color: #bbbbbb;
-            padding-left: 1.8rem;
-            position: relative;
-            font-size: 0.95rem;
-        }
-
-        .blueprint-card li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #c9a84c;
-            font-weight: bold;
-        }
-
-        /* Playbook Preview Gallery */
-        /* Preview section removed */
-
-        /* Pricing Section */
-        .pricing-section {
-            padding: 100px 2rem;
-            background: rgba(17, 17, 17, 0.5);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .pricing-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .pricing-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #999999;
-            margin-bottom: 4rem;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .pricing-card {
-            background: rgba(26, 26, 26, 0.8);
-            border: 1px solid rgba(201, 168, 76, 0.2);
-            padding: 3rem 2.5rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            background: rgba(201, 168, 76, 0.08);
-            border: 2px solid #c9a84c;
-            transform: scaleY(1.05);
-            box-shadow: 0 20px 40px rgba(201, 168, 76, 0.15);
-        }
-
-        .pricing-card.featured::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #c9a84c;
-            color: #0a0a0a;
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-        }
-
-        .pricing-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .pricing-price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #c9a84c;
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-price small {
-            font-size: 1.2rem;
-            color: #888888;
-        }
-
-        .pricing-old-price {
-            font-size: 1rem;
-            color: #666666;
-            text-decoration: line-through;
-            margin-bottom: 1.5rem;
-        }
-
-        .pricing-description {
-            color: #aaaaaa;
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            padding: 0.6rem 0;
-            color: #888888;
-            font-size: 0.9rem;
-            padding-left: 1.8rem;
-            position: relative;
-        }
-
-        .pricing-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #c9a84c;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .pricing-card.featured .pricing-features li {
-            color: #999999;
-        }
-
-        .pricing-button {
-            width: 100%;
-            padding: 1rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card:not(.featured) .pricing-button {
-            background-color: transparent;
-            color: #c9a84c;
-            border: 2px solid #c9a84c;
-        }
-
-        .pricing-card:not(.featured) .pricing-button:hover {
-            background-color: #c9a84c;
-            color: #0a0a0a;
-        }
-
-        .pricing-card.featured .pricing-button {
-            background-color: #c9a84c;
-            color: #0a0a0a;
-            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.2);
-        }
-
-        .pricing-card.featured .pricing-button:hover {
-            background-color: #e8c96d;
-            box-shadow: 0 12px 35px rgba(201, 168, 76, 0.35);
-        }
-
-        /* Why It Works Section */
-        .why-works-section {
-            padding: 100px 2rem;
-            background-color: #0a0a0a;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .why-works-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .why-card {
-            background: rgba(17, 17, 17, 0.6);
-            border: 1px solid rgba(201, 168, 76, 0.15);
-            padding: 2.5rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .why-card:hover {
-            background: rgba(17, 17, 17, 0.9);
-            border-color: #c9a84c;
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(201, 168, 76, 0.1);
-        }
-
-        .why-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #c9a84c;
-            margin-bottom: 1rem;
-        }
-
-        .why-card p {
-            color: #aaaaaa;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Coach Bio Section */
-        .coach-bio-section {
-            padding: 100px 2rem;
-            background: rgba(17, 17, 17, 0.5);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .coach-bio-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .coach-name {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #c9a84c;
-            margin-bottom: 1rem;
-        }
-
-        .coach-title {
-            font-size: 1.2rem;
-            color: #999999;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        .coach-bio-text {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #cccccc;
-            margin-bottom: 2rem;
-        }
-
-        .coach-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .coach-highlight {
-            padding: 1.5rem;
-            background: rgba(26, 26, 26, 0.8);
-            border: 1px solid rgba(201, 168, 76, 0.2);
-            border-radius: 8px;
-        }
-
-        .coach-highlight-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #c9a84c;
-        }
-
-        .coach-highlight-text {
-            font-size: 0.9rem;
-            color: #888888;
-            margin-top: 0.5rem;
-        }
-
-        /* Guarantee Section */
-        .guarantee-section {
-            padding: 100px 2rem;
-            background-color: #0a0a0a;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .guarantee-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.05) 100%);
-            border: 2px solid rgba(201, 168, 76, 0.3);
-            padding: 4rem 3rem;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .guarantee-container h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: #c9a84c;
-        }
-
-        .guarantee-text {
-            font-size: 1.05rem;
-            color: #cccccc;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 100px 2rem;
-            background: rgba(17, 17, 17, 0.5);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: rgba(26, 26, 26, 0.8);
-            border: 1px solid rgba(201, 168, 76, 0.2);
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            border-color: rgba(201, 168, 76, 0.4);
-        }
-
-        .faq-question {
-            padding: 1.5rem;
-            background: transparent;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #ffffff;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .faq-question:hover {
-            color: #c9a84c;
-        }
-
-        .faq-toggle {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #c9a84c;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-            margin-left: 1rem;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-        }
-
-        .faq-content {
-            padding: 1.5rem;
-            padding-top: 0;
-            color: #aaaaaa;
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        /* Blog Teaser Section */
-        .blog-teaser-section {
-            padding: 100px 2rem;
-            background-color: #0a0a0a;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .blog-teaser-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .blog-post-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .blog-card {
-            background: rgba(17, 17, 17, 0.6);
-            border: 1px solid rgba(201, 168, 76, 0.15);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .blog-card:hover {
-            border-color: rgba(201, 168, 76, 0.4);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(201, 168, 76, 0.1);
-        }
-
-        .blog-header {
-            background: rgba(26, 26, 26, 0.8);
-            padding: 2rem;
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-
-        .blog-video-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            background: rgba(201, 168, 76, 0.2);
-            color: #c9a84c;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            margin-bottom: 0.6rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .blog-video-badge svg {
-            width: 12px;
-            height: 12px;
-            fill: #c9a84c;
-        }
-
-        .blog-category {
-            display: inline-block;
-            background: rgba(201, 168, 76, 0.2);
-            color: #c9a84c;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-        }
-
-        .blog-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .blog-content {
-            padding: 2rem;
-        }
-
-        .blog-excerpt {
-            color: #888888;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .blog-link {
-            color: #c9a84c;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .blog-link:hover {
-            gap: 0.8rem;
-        }
-
-        /* Final CTA Section */
-        .final-cta-section {
-            padding: 100px 2rem;
-            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(201, 168, 76, 0.05) 100%);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-            text-align: center;
-        }
-
-        .final-cta-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .final-cta-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-        }
-
-        .final-cta-text {
-            font-size: 1.1rem;
-            color: #cccccc;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-
-        .final-cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000000;
-            border-top: 1px solid rgba(201, 168, 76, 0.1);
-            padding: 4rem 2rem 2rem;
-            color: #888888;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h4 {
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-section a {
-            color: #888888;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .footer-section a:hover {
-            color: #c9a84c;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(201, 168, 76, 0.1);
-            padding-top: 2rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #666666;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .hero {
-                padding: 60px 1rem;
-            }
-
-            .stats-bar {
-                padding: 60px 1rem;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-
-            .pricing-card.featured {
-                transform: scaleY(1);
-            }
-
-            .hero-cta-group {
-                flex-direction: column;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-            }
-
-            .nav-cta {
-                display: none;
-            }
-
-            .problem-section [style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/inter-latin-300-normal.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-latin-400-normal.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-latin-500-normal.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-latin-600-normal.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/inter-latin-700-normal.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/inter-latin-800-normal.woff2') format('woff2')} *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth} body{font-family:'Inter',sans-serif;background-color:#0a0a0a;color:#ffffff;line-height:1.6;overflow-x:hidden} nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,76,0.1);padding:1.2rem 0;z-index:1000;transition:all 0.3s ease} nav.scrolled{padding:0.8rem 0;border-bottom:1px solid rgba(201,168,76,0.2);box-shadow:0 2px 20px rgba(0,0,0,0.5)} .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center} .nav-logo{font-size:1.5rem;font-weight:700;color:#c9a84c;text-decoration:none;letter-spacing:0.5px;transition:all 0.3s ease} .nav-logo:hover{color:#e8c96d} .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center} .nav-links a{color:#ffffff;text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.3s ease;border-bottom:2px solid transparent;padding-bottom:0.25rem} .nav-links a:hover{color:#c9a84c;border-bottom:2px solid #c9a84c} .nav-cta{background-color:#c9a84c;color:#0a0a0a;padding:0.7rem 1.5rem;border-radius:6px;font-weight:600;font-size:0.9rem;cursor:pointer;border:none;transition:all 0.3s ease;text-decoration:none;display:inline-block} .nav-cta:hover{background-color:#e8c96d;transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.3)} .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:5px;z-index:1001} .nav-hamburger span{width:24px;height:2px;background:#ffffff;transition:all 0.3s ease;display:block} .nav-hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)} .nav-hamburger.active span:nth-child(2){opacity:0} .nav-hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)} @media (max-width:768px){.nav-hamburger{display:flex} .nav-links{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,10,10,0.98);flex-direction:column;padding:2rem;gap:1.5rem;border-bottom:1px solid rgba(201,168,76,0.2)} .nav-links.open{display:flex} .nav-links a{font-size:1.1rem} .nav-container{padding:0 1rem} } main{margin-top:60px} .container{max-width:1200px;margin:0 auto;padding:0 2rem} .hero{padding:100px 2rem;background:linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.82)),image-set( url('/files/arena-bg.webp') type('image/webp'),url('/files/arena-bg.jpg') type('image/jpeg') ) center center / cover no-repeat;background-color:#111;position:relative;overflow:hidden} .hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,0.05) 0%,transparent 70%);border-radius:50%;pointer-events:none} .hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.03) 0%,transparent 70%);border-radius:50%;pointer-events:none} .hero-container{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:2} .hero-eyebrow{display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:1.25rem;animation:fadeInDown 0.8s ease 0s both} .hero-rating{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);padding:0.75rem 1.5rem;border-radius:50px;margin-bottom:2rem;font-size:0.95rem;color:#c9a84c;animation:fadeInDown 0.8s ease 0.1s both} .hero-rating .stars{color:#c9a84c;letter-spacing:2px} h1{font-size:3.5rem;font-weight:800;line-height:1.2;margin-bottom:1.5rem;color:#ffffff;animation:fadeInDown 0.8s ease 0.2s both} .hero-subtext{font-size:1.15rem;line-height:1.8;color:#cccccc;margin-bottom:3rem;max-width:800px;margin-left:auto;margin-right:auto;animation:fadeInUp 0.8s ease 0.3s both} .hero-cta-group{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;animation:fadeInUp 0.8s ease 0.4s both} .btn-primary{background-color:#c9a84c;color:#0a0a0a;padding:1rem 2.5rem;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;border:none;text-decoration:none;display:inline-block;transition:all 0.3s ease;box-shadow:0 8px 25px rgba(201,168,76,0.2)} .btn-primary:hover{background-color:#e8c96d;transform:translateY(-3px);box-shadow:0 12px 35px rgba(201,168,76,0.35)} .btn-secondary{background-color:transparent;color:#cccccc;padding:0.85rem 2rem;border-radius:8px;font-weight:500;font-size:0.95rem;cursor:pointer;border:1px solid rgba(255,255,255,0.2);text-decoration:none;display:inline-block;transition:all 0.3s ease} .btn-secondary:hover{border-color:#c9a84c;color:#c9a84c;background-color:rgba(201,168,76,0.1)} .hero-trust{font-size:0.95rem;color:#999999;animation:fadeInUp 0.8s ease 0.5s both} .hero-trust strong{color:#c9a84c} @keyframes fadeInDown{from{opacity:0;transform:translateY(-30px)} to{opacity:1;transform:translateY(0)} } @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} } @keyframes fadeIn{from{opacity:0} to{opacity:1} } .scroll-animate{opacity:1;transform:translateY(30px);transition:all 0.8s ease} .scroll-animate.visible{opacity:1;transform:translateY(0)} .stats-bar{background:rgba(17,17,17,0.8);border-top:1px solid rgba(201,168,76,0.1);border-bottom:1px solid rgba(201,168,76,0.1);padding:80px 2rem;position:relative} .stats-bar::after{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.3),transparent)} .stats-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center} .stat-item h2{font-size:2.5rem;font-weight:700;color:#c9a84c;margin-bottom:0.5rem;counter-increment:stat-counter} .stat-item p{font-size:0.95rem;color:#999999;text-transform:uppercase;letter-spacing:1px} .problem-section{padding:100px 2rem;background-color:#0a0a0a;border-bottom:1px solid rgba(201,168,76,0.1)} .section-title{font-size:2.8rem;font-weight:800;text-align:center;margin-bottom:4rem;color:#ffffff} .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto} .problem-card{padding:2.5rem;background:rgba(17,17,17,0.6);border:1px solid rgba(201,168,76,0.15);border-radius:12px;transition:all 0.3s ease} .problem-card:hover{background:rgba(17,17,17,0.9);border-color:rgba(201,168,76,0.3);transform:translateY(-5px)} .problem-card h3{font-size:1.3rem;margin-bottom:1rem;color:#ffffff} .problem-card p{font-size:0.95rem;color:#bbbbbb;line-height:1.7} .testimonials-featured{padding:100px 2rem;background:rgba(17,17,17,0.5);border-bottom:1px solid rgba(201,168,76,0.1)} .testimonials-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2.5rem} .testimonial-card{background:rgba(26,26,26,0.8);border:1px solid rgba(201,168,76,0.2);border-left:4px solid #c9a84c;padding:3rem 2.5rem;border-radius:8px;transition:all 0.3s ease;position:relative} .testimonial-card:hover{background:rgba(26,26,26,1);border-color:rgba(201,168,76,0.4);transform:translateY(-8px);box-shadow:0 15px 40px rgba(201,168,76,0.1)} .testimonial-text{font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem;color:#dddddd;font-style:italic} .testimonial-stars{color:#c9a84c;font-size:0.9rem;margin-bottom:1rem;letter-spacing:2px} .testimonial-author{font-weight:600;color:#c9a84c;font-size:0.95rem} .testimonial-title{font-size:0.85rem;color:#888888;margin-top:0.3rem} .testimonial-verified{font-size:0.75rem;color:#4CAF50;margin-top:0.4rem} .blueprint-section{padding:70px 2rem;background-color:#0a0a0a;border-bottom:1px solid rgba(201,168,76,0.1)} .blueprint-intro{text-align:center;max-width:900px;margin:0 auto 2.5rem;font-size:1.05rem;color:#cccccc;line-height:1.7} .blueprint-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem} .blueprint-card{background:linear-gradient(135deg,rgba(17,17,17,0.9) 0%,rgba(26,26,26,0.7) 100%);border:1px solid rgba(201,168,76,0.15);padding:2rem;border-radius:12px;transition:all 0.3s ease} .blueprint-card:hover{border-color:rgba(201,168,76,0.4);background:linear-gradient(135deg,rgba(17,17,17,1) 0%,rgba(26,26,26,0.9) 100%);transform:translateY(-8px)} .blueprint-card h3{font-size:1.15rem;margin-bottom:1rem;color:#c9a84c;font-weight:700} .blueprint-card ul{list-style:none} .blueprint-card li{padding:0.45rem 0;color:#bbbbbb;padding-left:1.6rem;position:relative;font-size:0.875rem} .blueprint-card li::before{content:'▸';position:absolute;left:0;color:#c9a84c;font-weight:bold} .pricing-section{padding:100px 2rem;background:rgba(17,17,17,0.5);border-bottom:1px solid rgba(201,168,76,0.1)} .pricing-container{max-width:1200px;margin:0 auto} .pricing-subtitle{text-align:center;font-size:1.1rem;color:#999999;margin-bottom:4rem} .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem} .pricing-card{background:rgba(26,26,26,0.8);border:1px solid rgba(201,168,76,0.2);padding:3rem 2.5rem;border-radius:12px;text-align:center;transition:all 0.3s ease;position:relative} .pricing-card.featured{background:rgba(201,168,76,0.08);border:2px solid #c9a84c;transform:scaleY(1.05);box-shadow:0 20px 40px rgba(201,168,76,0.15)} .pricing-card.featured::before{content:'MOST POPULAR';position:absolute;top:-15px;left:50%;transform:translateX(-50%);background-color:#c9a84c;color:#0a0a0a;padding:0.5rem 1.5rem;border-radius:20px;font-weight:700;font-size:0.75rem;letter-spacing:1px} .pricing-name{font-size:1.4rem;font-weight:700;margin-bottom:1rem;color:#ffffff} .pricing-price{font-size:3rem;font-weight:800;color:#c9a84c;margin-bottom:0.5rem} .pricing-price small{font-size:1.2rem;color:#888888} .pricing-old-price{font-size:1rem;color:#999999;text-decoration:line-through;margin-bottom:1.5rem} .pricing-description{color:#aaaaaa;margin-bottom:2rem;font-size:0.95rem;line-height:1.6} .pricing-features{list-style:none;margin-bottom:2rem;text-align:left} .pricing-features li{padding:0.6rem 0;color:#888888;font-size:0.9rem;padding-left:1.8rem;position:relative} .pricing-features li::before{content:'✓';position:absolute;left:0;color:#c9a84c;font-weight:bold;font-size:1.1rem} .pricing-card.featured .pricing-features li{color:#999999} .pricing-button{width:100%;padding:1rem;border:none;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease} .pricing-card:not(.featured) .pricing-button{background-color:transparent;color:#c9a84c;border:2px solid #c9a84c} .pricing-card:not(.featured) .pricing-button:hover{background-color:#c9a84c;color:#0a0a0a} .pricing-card.featured .pricing-button{background-color:#c9a84c;color:#0a0a0a;box-shadow:0 8px 25px rgba(201,168,76,0.2)} .pricing-card.featured .pricing-button:hover{background-color:#e8c96d;box-shadow:0 12px 35px rgba(201,168,76,0.35)} .why-works-section{padding:100px 2rem;background-color:#0a0a0a;border-bottom:1px solid rgba(201,168,76,0.1)} .why-works-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem} .why-card{background:rgba(17,17,17,0.6);border:1px solid rgba(201,168,76,0.15);padding:2.5rem;border-radius:12px;text-align:center;transition:all 0.3s ease} .why-card:hover{background:rgba(17,17,17,0.9);border-color:#c9a84c;transform:translateY(-8px);box-shadow:0 15px 40px rgba(201,168,76,0.1)} .why-card h3{font-size:1.25rem;font-weight:700;color:#c9a84c;margin-bottom:1rem} .why-card p{color:#aaaaaa;font-size:0.95rem;line-height:1.6} .coach-bio-section{padding:100px 2rem;background:rgba(17,17,17,0.5);border-bottom:1px solid rgba(201,168,76,0.1)} .coach-bio-container{max-width:900px;margin:0 auto;text-align:center} .coach-name{font-size:2.2rem;font-weight:800;color:#c9a84c;margin-bottom:1rem} .coach-title{font-size:1.2rem;color:#999999;margin-bottom:2rem;font-weight:500} .coach-bio-text{font-size:1.05rem;line-height:1.8;color:#cccccc;margin-bottom:2rem} .coach-highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:3rem} .coach-highlight{padding:1.5rem;background:rgba(26,26,26,0.8);border:1px solid rgba(201,168,76,0.2);border-radius:8px} .coach-highlight-number{font-size:2rem;font-weight:800;color:#c9a84c} .coach-highlight-text{font-size:0.9rem;color:#888888;margin-top:0.5rem} .guarantee-section{padding:100px 2rem;background-color:#0a0a0a;border-bottom:1px solid rgba(201,168,76,0.1)} .guarantee-container{max-width:900px;margin:0 auto;background:linear-gradient(135deg,rgba(201,168,76,0.1) 0%,rgba(201,168,76,0.05) 100%);border:2px solid rgba(201,168,76,0.3);padding:4rem 3rem;border-radius:12px;text-align:center} .guarantee-container h2{font-size:2rem;font-weight:800;margin-bottom:1.5rem;color:#c9a84c} .guarantee-text{font-size:1.05rem;color:#cccccc;line-height:1.8;margin-bottom:2rem} .faq-section{padding:100px 2rem;background:rgba(17,17,17,0.5);border-bottom:1px solid rgba(201,168,76,0.1)} .faq-container{max-width:900px;margin:0 auto} .faq-item{background:rgba(26,26,26,0.8);border:1px solid rgba(201,168,76,0.2);margin-bottom:1rem;border-radius:8px;overflow:hidden;transition:all 0.3s ease} .faq-item:hover{border-color:rgba(201,168,76,0.4)} .faq-question{padding:1.5rem;background:transparent;border:none;width:100%;text-align:left;font-size:1.05rem;font-weight:600;color:#ffffff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:all 0.3s ease;font-family:'Inter',sans-serif} .faq-question:hover{color:#c9a84c} .faq-toggle{width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:#c9a84c;font-size:1.2rem;transition:transform 0.3s ease;flex-shrink:0;margin-left:1rem} .faq-item.active .faq-toggle{transform:rotate(180deg)} .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease} .faq-item.active .faq-answer{max-height:500px} .faq-content{padding:1.5rem;padding-top:0;color:#aaaaaa;line-height:1.7;font-size:0.95rem} .blog-teaser-section{padding:100px 2rem;background-color:#0a0a0a;border-bottom:1px solid rgba(201,168,76,0.1)} .blog-teaser-container{max-width:1200px;margin:0 auto} .blog-post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem} .blog-card{background:rgba(17,17,17,0.6);border:1px solid rgba(201,168,76,0.15);border-radius:12px;overflow:hidden;transition:all 0.3s ease} .blog-card:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-8px);box-shadow:0 15px 40px rgba(201,168,76,0.1)} .blog-header{background:rgba(26,26,26,0.8);padding:2rem;min-height:200px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(201,168,76,0.1)} .blog-video-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(201,168,76,0.2);color:#c9a84c;font-size:0.7rem;font-weight:600;padding:0.25rem 0.6rem;border-radius:4px;margin-bottom:0.6rem;letter-spacing:0.5px;text-transform:uppercase} .blog-video-badge svg{width:12px;height:12px;fill:#c9a84c} .blog-category{display:inline-block;background:rgba(201,168,76,0.2);color:#c9a84c;padding:0.4rem 0.8rem;border-radius:4px;font-size:0.75rem;font-weight:700;letter-spacing:0.5px;margin-bottom:1rem} .blog-title{font-size:1.2rem;font-weight:700;color:#ffffff;margin-bottom:1rem;line-height:1.4} .blog-content{padding:2rem} .blog-excerpt{color:#888888;font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6} .blog-link{color:#c9a84c;text-decoration:none;font-weight:600;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.3s ease} .blog-link:hover{gap:0.8rem} .final-cta-section{padding:100px 2rem;background:linear-gradient(135deg,rgba(201,168,76,0.1) 0%,rgba(201,168,76,0.05) 100%);border-bottom:1px solid rgba(201,168,76,0.1);text-align:center} .final-cta-container{max-width:900px;margin:0 auto} .final-cta-title{font-size:2.5rem;font-weight:800;margin-bottom:1.5rem;color:#ffffff} .final-cta-text{font-size:1.1rem;color:#cccccc;margin-bottom:3rem;line-height:1.8} .final-cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap} footer{background-color:#000000;border-top:1px solid rgba(201,168,76,0.1);padding:4rem 2rem 2rem;color:#888888} .footer-container{max-width:1200px;margin:0 auto} .footer-content{display:grid;grid-template-columns:repeat(4,1fr);gap:3rem;margin-bottom:3rem} .footer-section h3{color:#ffffff;font-size:1rem;font-weight:700;margin-bottom:1.5rem;letter-spacing:0.5px} .footer-section ul{list-style:none} .footer-section li{margin-bottom:0.8rem} .footer-section a{color:#888888;text-decoration:none;transition:color 0.3s ease;font-size:0.9rem} .footer-section a:hover{color:#c9a84c} .footer-bottom{border-top:1px solid rgba(201,168,76,0.1);padding-top:2rem;text-align:center;font-size:0.85rem;color:#888888} @media (max-width:900px){.footer-content{grid-template-columns:repeat(2,1fr)} } @media (max-width:768px){h1{font-size:2.2rem} .section-title{font-size:1.8rem} .hero{padding:60px 1rem} .stats-bar{padding:60px 1rem} .stats-container{grid-template-columns:repeat(2,1fr);gap:2rem} .pricing-card.featured{transform:scaleY(1)} .hero-cta-group{flex-direction:column} .btn-primary,.btn-secondary{width:100%} .nav-cta{display:none} .problem-section [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important} .blueprint-grid{grid-template-columns:1fr} .blog-post-grid{grid-template-columns:1fr} .footer-content{grid-template-columns:repeat(2,1fr);gap:2rem} } @media (max-width:480px){.footer-content{grid-template-columns:1fr} }
+</style>
 </head>
 <body>
     <!-- Navigation -->
@@ -1258,9 +77,10 @@
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="hero-container">
+                <p class="hero-eyebrow">The Original Princeton Offense System · Online Since 2008</p>
                 <div class="hero-rating">
                     <span class="stars">★★★★★</span>
-                    <span>4.9 from 127 coaches</span>
+                    <span>4.9 from 200+ coaches</span>
                 </div>
                 <h1>Stop Running Plays.<br>Start Teaching Reads.</h1>
                 <p class="hero-subtext">A complete read-based offensive system — six sets, fourteen counters, every drill you need.<br>Used by 200+ coaches at every level from middle school to NCAA DI.</p>
@@ -1272,53 +92,20 @@
             </div>
         </section>
 
-        <!-- Sales Video -->
-        <section style="padding: 60px 2rem; background: linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%); border-bottom: 1px solid rgba(201, 168, 76, 0.1);">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 0.75rem;">See the System in Action</h2>
-                <p style="text-align: center; color: #999; font-size: 1rem; margin-bottom: 2rem;">Watch how the Princeton Offense creates open shots through reads, not memorized plays.</p>
-                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:2px solid rgba(201,168,76,0.25);box-shadow:0 12px 40px rgba(0,0,0,0.4)">
-                    <iframe src="https://www.youtube.com/embed/2FgWbwnToLc" title="Princeton Offense System Breakdown" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px"></iframe>
-                </div>
-            </div>
-        </section>
-
         <!-- Stats Bar -->
         <section class="stats-bar">
             <div class="container stats-container">
-                <div class="stat-item">
-                    <h3>12</h3>
+                <div class="stat-item"><h2>12</h2>
                     <p>Countries Worldwide</p>
                 </div>
-                <div class="stat-item">
-                    <h3>4.9★</h3>
+                <div class="stat-item"><h2>4.9★</h2>
                     <p>Average Rating</p>
                 </div>
-                <div class="stat-item">
-                    <h3>Instant</h3>
+                <div class="stat-item"><h2>Instant</h2>
                     <p>Digital Access</p>
                 </div>
-                <div class="stat-item">
-                    <h3>60-Day</h3>
+                <div class="stat-item"><h2>60-Day</h2>
                     <p>Money-Back Guarantee</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problem → Solution (2 cards side by side) -->
-        <section class="problem-section scroll-animate" style="padding: 80px 2rem;">
-            <div class="container">
-                <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #ffffff; margin-bottom: 1.2rem;">The Problem</h3>
-                        <p style="font-size: 1.05rem; color: #cccccc; line-height: 1.8; margin-bottom: 1rem;">Your players memorize plays in practice — then freeze when the defense switches. Bad shots. Turnovers. Hours of game-planning forgotten by tipoff.</p>
-                        <p style="font-size: 1rem; color: #999999; line-height: 1.7;">The problem isn't your players. It's the system.</p>
-                    </div>
-                    <div style="background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2); border-radius: 16px; padding: 2.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #c9a84c; margin-bottom: 1.2rem;">The Solution</h3>
-                        <p style="font-size: 1.05rem; color: #cccccc; line-height: 1.8; margin-bottom: 1rem;">The Princeton Offense teaches reads, not memorization. Six sets. Fourteen counters. Your players react to the defense on every possession.</p>
-                        <p style="font-size: 1rem; color: #999999; line-height: 1.7;">Fewer turnovers. Better shots. Players who think.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -1417,8 +204,108 @@
         </section>
 
         <!-- Pricing Section -->
+        <!-- Author Credibility Section -->
+        <section style="padding:80px 2rem;background:#111111;border-top:1px solid rgba(201,168,76,0.12);border-bottom:1px solid rgba(201,168,76,0.12);" id="about">
+            <div style="max-width:960px;margin:0 auto;">
+                <h2 style="text-align:center;font-size:2rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem;">About the Author</h2>
+                <p style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:3rem;">Coach Lee DeForest</p>
+
+                <div style="display:flex;flex-wrap:wrap;gap:3rem;align-items:flex-start;margin-bottom:3rem;">
+                    <!-- DVD Covers -->
+                    <div style="flex:0 0 auto;display:flex;gap:1.25rem;flex-wrap:wrap;justify-content:center;">
+                        <div style="text-align:center;">
+                            <img src="/images/dvd-winning-princeton.jpg" alt="Winning With the Princeton Offense — Championship Productions" loading="lazy" width="140" height="198" style="width:140px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,0.6);border:1px solid rgba(201,168,76,0.2);" />
+                            <div style="margin-top:0.5rem;font-size:0.75rem;color:#c9a84c;">★★★★★ 4.89/5 · 19 reviews</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="/images/dvd-princeton-2pack.jpg" alt="Princeton Offense 2-Pack — Championship Productions" loading="lazy" width="140" height="198" style="width:140px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,0.6);border:1px solid rgba(201,168,76,0.2);" />
+                            <div style="margin-top:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.65);">Championship Productions</div>
+                        </div>
+                    </div>
+
+                    <!-- Bio Text -->
+                    <div style="flex:1;min-width:280px;">
+                        <p style="color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:1.25rem;font-size:1.05rem;">Coach Lee DeForest has spent over 25 years coaching basketball at every level. He served as a head high school coach for 10 years, a head prep school coach for 8 years, and a college assistant at programs across NCAA, JUCO, and NAIA.</p>
+                        <p style="color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:1.25rem;font-size:1.05rem;">He's a featured clinic speaker on the Princeton Offense and a published author through Championship Productions — one of the most respected basketball instructional platforms in the country. His DVD on winning with the Princeton Offense holds a <strong style="color:#c9a84c;">4.89 out of 5 rating with 19 coach reviews</strong>.</p>
+                        <p style="color:rgba(255,255,255,0.8);line-height:1.8;font-size:1.05rem;">This Blueprint is the same system he's taught at clinics, ran at every level, and refined over decades. Not theory — a tested, teachable offense.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+                    <div style="flex:1;min-width:155px;text-align:center;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:8px;padding:1.25rem;">
+                        <div style="font-size:2rem;font-weight:700;color:#c9a84c;">10</div>
+                        <div style="font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:0.25rem;">Years HS Head Coach</div>
+                    </div>
+                    <div style="flex:1;min-width:155px;text-align:center;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:8px;padding:1.25rem;">
+                        <div style="font-size:2rem;font-weight:700;color:#c9a84c;">8</div>
+                        <div style="font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:0.25rem;">Years Prep School Head Coach</div>
+                    </div>
+                    <div style="flex:1;min-width:155px;text-align:center;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:8px;padding:1.25rem;">
+                        <div style="font-size:2rem;font-weight:700;color:#c9a84c;">3</div>
+                        <div style="font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:0.25rem;">College Levels (NCAA, JUCO, NAIA)</div>
+                    </div>
+                    <div style="flex:1;min-width:155px;text-align:center;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:8px;padding:1.25rem;">
+                        <div style="font-size:2rem;font-weight:700;color:#c9a84c;">★</div>
+                        <div style="font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:0.25rem;">Featured Clinic Speaker</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sales Video -->
+        <section style="padding: 60px 2rem; background: linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%); border-bottom: 1px solid rgba(201, 168, 76, 0.1);">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 0.75rem;">See the System in Action</h2>
+                <p style="text-align: center; color: #999; font-size: 1rem; margin-bottom: 2rem;">Watch how the Princeton Offense creates open shots through reads, not memorized plays.</p>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:2px solid rgba(201,168,76,0.25);box-shadow:0 12px 40px rgba(0,0,0,0.4)">
+                    <iframe src="https://www.youtube-nocookie.com/embed/2FgWbwnToLc" title="Princeton Offense System Breakdown" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px"></iframe>
+                </div>
+            </div>
+        </section>
+
         <section class="pricing-section scroll-animate" id="pricing">
             <div class="pricing-container">
+                <!-- Countdown Urgency Bar -->
+                <div style="text-align:center;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:1rem 1.5rem;margin-bottom:2.5rem;max-width:560px;margin-left:auto;margin-right:auto;">
+                    <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;margin:0 0 0.6rem;letter-spacing:0.5px;">⏰ Current pricing expires in:</p>
+                    <div style="display:flex;gap:1.25rem;justify-content:center;align-items:center;">
+                        <div style="text-align:center;">
+                            <div id="hp-cd-hours" style="font-size:2rem;font-weight:700;color:#c9a84c;line-height:1;">00</div>
+                            <div style="font-size:0.65rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">hrs</div>
+                        </div>
+                        <div style="font-size:1.5rem;color:rgba(201,168,76,0.4);padding-bottom:10px;">:</div>
+                        <div style="text-align:center;">
+                            <div id="hp-cd-minutes" style="font-size:2rem;font-weight:700;color:#c9a84c;line-height:1;">00</div>
+                            <div style="font-size:0.65rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">min</div>
+                        </div>
+                        <div style="font-size:1.5rem;color:rgba(201,168,76,0.4);padding-bottom:10px;">:</div>
+                        <div style="text-align:center;">
+                            <div id="hp-cd-seconds" style="font-size:2rem;font-weight:700;color:#c9a84c;line-height:1;">00</div>
+                            <div style="font-size:0.65rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">sec</div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                (function() {
+                    var KEY = 'cdDeadlineHome48';
+                    var DURATION = 48 * 60 * 60 * 1000;
+                    var deadline = parseInt(localStorage.getItem(KEY), 10);
+                    if (!deadline || isNaN(deadline) || deadline < Date.now()) {
+                        deadline = Date.now() + DURATION;
+                        localStorage.setItem(KEY, deadline);
+                    }
+                    var pad = function(n) { return String(n).padStart(2, '0'); };
+                    function tick() {
+                        var diff = Math.max(0, deadline - Date.now());
+                        document.getElementById('hp-cd-hours').textContent   = pad(Math.floor(diff / 3600000));
+                        document.getElementById('hp-cd-minutes').textContent = pad(Math.floor((diff % 3600000) / 60000));
+                        document.getElementById('hp-cd-seconds').textContent = pad(Math.floor((diff % 60000) / 1000));
+                    }
+                    tick();
+                    setInterval(tick, 1000);
+                })();
+                </script>
                 <h2 class="section-title">Simple Pricing</h2>
                 <p class="pricing-subtitle scroll-animate">Choose the option that works best for you</p>
 
@@ -1449,7 +336,7 @@
                             <li>87-Page Princeton Offense Playbook (PDF)</li>
                             <li>Learn the Princeton Video Walkthrough</li>
                             <li>Practice Plans &amp; Drills Guide (PDF)</li>
-                            <li><strong>BONUS: West Virginia 2-Guard Offense (PDF)</strong></li>
+                            <li><strong>BONUS: John Beilein's WVU Two-Guard Offense (PDF)</strong> — the read-based motion system Beilein built at West Virginia before taking it to Michigan. A complete second offense that complements Princeton perfectly.</li>
                             <li>All six sets and counters</li>
                             <li>Zone offense and press break</li>
                             <li>60-day guarantee</li>
@@ -1486,37 +373,6 @@
         </section>
 
         <!-- Coach Bio Section -->
-        <section class="coach-bio-section scroll-animate" id="about">
-            <div class="coach-bio-container">
-                <h2 class="section-title">About Coach Lee DeForest</h2>
-                <div class="coach-name">Coach Lee DeForest</div>
-                <div class="coach-title">25 Years of Basketball Coaching Experience</div>
-
-                <p class="coach-bio-text scroll-animate">Coach Lee DeForest has coached basketball at every level — NCAA DI, DII, NAIA, and JUCO. As Athletic Director at Florida Coastal Prep, he's overseen a basketball program that has produced multiple college athletes and developed dozens of young coaches.</p>
-
-                <p class="coach-bio-text scroll-animate">He's a published author on basketball offense and has spent 25 years studying, teaching, and refining the Princeton Offense system. His teams have consistently run this offense to great success, and he's now sharing his complete system with coaches worldwide.</p>
-
-                <div class="coach-highlights scroll-animate">
-                    <div class="coach-highlight">
-                        <div class="coach-highlight-number">25</div>
-                        <div class="coach-highlight-text">Years Coaching Experience</div>
-                    </div>
-                    <div class="coach-highlight">
-                        <div class="coach-highlight-number">8</div>
-                        <div class="coach-highlight-text">Different Programs</div>
-                    </div>
-                    <div class="coach-highlight">
-                        <div class="coach-highlight-number">4</div>
-                        <div class="coach-highlight-text">Coaching Levels</div>
-                    </div>
-                    <div class="coach-highlight">
-                        <div class="coach-highlight-number">200+</div>
-                        <div class="coach-highlight-text">Athletes Coached</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Guarantee Section -->
         <section class="guarantee-section scroll-animate">
             <div class="guarantee-container">
@@ -1708,7 +564,7 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#about">About Coach</a></li>
                         <li><a href="#blueprint">The Blueprint</a></li>
@@ -1718,7 +574,7 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h3>Resources</h3>
                     <ul>
                         <li><a href="/blog/">Coaching Blog</a></li>
                         <li><a href="/#faq">FAQ</a></li>
@@ -1728,7 +584,7 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>Legal</h4>
+                    <h3>Legal</h3>
                     <ul>
                         <li><a href="/privacy/">Privacy Policy</a></li>
                         <li><a href="/terms-of-use/">Terms of Use</a></li>
@@ -1738,7 +594,7 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <ul>
                         <li><a href="https://www.youtube.com/@CoachPrincetonBasketball" target="_blank" rel="noopener">YouTube</a></li>
                         <li><a href="mailto:coachdeforest@gmail.com">Email Us</a></li>
@@ -1873,6 +729,22 @@
                 "reviewBody": "Parents can't believe what they're watching. The offense is so beautiful, so clean, and our kids play with such confidence. This changed everything."
             }
         ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Coach Lee DeForest",
+        "jobTitle": "Head Basketball Coach & Athletic Director",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Florida Coastal Prep"
+        },
+        "url": "https://coachprincetonbasketball.com/about/",
+        "knowsAbout": ["Princeton Offense", "Basketball Coaching", "Read-Based Offense", "Pete Carril System"],
+        "sameAs": ["https://www.youtube.com/@CoachPrincetonBasketball"]
     }
     </script>
 
@@ -2240,18 +1112,18 @@
 
     <div id="exitPopup" style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,0.8); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
         <div style="background:#111; border:1px solid rgba(201,168,76,0.3); border-radius:16px; max-width:480px; width:90%; padding:2.5rem; position:relative; text-align:center; box-shadow:0 25px 50px rgba(0,0,0,0.5);">
-            <button onclick="closeExitPopup()" style="position:absolute; top:12px; right:16px; background:none; border:none; color:#666; font-size:1.5rem; cursor:pointer; line-height:1;">&times;</button>
+            <button onclick="closeExitPopup()" style="position:absolute; top:8px; right:12px; background:none; border:none; color:#fff; font-size:1.8rem; cursor:pointer; line-height:1; padding:6px 10px;" aria-label="Close">&times;</button>
             <div style="font-size:2.5rem; margin-bottom:0.75rem;">🏀</div>
-            <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:0.5rem; background:linear-gradient(135deg,#c9a84c,#e8c96d); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Wait — Free Coaching Guide</h3>
-            <p style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">Get our <strong style="color:#fff;">5 Princeton Offense Quick Hitters</strong> PDF — the plays that work in the first week of practice. Free, instant download.</p>
+            <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:0.5rem; background:linear-gradient(135deg,#c9a84c,#e8c96d); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Get the Free Chin Set Breakdown PDF</h3>
+            <p style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">Drop your email and we'll send you a free breakdown of the <strong style="color:#fff;">Chin Set</strong> — full court diagrams, read progressions, and coaching points. Instant delivery, no strings.</p>
             <form id="exitPopupForm" style="display:flex; flex-direction:column; gap:0.75rem;">
                 <input type="email" id="exitEmail" placeholder="Your coaching email" required style="padding:0.85rem 1rem; border-radius:8px; border:1px solid rgba(201,168,76,0.2); background:#1a1a1a; color:#fff; font-size:1rem; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='#c9a84c'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'">
-                <button type="submit" style="padding:0.85rem 1rem; border-radius:8px; border:none; background:linear-gradient(135deg,#c9a84c,#b8943f); color:#0a0a0a; font-size:1rem; font-weight:700; cursor:pointer; transition:transform 0.2s, box-shadow 0.2s; font-family:inherit;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(201,168,76,0.3)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">Send Me the Free Plays →</button>
+                <button type="submit" style="padding:0.85rem 1rem; border-radius:8px; border:none; background:linear-gradient(135deg,#c9a84c,#b8943f); color:#0a0a0a; font-size:1rem; font-weight:700; cursor:pointer; transition:transform 0.2s, box-shadow 0.2s; font-family:inherit;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 15px rgba(201,168,76,0.3)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">Send Me the Free Breakdown →</button>
             </form>
             <div id="exitSuccess" style="display:none; padding:1rem 0;">
                 <div style="font-size:1.8rem; margin-bottom:0.5rem;">✅</div>
-                <p style="color:#4ade80; font-weight:600; margin-bottom:0.25rem;">You're in!</p>
-                <p style="color:#999; font-size:0.85rem;">Check your inbox for the free plays guide.</p>
+                <p style="color:#4ade80; font-weight:600; margin-bottom:0.25rem;">Check your inbox!</p>
+                <p style="color:#999; font-size:0.85rem;">The Chin Set breakdown is on its way.</p>
             </div>
             <p style="color:#555; font-size:0.75rem; margin-top:1rem;">No spam ever. Unsubscribe anytime.</p>
         </div>
@@ -2317,33 +1189,27 @@
             if (e.key === 'Escape') window.closeExitPopup();
         });
 
-        // Form submission via Netlify Forms
+        // Form submission — calls exit-lead function (Airtable + Resend Chin Set PDF delivery)
         document.getElementById('exitPopupForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            var email = document.getElementById('exitEmail').value;
+            var email = document.getElementById('exitEmail').value.trim();
             if (!email) return;
 
-            var formData = new FormData();
-            formData.append('form-name', 'email-capture');
-            formData.append('email', email);
-            formData.append('source', 'exit-intent-popup');
-
-            fetch('/', {
+            fetch('/.netlify/functions/exit-lead', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
-            }).then(function() {
-                document.getElementById('exitPopupForm').style.display = 'none';
-                document.getElementById('exitSuccess').style.display = 'block';
-                gtag('event', 'generate_lead', {
-                    'event_category': 'email_capture',
-                    'event_label': 'exit_intent_popup',
-                    'value': 5
-                });
-                setTimeout(function() { popup.style.display = 'none'; }, 3000);
-            }).catch(function() {
-                alert('Something went wrong. Email coachdeforest@gmail.com for the free guide.');
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email })
+            }).catch(function() {});
+
+            // Show success immediately — don't block UX on server round-trip
+            document.getElementById('exitPopupForm').style.display = 'none';
+            document.getElementById('exitSuccess').style.display = 'block';
+            gtag('event', 'generate_lead', {
+                'event_category': 'email_capture',
+                'event_label': 'exit_intent_popup',
+                'value': 5
             });
+            // Auto-close removed — user can close with X button or backdrop click
         });
     })();
     </script>

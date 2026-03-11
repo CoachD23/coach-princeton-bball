@@ -3,5 +3,8 @@
   "private": true,
   "dependencies": {
     "authorizenet": "^1.0.8"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.2.8"
   }
 }

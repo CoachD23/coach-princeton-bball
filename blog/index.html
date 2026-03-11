@@ -97,16 +97,18 @@
         .blog-directory { max-width: 1200px; margin: 2rem auto 0; padding: 0 2rem; }
         .directory-inner { background: rgba(17,17,17,0.6); border: 1px solid rgba(201,168,76,0.15); border-radius: 12px; padding: 2.5rem; }
         .directory-title { font-size: 1.4rem; font-weight: 700; color: #c9a84c; margin-bottom: 1.5rem; text-align: center; }
-        .directory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
-        .directory-silo h3 { font-size: 0.95rem; font-weight: 700; color: #c9a84c; margin-bottom: 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid rgba(201,168,76,0.2); }
-        .directory-silo ul { list-style: none; }
-        .directory-silo li { margin-bottom: 0.5rem; }
-        .directory-silo a { color: #ccc; text-decoration: none; font-size: 0.82rem; line-height: 1.4; display: block; transition: color 0.3s; }
-        .directory-silo a:hover { color: #c9a84c; }
-        .directory-silo .video-tag { color: #c9a84c; font-size: 0.7rem; font-weight: 700; }
-        .directory-silo .pillar-tag { color: #c9a84c; font-size: 0.7rem; font-weight: 700; }
-        @media (max-width: 768px) { .directory-grid { grid-template-columns: 1fr 1fr; } .directory-inner { padding: 1.5rem; } }
-        @media (max-width: 480px) { .directory-grid { grid-template-columns: 1fr; } }
+        /* Category browse cards */
+        .category-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+        .category-card { background: rgba(26,26,26,0.8); border: 1px solid rgba(201,168,76,0.2); border-radius: 10px; padding: 1.5rem 1.5rem 1.25rem; text-decoration: none; transition: all 0.3s; display: flex; flex-direction: column; }
+        .category-card:hover { border-color: rgba(201,168,76,0.5); background: rgba(201,168,76,0.07); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(201,168,76,0.1); }
+        .category-card-count { font-size: 0.78rem; font-weight: 700; color: #c9a84c; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.4rem; }
+        .category-card-name { font-size: 1.05rem; font-weight: 700; color: #ffffff; line-height: 1.3; margin-bottom: 0.5rem; }
+        .category-card-desc { font-size: 0.85rem; color: #888; line-height: 1.55; flex: 1; }
+        .category-card-arrow { font-size: 0.82rem; color: #c9a84c; font-weight: 600; margin-top: 1rem; }
+        @media (max-width: 900px) { .category-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .directory-inner { padding: 1.5rem; } }
+        @media (max-width: 560px) { .category-cards { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 380px) { .category-cards { grid-template-columns: 1fr; } }
 
         /* Featured Post */
         .featured-section { padding: 60px 2rem 20px; background-color: #0a0a0a; }
@@ -209,66 +211,38 @@
         <!-- Blog Directory - All Posts by Silo -->
         <div class="blog-directory">
             <div class="directory-inner">
-                <div class="directory-title">All Posts by Topic — 32 Articles &amp; Videos</div>
-                <div class="directory-grid">
-                    <div class="directory-silo">
-                        <h3>Core Sets &amp; Fundamentals</h3>
-                        <ul>
-                            <li><a href="/princeton-offense-complete-guide/"><span class="pillar-tag">★ GUIDE</span> Complete Guide to the Princeton Offense</a></li>
-                            <li><a href="/chin-set/">The Chin Set: Foundation of the Princeton Offense</a></li>
-                            <li><a href="/low-set-princeton-offense/">The Low Set: Post-Oriented Princeton Offense</a></li>
-                            <li><a href="/point-set-princeton-offense/">The Point Set: Guard-Driven Princeton Offense</a></li>
-                            <li><a href="/twirl-set-princeton-offense/">The Twirl Set: Motion-Based Princeton Offense</a></li>
-                            <li><a href="/five-out-princeton-offense/">Five-Out Princeton Offense: Spread the Floor</a></li>
-                            <li><a href="/x-set-princeton-offense/">The X-Set: Cross-Screen Action</a></li>
-                            <li><a href="/princeton-offense-chin-set-video/"><span class="video-tag">▶</span> Chin Set Breakdown</a></li>
-                            <li><a href="/princeton-offense-strongside-set-video/"><span class="video-tag">▶</span> Strongside Set Breakdown</a></li>
-                            <li><a href="/princeton-offense-blueprint-video/"><span class="video-tag">▶</span> The Princeton Offense Blueprint</a></li>
-                            <li><a href="/princeton-offense-basics-coaches-clinic-video/"><span class="video-tag">▶</span> Basics — Coaches Clinic</a></li>
-                        </ul>
-                    </div>
-                    <div class="directory-silo">
-                        <h3>Counters &amp; Defense</h3>
-                        <ul>
-                            <li><a href="/princeton-offense-counters-explained/"><span class="pillar-tag">★ GUIDE</span> Counters Explained: Beat Any Defense</a></li>
-                            <li><a href="/princeton-offense-against-zone-defense/">Princeton Offense Against Zone Defense</a></li>
-                            <li><a href="/princeton-offense-against-man-to-man/">Princeton Offense Against Man-to-Man</a></li>
-                            <li><a href="/read-based-offense-basketball/">Read-Based Offense: The Complete Guide</a></li>
-                            <li><a href="/princeton-offense-chin-counters-video/"><span class="video-tag">▶</span> Chin Set and Counters</a></li>
-                            <li><a href="/princeton-offense-counter-vs-switch-video/"><span class="video-tag">▶</span> Counter vs Switch Defense</a></li>
-                            <li><a href="/princeton-offense-spin-point-counter-video/"><span class="video-tag">▶</span> Spin and Point Counter</a></li>
-                        </ul>
-                    </div>
-                    <div class="directory-silo">
-                        <h3>Drills &amp; Practice</h3>
-                        <ul>
-                            <li><a href="/princeton-offense-drills/"><span class="pillar-tag">★ GUIDE</span> Top 10 Princeton Offense Drills</a></li>
-                            <li><a href="/princeton-offense-practice-plan/">4-Week Practice Plan</a></li>
-                            <li><a href="/best-backdoor-cut-drills-basketball/">Best Backdoor Cut Drills</a></li>
-                            <li><a href="/basketball-peer-pressure-drill-video/"><span class="video-tag">▶</span> Peer Pressure Drill</a></li>
-                        </ul>
-                    </div>
-                    <div class="directory-silo">
-                        <h3>Coaching Guides</h3>
-                        <ul>
-                            <li><a href="/how-to-teach-basketball-reads/"><span class="pillar-tag">★ GUIDE</span> How to Teach Basketball Reads</a></li>
-                            <li><a href="/basketball-coaching-tips-offense/">15 Coaching Tips for Better Offense</a></li>
-                            <li><a href="/princeton-offense-youth-basketball/">Princeton Offense for Youth Basketball</a></li>
-                            <li><a href="/princeton-offense-high-school/">Princeton Offense for High School</a></li>
-                            <li><a href="/hubie-brown-post-up-moves-video/"><span class="video-tag">▶</span> Hubie Brown: Post Up Moves</a></li>
-                            <li><a href="/michigan-2-guard-offense-series-video/"><span class="video-tag">▶</span> Michigan 2 Guard Offense</a></li>
-                        </ul>
-                    </div>
-                    <div class="directory-silo">
-                        <h3>Comparisons &amp; History</h3>
-                        <ul>
-                            <li><a href="/pete-carril-princeton-offense-history/"><span class="pillar-tag">★ GUIDE</span> Pete Carril &amp; Princeton Offense History</a></li>
-                            <li><a href="/princeton-offense-vs-motion-offense/">Princeton vs Motion Offense</a></li>
-                            <li><a href="/princeton-offense-vs-flex-offense/">Princeton vs Flex Offense</a></li>
-                            <li><a href="/5-common-myths-about-the-princeton-offense/">5 Common Myths</a></li>
-                            <li><a href="/3-reasons-to-learn-the-princeton-offense/">3 Reasons to Learn the Princeton Offense</a></li>
-                        </ul>
-                    </div>
+                <div class="directory-title">Browse All 32 Articles &amp; Videos by Topic</div>
+                <div class="category-cards">
+                    <a href="#sets-fundamentals" class="category-card">
+                        <div class="category-card-count">11 Posts · 4 Videos</div>
+                        <div class="category-card-name">Core Sets &amp; Fundamentals</div>
+                        <div class="category-card-desc">Every Princeton Offense set — Chin, Low, Point, Twirl, Five-Out, and X-Set. Start here.</div>
+                        <div class="category-card-arrow">Browse Posts ↓</div>
+                    </a>
+                    <a href="#counters-defense" class="category-card">
+                        <div class="category-card-count">7 Posts · 3 Videos</div>
+                        <div class="category-card-name">Counters &amp; Defense</div>
+                        <div class="category-card-desc">Beat zone, man-to-man, and switching defenses. All 14 counters broken down.</div>
+                        <div class="category-card-arrow">Browse Posts ↓</div>
+                    </a>
+                    <a href="#drills-practice" class="category-card">
+                        <div class="category-card-count">4 Posts · 1 Video</div>
+                        <div class="category-card-name">Drills &amp; Practice</div>
+                        <div class="category-card-desc">Top drills, a 4-week practice plan, and backdoor cut training to install the system fast.</div>
+                        <div class="category-card-arrow">Browse Posts ↓</div>
+                    </a>
+                    <a href="#coaching-guides" class="category-card">
+                        <div class="category-card-count">6 Posts · 2 Videos</div>
+                        <div class="category-card-name">Coaching Guides</div>
+                        <div class="category-card-desc">Teaching reads, youth and high school implementation, and offense-building tips.</div>
+                        <div class="category-card-arrow">Browse Posts ↓</div>
+                    </a>
+                    <a href="#comparisons-history" class="category-card">
+                        <div class="category-card-count">5 Posts</div>
+                        <div class="category-card-name">Comparisons &amp; History</div>
+                        <div class="category-card-desc">Pete Carril's legacy, Princeton vs motion and flex offenses, and common myths.</div>
+                        <div class="category-card-arrow">Browse Posts ↓</div>
+                    </a>
                 </div>
             </div>
         </div>

@@ -252,15 +252,34 @@
         }
 
         .hero-container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 5rem;
             position: relative;
             z-index: 2;
         }
 
+        .hero-photo {
+            flex: 0 0 auto;
+            width: 380px;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(201, 168, 76, 0.25);
+            display: block;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1.5rem;
@@ -268,13 +287,21 @@
         }
 
         .hero-subtext {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             line-height: 1.8;
             color: #cccccc;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 2.5rem;
+            }
+            .hero-photo {
+                width: 260px;
+            }
         }
 
         .btn-primary {
@@ -317,7 +344,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -372,7 +399,7 @@
 
         .highlights-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -562,9 +589,15 @@
             transform: translateY(0);
         }
 
+        @media (max-width: 900px) {
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
 
             .section-title {
@@ -582,6 +615,12 @@
 
             .nav-cta {
                 display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -609,8 +648,14 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-container">
-                <h1>About Coach Lee DeForest</h1>
-                <p class="hero-subtext">25 years of basketball coaching experience at every level. From NCAA Division I to youth leagues, Coach DeForest has taught, developed, and inspired thousands of players.</p>
+                <div class="hero-photo">
+                    <img src="/images/about-hero.jpg" alt="Coach Lee DeForest — Basketball Coach and Author" loading="eager" />
+                </div>
+                <div class="hero-text">
+                    <h1>About Coach Lee DeForest</h1>
+                    <p class="hero-subtext">25 years of basketball coaching experience at every level. From NCAA Division I to youth leagues, Coach DeForest has taught, developed, and inspired thousands of players through the Princeton Offense system.</p>
+                    <a href="/#pricing" class="btn-primary">Get the Princeton Playbook</a>
+                </div>
             </div>
         </section>
 
@@ -623,6 +668,20 @@
                         <p>Coach Lee DeForest has spent 25 years in basketball, serving as a coach, mentor, and innovator at the highest levels of the sport. Currently, he serves as Athletic Director and Director of Operations at Florida Coastal Prep, where he oversees a comprehensive basketball program dedicated to player development and college placement.</p>
                         <p>Throughout his career, Coach DeForest has coached at NCAA Division I, Division II, NAIA, and JUCO levels. He's developed numerous players who have gone on to compete at the college level, including successful placements at Missouri, DePaul, Houston Baptist, and SIU Edwardsville.</p>
                         <p>Beyond coaching on the court, Coach DeForest is a published author on basketball offense strategy and has created instructional DVD materials that have influenced coaches worldwide. His expertise in the Princeton Offense—a read-based, system-oriented approach to basketball—has earned him recognition as one of the sport's most innovative offensive minds.</p>
+
+                        <!-- Published DVD Credentials -->
+                        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:2.5rem;align-items:flex-start;">
+                            <div style="text-align:center;">
+                                <img src="/images/dvd-winning-princeton.jpg" alt="Winning With the Princeton Offense — Championship Productions" style="width:140px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,0.6);border:1px solid rgba(201,168,76,0.2);" />
+                                <div style="margin-top:0.5rem;font-size:0.75rem;color:#c9a84c;">★★★★★ 4.89/5 · 19 reviews</div>
+                                <div style="margin-top:0.25rem;font-size:0.72rem;color:rgba(255,255,255,0.4);">Championship Productions</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <img src="/images/dvd-princeton-2pack.jpg" alt="Princeton Offense 2-Pack — Championship Productions" style="width:140px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,0.6);border:1px solid rgba(201,168,76,0.2);" />
+                                <div style="margin-top:0.5rem;font-size:0.75rem;color:#c9a84c;">Princeton Offense 2-Pack</div>
+                                <div style="margin-top:0.25rem;font-size:0.72rem;color:rgba(255,255,255,0.4);">Championship Productions</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="highlights-grid scroll-animate">
@@ -645,19 +704,7 @@
                     </div>
                 </div>
 
-                <div class="experience-list scroll-animate">
-                    <h3>Coaching Experience</h3>
-                    <ul>
-                        <li>NCAA Division I Basketball Coaching</li>
-                        <li>NCAA Division II Program Development</li>
-                        <li>NAIA Championship Experience</li>
-                        <li>JUCO Competitive Basketball</li>
-                        <li>AAU Program Leadership</li>
-                        <li>High School Championship Teams</li>
-                        <li>Youth Basketball Development Programs</li>
-                        <li>International Coaching Clinics</li>
-                    </ul>
-                </div>
+
             </div>
         </section>
 
