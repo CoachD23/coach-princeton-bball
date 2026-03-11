@@ -109,7 +109,25 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog articles -->
+  <!-- Blog articles — live AI-generated content -->
+  <url>
+    <loc>https://coachprincetonbasketball.com/princeton-offense-basketball/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coachprincetonbasketball.com/princeton-offense-plays/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coachprincetonbasketball.com/how-to-run-the-princeton-offense/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://coachprincetonbasketball.com/5-common-myths-about-the-princeton-offense/</loc>
     <lastmod>2026-03-10</lastmod>
@@ -135,7 +153,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coachprincetonbasketball.com/princeton-offense-youth-basketball/</loc>
+    <loc>https://coachprincetonbasketball.com/princeton-offense-for-youth-basketball/</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
