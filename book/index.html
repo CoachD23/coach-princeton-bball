@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="description" content="The Princeton Offense Mastery Blueprint — Complete read-based basketball system. Six sets, fourteen counters, 42 drills. Used by 200+ coaches worldwide.">
     <meta name="keywords" content="Princeton Offense, basketball playbook, coaching system, basketball drills, offensive system">
     <meta name="robots" content="index, follow">
@@ -38,7 +36,7 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/fonts/inter.css">
 
     <style>
         * {
@@ -1573,7 +1571,7 @@
                     const data = await res.json().catch(() => ({}));
 
                     if (res.ok && data.ok) {
-                        form.innerHTML = '<p class="book-inline-msg success" style="display:block;font-size:1.05rem;">✓ Got it! Check your inbox — Coach DeForest will be in touch.</p>';
+                        window.location.href = '/video/';
                     } else {
                         throw new Error('Server error');
                     }
