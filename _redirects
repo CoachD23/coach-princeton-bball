@@ -56,6 +56,9 @@
 /princeton-offense-blueprint       /book/                301
 /princeton-offense-secrets/        /book/                301
 /princeton-offense-secrets         /book/                301
+# Cannibalization fix — consolidate "princeton offense guide" URL onto pillar
+/princeton-offense-guide/          /princeton-offense-complete-guide/  301
+/princeton-offense-guide           /princeton-offense-complete-guide/  301
 /terms-use/                        /terms-of-use/        301
 /terms-use                         /terms-of-use/        301
 /princeton-offense-chin-breakdown/ /chin-set/            301
