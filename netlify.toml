@@ -104,6 +104,24 @@
   force = true
 
 [[redirects]]
+  from = "/princeton-offense-basketball/"
+  to = "/princeton-offense-complete-guide/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/princeton-offense-for-youth-basketball/"
+  to = "/princeton-offense-youth-basketball/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/princeton-offense-motion-offense/"
+  to = "/princeton-offense-vs-motion-offense/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/sitemap_index.xml"
   to = "/sitemap.xml"
   status = 301
