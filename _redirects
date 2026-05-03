@@ -7,6 +7,11 @@
 # 200 = rewrite (serves content without changing URL)
 # ============================================================
 
+/princeton-offense-sets/           /princeton-offense-actions/  301!
+/princeton-offense-a-complete-guide/  /princeton-offense-complete-guide/  301!
+/terms/                            /terms-of-use/        301!
+/terms                             /terms-of-use/        301!
+
 # -----------------------------------------------
 # Old WordPress page URLs → new pages
 # -----------------------------------------------
@@ -104,8 +109,6 @@
 # -----------------------------------------------
 /faq                               /#faq                 301
 /faq/                              /#faq                 301
-/terms                             /privacy/             301
-/terms/                            /privacy/             301
 /refunds                           /privacy/             301
 /refunds/                          /privacy/             301
 

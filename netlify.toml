@@ -83,6 +83,25 @@
   from = "/terms"
   to = "/terms-of-use/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms/"
+  to = "/terms-of-use/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/princeton-offense-sets/"
+  to = "/princeton-offense-actions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/princeton-offense-a-complete-guide/"
+  to = "/princeton-offense-complete-guide/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/sitemap_index.xml"
