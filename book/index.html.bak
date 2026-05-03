@@ -1020,7 +1020,7 @@
                             <li>Practice Plans &amp; Drills Guide (PDF)</li>
                             <li>All six sets and counters</li>
                             <li>Zone offense and press break</li>
-                            <li>60-day guarantee</li>
+                            <li>Instant digital delivery</li>
                         </ul>
                         <button class="pricing-button" onclick="gtag('event','begin_checkout',{currency:'USD',value:39,items:[{item_name:'Princeton Offense System',price:39}]});location.href='/checkout/?product=system';">Get Started — $39</button>
                     </div>
@@ -1036,7 +1036,7 @@
                             <li>Practice Plans &amp; Drills Guide (PDF)</li>
                             <li><strong>BONUS: West Virginia 2-Guard Offense (PDF)</strong></li>
                             <li>All six sets and counters</li>
-                            <li>60-day guarantee</li>
+                            <li>Instant digital delivery</li>
                         </ul>
                         <button class="pricing-button" onclick="gtag('event','begin_checkout',{currency:'USD',value:49,items:[{item_name:'Complete Coaching Bundle',price:49}]});location.href='/checkout/?product=bundle';">Get the Bundle — $49</button>
                     </div>
@@ -1077,12 +1077,12 @@
             </div>
         </section>
 
-        <!-- Guarantee Section -->
+        <!-- Access Section -->
         <section class="guarantee-section scroll-animate">
             <div class="guarantee-container">
-                <h2>60-Day Money-Back Guarantee</h2>
-                <p class="guarantee-text">If you purchase the Blueprint and don't find it valuable within 60 days, we'll refund every penny. No questions asked. We stand behind this system because we know it works.</p>
-                <p class="guarantee-text">The only risk is missing out on what could transform your team's offense.</p>
+                <h2>Instant Digital Access</h2>
+                <p class="guarantee-text">Your purchase gives you immediate access to the Princeton Offense Blueprint, video walkthroughs, practice plans, and drill progressions in one complete coaching package.</p>
+                <p class="guarantee-text">Everything is built to help you move from idea to practice floor as quickly as possible.</p>
             </div>
         </section>
 
@@ -1165,12 +1165,12 @@
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What's your refund policy?</span>
+                            <span>What are the purchase terms for digital products?</span>
                             <span class="faq-toggle">+</span>
                         </button>
                         <div class="faq-answer">
                             <div class="faq-content">
-                                We offer a 60-day money-back guarantee. If you're not satisfied with the Blueprint for any reason, email us within 60 days and we'll refund your purchase immediately. No questions asked. We're confident you'll find this system valuable.
+                                Because these are instant-access digital coaching materials, all sales are final except where required by law or in cases of duplicate charges or technical delivery issues. If you have trouble accessing your files, email coachdeforest@gmail.com and we'll help you get set up.
                             </div>
                         </div>
                     </div>
