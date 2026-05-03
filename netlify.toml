@@ -83,3 +83,8 @@
   from = "/terms"
   to = "/terms-of-use/"
   status = 301
+
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
+  status = 301

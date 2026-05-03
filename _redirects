@@ -36,6 +36,7 @@
 /wp-json/*                         /                     301
 /xmlrpc.php                        /                     301
 /wp-sitemap.xml                    /sitemap.xml          301
+/sitemap_index.xml                 /sitemap.xml          301
 /wp-sitemap-posts-post-1.xml       /sitemap.xml          301
 /wp-sitemap-posts-page-1.xml       /sitemap.xml          301
 /wp-sitemap-taxonomies-category-1.xml  /sitemap.xml      301
