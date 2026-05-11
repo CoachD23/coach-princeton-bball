@@ -134,6 +134,10 @@ https://coach-princeton-basketball.netlify.app/*  https://coachprincetonbasketba
 /checkout    /checkout/    301
 /privacy     /privacy/     301
 
+/princeton-offense-2-3-zone          /princeton-offense-vs-2-3-zone/  301
+/princeton-offense-2-3-zone/         /princeton-offense-vs-2-3-zone/  301
+/princeton-offense-install-plan      /princeton-offense-install-plan-first-10-practices/  301
+/princeton-offense-install-plan/     /princeton-offense-install-plan-first-10-practices/  301
 # -----------------------------------------------
 # 404 fallback
 # -----------------------------------------------
