@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /checkout/
 Disallow: /thank-you/
+Disallow: /docs/
 
 Sitemap: https://coachprincetonbasketball.com/sitemap.xml
