@@ -1,0 +1,30 @@
+- name: phase1:ready
+  color: "0e8a16"
+  description: Issue passes the readiness gate and can enter the manual Phase 1 loop.
+- name: agent:generate
+  color: "1d76db"
+  description: Codex should claim the issue, create or revise a draft PR, and report evidence.
+- name: agent:review
+  color: "5319e7"
+  description: Claude should review the PR against the issue spec, CI, tests, and codebase.
+- name: loop:round-1
+  color: "bfdadc"
+  description: First generator-verifier review round is active.
+- name: loop:round-2
+  color: "bfdadc"
+  description: Second generator-verifier review round is active.
+- name: loop:round-3
+  color: "bfdadc"
+  description: Final allowed review round before the circuit breaker escalates.
+- name: needs-human
+  color: "fbca04"
+  description: Human decision required for merge, clarification, adjudication, or restart.
+- name: blocked
+  color: "d93f0b"
+  description: Agent loop cannot continue without missing information or external action.
+- name: risk:elevated
+  color: "ff7619"
+  description: Broad trial work is allowed, but changed surfaces require extra human attention.
+- name: hard-stop
+  color: "b60205"
+  description: Sensitive or protected surface touched; agents must stop until a human decides.
