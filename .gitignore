@@ -5,3 +5,5 @@
 .env
 .netlify
 node_modules/
+.venv-ocr/
+scripts/__pycache__/
